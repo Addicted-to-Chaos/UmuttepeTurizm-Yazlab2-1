@@ -1,0 +1,56 @@
+CRITICAL - 2024-03-03 17:37:52 --> ErrorException: Undefined variable $route
+in APPPATH\Config\Routes.php on line 8.
+ 1 APPPATH\Config\Routes.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php', 8)
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 17:37:57 --> ErrorException: Undefined variable $route
+in APPPATH\Config\Routes.php on line 8.
+ 1 APPPATH\Config\Routes.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php', 8)
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 18:13:37 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\codeIgniter4\app\Config\Routes.php on line 9 and exactly 3 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 APPPATH\Config\Routes.php(9): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 18:13:39 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\codeIgniter4\app\Config\Routes.php on line 9 and exactly 3 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 APPPATH\Config\Routes.php(9): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 18:13:51 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\codeIgniter4\app\Config\Routes.php on line 9 and exactly 3 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 APPPATH\Config\Routes.php(9): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 18:13:51 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\codeIgniter4\app\Config\Routes.php on line 9 and exactly 3 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 APPPATH\Config\Routes.php(9): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-03 18:13:51 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\codeIgniter4\app\Config\Routes.php on line 9 and exactly 3 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 APPPATH\Config\Routes.php(9): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\codeIgniter4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
