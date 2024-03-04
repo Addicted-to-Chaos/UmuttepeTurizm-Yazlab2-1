@@ -4,11 +4,18 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index()
-    {
-        return view('index'); //views içerisindeki index.html dosyasını index.php haline getirdim. Onu çağırıyor
-                              //index.php dosyasına gitmek için bu da. Her sayfa için ayrı ayrı metot yazmak gerekli.
+
+    
+    public function index() {
+        
+        $db = \Config\Database::connect();
+         
+        $query = $db->query('SELECT * FROM yolcular');
+        $data['veriler'] = $query->getResult();
+
+        return view('db_deneme', $data);
     }
+
 
     public function about(){
         return view('about');
