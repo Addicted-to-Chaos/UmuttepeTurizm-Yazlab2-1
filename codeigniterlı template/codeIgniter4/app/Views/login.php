@@ -68,15 +68,18 @@
     </style>
 </head>
 <body>
-    <form>
+    <h3><?php $session=session(); echo $session ->getFlashdata('login'); ?></h3>
+    <form action="<?php echo site_url('/girisYap'); ?>" method="post">
         <h2>Giriş Yap</h2>
-        <label for="login-email">E-mail:</label>
-        <input type="email" id="login-email" name="login-email" required>
+        <label for="Email">E-mail:</label>
+        <input type="email" id="Email" name="Email" required>
 
-        <label for="login-password">Şifre:</label>
-        <input type="password" id="login-password" name="login-password" required>
+        <label for="Sifre">Şifre:</label>
+        <input type="password" id="Sifre" name="Sifre" required>
 
-        <input type="submit" value="Login">
+        <div class="form-row">
+     <button type="submit" class="btn btn-primary" name="kaydet">Giriş Yap</button>
+        </div>
         
         <p>Hesabınız yok mu? <a href="register.html" class="register-link">Kayıt Ol</a></p>
     </form>

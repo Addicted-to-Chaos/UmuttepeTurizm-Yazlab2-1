@@ -21,4 +21,7 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/services', 'Home::services');
     $routes->get('/testimonial', 'Home::testimonial');
     $routes->get('/tour', 'Home::tour');
-
+    $routes->post('/kayitOl', 'User::kayitOl');
+    $routes->get('/dbtest', 'Home::dbtest'); #veritabanının test sayfası
+    $routes->post('/girisYap', 'User::girisYap');
+    $routes->get('/cikisYap', 'User::cikisYap');

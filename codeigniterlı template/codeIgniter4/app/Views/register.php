@@ -18,7 +18,7 @@
 
         .center-text {
         text-align: center;
-    }
+     }
         form {
             background-color: #ffffff;
             padding: 20px;
@@ -82,57 +82,67 @@
     </style>
 </head>
 <body>
-    <form>
-        <h2>Kayıt Ol</h2>
+    <form action="<?php echo site_url('/kayitOl'); ?>" method="post">
+  
+    <h2>Kayıt Ol</h2>
 
         <div class="form-row">
             <div class="form-column">
-                <label for="register-name">Ad:</label>
-                <input type="text" id="register-name" name="register-name" required>
+                <label for="Ad">Ad:</label>
+                <input type="text" id="Ad" name="Ad" required>
             </div>
 
             <div class="form-column">
-                <label for="register-surname">Soyad:</label>
-                <input type="text" id="register-surname" name="register-surname" required>
+                <label for="Soyad">Soyad:</label>
+                <input type="text" id="Soyad" name="Soyad" required>
             </div>
         </div>
 
-        <div class="form-row">
+       <div class="form-row">
             <div class="form-column">
-                <label for="register-birthdate">Doğum Tarihi:</label>
-                <input type="date" id="register-birthdate" name="register-birthdate" required>
+                <label for="Yas">Doğum Tarihi:</label>
+                <input type="date" id="Yas" name="Yas" required>
             </div>
 
             <div class="form-column">
-                <label for="register-gender">Cinsiyet:</label>
-                <select id="register-gender" name="register-gender" required>
+                <label for="Cinsiyet">Cinsiyet:</label>
+                <select id="Cinsiyet" name="Cinsiyet" required>
                     <option value="" disabled selected>Cinsiyet seçin</option>
-                    <option value="male">Erkek</option>
-                    <option value="female">Kadın</option>
+                    <option value="Erkek">Erkek</option>
+                    <option value="Kadın">Kadın</option>
                 </select>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-column">
-                <label for="register-email">E-posta:</label>
-                <input type="email" id="register-email" name="register-email" required>
+                <label for="Email">E-posta:</label>
+                <input type="email" id="Email" name="Email" required>
             </div>
 
             <div class="form-column">
-                <label for="register-id">TC Kimlik No:</label>
-                <input type="text" id="register-id" name="register-id" pattern="[0-9]{11}"  required>
+                <label for="Tc">TC Kimlik No:</label>
+                <input type="text" id="Tc" name="Tc" pattern="[0-9]{11}"  required>
             </div>
         </div>
 
         <div class="form-row">
-            <label for="register-phone">Telefon:</label>
-            <input type="tel" id="register-phone" name="register-phone" required>
+            <label for="Telefon">Telefon:</label>
+            <input type="tel" id="Telefon" name="Telefon" required>
         </div>
+        <div class="form-row">
+            <label for="Sifre">Şifre:</label>
+            <input type="password" id="Sifre" name="Sifre" required>
+        </div>
+     <!--   <input type="submit" name="kaydet" value="Kayıt Ol">-->
+     <div class="form-row">
+     <button type="submit" class="btn btn-primary" name="kaydet">Kayıt Ol</button>
+        </div>
+    
 
-        <input type="submit" value="Kayıt Ol">
 
-        <p class="center-text">Hesabınız var mı? <a href="<?= site_url('/login') ?>" class="register-link" style="color: rgb(57, 82, 131);" >Giriş Yap</a></p>
+        <p class="center-text">Hesabınız var mı? <a href="<?= site_url('/index') ?>" class="register-link" style="color: rgb(57, 82, 131);" >Giriş Yap</a></p>
     </form>
+    
 </body>
 </html>

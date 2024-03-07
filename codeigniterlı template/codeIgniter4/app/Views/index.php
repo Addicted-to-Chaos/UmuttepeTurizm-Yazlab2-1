@@ -60,7 +60,7 @@
                             <div class="dropdown-menu rounded">
                                 <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Profilim</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Hesap Ayarları</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Çıkış Yap</a>
+                                <a href="<?php echo site_url('/cikisYap'); ?>" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Çıkış Yap</a>
                             </div>
                         </div>
                     </div>
@@ -1295,5 +1295,8 @@
         <!-- Template Javascript -->
         <script src="assets/js/main.js"></script>
     </body>
+    <?php $session=session();?>
+<?php echo $session->getFlashdata('login'); ?>
+<hl> Welcome, <?php echo $session->user; ?></hl>
 
 </html>

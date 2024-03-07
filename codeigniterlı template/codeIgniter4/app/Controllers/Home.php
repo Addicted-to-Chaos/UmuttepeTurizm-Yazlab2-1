@@ -1,19 +1,16 @@
-<?php
+<?php  namespace App\Controllers;
+use App\Models\UserModel;
 
-namespace App\Controllers;
+
+use CodeIgniter\Controller;
 
 class Home extends BaseController
 {
 
     
     public function index() {
-        
-        $db = \Config\Database::connect();
-         
-        $query = $db->query('SELECT * FROM yolcular');
-        $data['veriler'] = $query->getResult();
-
-        return view('db_deneme', $data);
+       
+        return view('index');
     }
 
 
@@ -27,7 +24,13 @@ class Home extends BaseController
         return view('blog');
     }
     public function booking(){
-        return view('booking');
+        $session=session();
+        if( $session->has('user') ){
+            return view('booking');
+        }else{
+            return view('login');
+        }
+        
     }
     public function contact(){
         return view('contact');
@@ -42,6 +45,7 @@ class Home extends BaseController
         return view('guides');
     }
     public function login(){
+        
         return view('login');
     }
     public function package(){
@@ -49,6 +53,39 @@ class Home extends BaseController
     }
     public function register(){
         return view('register');
+    }
+
+    public function insert(){
+/*
+$data=['registername'=>$this->request->getVar('registername'),
+'registersurname'=>$this->request->getVar('registersurname'),
+'registerbirthdate'=>$this->request->getVar('registerbirthdate'),
+'registergender'=>$this->request->getVar('registergender'),
+'registeremail'=>$this->request->getVar('registeremail'),
+'registerid'=>$this->request->getVar('registerid'),
+'registerphone'=>$this->request->getVar('registerphone'),
+'registerpassword'=>$this->request->getVar('registerpassword')];
+     $db=\Config\Database::connect();
+$builder=$db->table('Yolcular');
+$builder->insert($data);*/
+
+      /*$validation=$this->validate([
+      'registername'=>'required',
+      'registersurname'=>'required',
+      'registerbirthdate'=>'required',
+      'registergender'=>'required',
+      'registeremail'=>'required',
+      'registerid'=>'required',
+      'registerphone'=>'required',
+      'registerpassword'=>'required'     
+      
+      ]);
+      if(!$validation){
+        return view('register',['validation'=>$this->validator]);
+      }else{
+        echo "successs";
+      }*/
+
     }
     public function services(){
         return view('services');
@@ -58,5 +95,17 @@ class Home extends BaseController
     }
     public function tour(){
         return view('tour');
+    }
+    public function regConnect(){
+        return view('regConnect');
+    }
+
+    public function dbtest(){
+        $db = \Config\Database::connect();
+
+        $query = $db->query('SELECT * FROM yolcular');
+        $data['veriler'] = $query->getResult();
+
+        return view('db_deneme', $data);
     }
 }
