@@ -79,6 +79,21 @@
         .form-column {
             width: calc(50% - 5px); /* %50 genişlikte, aralarında 10px boşluk */
         }
+
+
+        button[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(57, 82, 131);
+        }
     </style>
 </head>
 <body>
@@ -141,7 +156,7 @@
     
 
 
-        <p class="center-text">Hesabınız var mı? <a href="<?= site_url('/index') ?>" class="register-link" style="color: rgb(57, 82, 131);" >Giriş Yap</a></p>
+        <p class="center-text">Hesabınız var mı? <a href="<?= site_url('/login') ?>" class="register-link" style="color: rgb(57, 82, 131);" >Giriş Yap</a></p>
     </form>
     
 </body>

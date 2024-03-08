@@ -54,6 +54,9 @@ class Home extends BaseController
     public function register(){
         return view('register');
     }
+    public function hesabim(){
+        return view('hesabim');
+    }
 
     public function insert(){
 /*

@@ -45,12 +45,7 @@
             border-radius: 4px;
         }
 
-        input[type="submit"] {
-            background-color:rgb(57, 82, 131);
-            color: #fff;
-            cursor: pointer;
-        }
-
+    
         input[type="submit"]:hover {
             background-color: rgb(57, 82, 131);
         }
@@ -64,6 +59,19 @@
 
         .register-link:hover {
             text-decoration: underline;
+        }
+        button[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(57, 82, 131);
         }
     </style>
 </head>
@@ -81,7 +89,7 @@
      <button type="submit" class="btn btn-primary" name="kaydet">Giriş Yap</button>
         </div>
         
-        <p>Hesabınız yok mu? <a href="register.html" class="register-link">Kayıt Ol</a></p>
+        <p>Hesabınız yok mu? <a href="register" class="register-link">Kayıt Ol</a></p>
     </form>
 </body>
 </html>

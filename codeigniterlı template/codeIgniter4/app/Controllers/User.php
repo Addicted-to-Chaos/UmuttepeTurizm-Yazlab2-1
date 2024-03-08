@@ -39,20 +39,23 @@ class User extends BaseController
 
 
     public function girisYap() {
-    $model=new UsersModel();
-    $result=$model->where('Email', $this->request->getVar('Email'))-> 
-    where('Sifre', $this->request->getVar('Sifre'))->first();
-   $session=session();
-   if($result) {
-    $session->setFlashdata('login','login Successfully');
-    $session->set('user', $result['Yolcu_id']);
-    return view('hesabim');
-  }
-  else {
-    $session->setFlashdata('login','login Failed');
-      return view('login');
-  }
+        $model = new UsersModel();
+        $result = $model->where('Email', $this->request->getVar('Email'))
+                        ->where('Sifre', $this->request->getVar('Sifre'))
+                        ->first();
+    
+        $session = session();
+        if ($result) {
+            $session->setFlashdata('login', 'login Successfully');
+            $session->set('user', $result['Yolcu_id']);
+            return view('hesabim', ['user' => $result]);
+        } else {
+            $session->setFlashdata('login', 'login Failed');
+            return view('login');
+        }
     }
+    
+    
 public function cikisYap() {
     $session=session();
     $session->destroy() ;
