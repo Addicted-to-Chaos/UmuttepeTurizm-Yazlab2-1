@@ -495,6 +495,7 @@ label {
     var newEposta = document.getElementById('newEmail').value;
     var newTc = document.getElementById('newTc').value;
     var newTelefon= document.getElementById('newTelefon').value;
+    var newCinsiyet= document.getElementById('newCinsiyet').value;
 
 
     var errorMessages = "";
@@ -510,7 +511,9 @@ label {
     if (newTelefon.length  !== 11) {
       errorMessages += "TC kimlik numarası 11 haneli olmak zorundadır!.<br>";
     }
-
+    if(newCinsiyet ===null){
+      newCinsiyet="Erkek";
+    }
     var errorContainer = document.getElementById("errorMessage1");
     errorContainer.innerHTML = errorMessages;
 
