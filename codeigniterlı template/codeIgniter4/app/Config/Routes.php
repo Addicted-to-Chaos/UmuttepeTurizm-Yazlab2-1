@@ -28,3 +28,4 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/cikisYap', 'User::cikisYap');
     $routes->get('/packages', 'User::packages');
     $routes->post('/sifreDegistir' ,'User::sifreDegistir');
+    $routes->post('/bilgileriGuncelle' ,'User::bilgileriGuncelle');

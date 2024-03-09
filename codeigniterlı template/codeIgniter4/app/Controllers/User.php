@@ -58,7 +58,7 @@ class User extends BaseController
                 'Yas' => $result['Yas'],
                 'Cinsiyet' => $result['Cinsiyet'],
             ]);
-            return view('hesabim', ['user' => $result]);
+            return view('index', ['user' => $result]);
         } else {
             return view('login');
         }
@@ -68,7 +68,7 @@ class User extends BaseController
 public function cikisYap() {
     $session=session();
     $session->destroy() ;
-    return view('index');
+    return view('redirect');
 }
 
 public function sifreDegistir()
@@ -77,7 +77,7 @@ public function sifreDegistir()
     $userData = $session->get('user');
 
     if (!$userData) {
-        return redirect()->to('/login');
+        return redirect()->to('login');
     }
 
     $currentPassword = $this->request->getVar('oldPass');
@@ -98,14 +98,71 @@ public function sifreDegistir()
 
     $model->where('Yolcu_id', $userData['Yolcu_id'])->set($updateData)->update();
 
-    // Oturumu güncelle
     $userData['Sifre'] = $newPassword;
     $session->set('user', $userData);
 
-    $successMessage = 'Şifreniz başarıyla güncellendi.';
+    $successMessage1 = 'Şifreniz başarıyla güncellendi.';
 
-    // Mesajı view'a gönder
-    return view('hesabim', ['successMessage' => $successMessage]);
+    return view('hesabim', ['successMessage' => $successMessage1]);
+}
+
+
+public function bilgileriGuncelle()
+{
+    // Oturumu başlat
+    $session = session();
+
+    // Kullanıcı verilerini oturumdan al
+    $userData = $session->get('user');
+
+    // Kullanıcı oturumu kontrolü
+    if (!$userData) {
+        return redirect()->to('login');
+    }
+
+    // Yeni bilgileri al
+    $newAd = $this->request->getVar('newAdd');
+    $newSoyad = $this->request->getVar('newSoyad');
+    $newYas = $this->request->getVar('newYas');
+    $newCinsiyet=$this->request->getVar('newCinsiyet');
+    $newEmail = $this->request->getVar('newEmail');
+    $newTc = $this->request->getVar('newTc');
+    $newTelefon = $this->request->getVar('newTelefon');
+
+
+    // Yeni bilgileri kullanıcı verilerine ekle
+    $userData['Ad'] = $newAd;
+    $userData['Soyad'] = $newSoyad;
+    $userData['Yas'] = $newYas;
+    $userData['Cinsiyet'] = $newCinsiyet;
+    $userData['Email'] = $newEmail;
+    $userData['Tc'] = $newTc;
+    $userData['Telefon'] = $newTelefon;
+
+    // Kullanıcı modelini yükle
+    $model = new UsersModel();
+
+    // Kullanıcı verilerini güncelle
+    $updateData = [
+        'Ad' => $newAd,
+        'Soyad' => $newSoyad,
+        'Yas' => $newYas,
+        'Cinsiyet' => $newCinsiyet,
+        'Email' => $newEmail,
+        'Tc' => $newTc,
+        'Telefon' => $newTelefon
+    ];
+
+    $model->where('Yolcu_id', $userData['Yolcu_id'])->set($updateData)->update();
+
+    // Oturumu güncelle
+    $session->set('user', $userData);
+
+    // Başarı mesajı
+    $successMessage2 = 'Bilgileriniz başarıyla güncellendi.';
+
+    // Güncelleme sonrası kullanıcıyı hesabına yönlendir
+    return view('hesabim', ['successMessage' => $successMessage2, 'user' => $userData]);
 }
 
 

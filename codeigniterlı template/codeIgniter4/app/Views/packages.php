@@ -1,9 +1,11 @@
+<?php $session=session();?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
     <head>
         <meta charset="utf-8">
-        <title>Travela - Tourism Website Template</title>
+        <title>Umuttepe Turizm</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -53,16 +55,21 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="register.html"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Kayıt Ol</small></a>
-                        <a href="<?= site_url('/login') ?>"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Giriş Yap</small></a>
+
+                    <?php if(isset($session->user['Yolcu_id'])):?>
                         <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> Kullanıcı</small></a>
+                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> <?php echo isset($session->user['Ad']) ? $session->user['Ad'] : ''; ?></small></a>
                             <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Profilim</a>
+                                <a href="<?= site_url('/hesabim') ?>" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Profilim</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Hesap Ayarları</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Çıkış Yap</a>
+                                <a href="<?php echo site_url('/cikisYap'); ?>" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Çıkış Yap</a>
                             </div>
                         </div>
+                    <?php else: ?>
+                        <a href="<?= site_url('/register') ?>"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Kayıt Ol</small></a>
+                        <a href="<?= site_url('/login') ?>"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Giriş Yap</small></a>
+                    <?php endif; ?>    
+
                     </div>
                 </div>
             </div>
@@ -72,7 +79,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="<?= site_url('/') ?>" class="navbar-brand p-0">
                     <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Umuttepe</h1>
                     <!-- <img src="assets/img/logo.png" alt="Logo"> -->
                 </a>
@@ -411,9 +418,7 @@
                         <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-start">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        
                          
                     </div>
                     </div>

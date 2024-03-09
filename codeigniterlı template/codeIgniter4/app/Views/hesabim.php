@@ -1,7 +1,7 @@
 <?php $session=session(); ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -253,6 +253,7 @@ label {
     </style>
 </head>
 <body>
+  
     <div class="logout-container">
         <a href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
     </div>
@@ -262,57 +263,59 @@ label {
     <div class="form-container">
         
     
-        <form action="" method="post">
+        <form action="<?php echo base_url('/bilgileriGuncelle'); ?>" method="post" onsubmit="return bilgiKontrol()">
 
         <div class="form-row">
-            <div class="form-column">
+          <div class="form-column">
                 <label for="Ad">Ad:</label>
-                <input type="text" id="Ad" name="Ad" value="<?php echo isset($session->user["Ad"]) ? $session->user["Ad"] : ''; ?>">
+                <input type="text" id="newAdd" name="newAdd" value="<?php echo isset($session->user["Ad"]) ? $session->user["Ad"] : ''; ?>" onkeydown="return /[a-zçğıüö]/i.test(event.key) || event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight'" maxlength="20" >
             </div>
     
             <div class="form-column">
                 <label for="Soyad">Soyad:</label>
-                <input type="text" id="Soyad" name="Soyad" value="<?php echo isset($session->user["Soyad"]) ? $session->user["Soyad"] : ''; ?>">
+                <input type="text" id="newSoyad" name="newSoyad" value="<?php echo isset($session->user["Soyad"]) ? $session->user["Soyad"] : ''; ?>" onkeydown="return /[a-zçğıüö]/i.test(event.key) || event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight'" maxlength="20">
             </div>
         </div>
     
         <div class="form-row">
             <div class="form-column">
-                <label for="Yas">Yaş:</label>
-                <input type="number" id="Yas" name="Yas" value="<?php echo isset($session->user["Yas"]) ? $session->user["Yas"] : ''; ?>" required>
+                <label for="Yas">Doğum Tarihi:</label>
+                <input type="date" id="newYas" name="newYas" required>
             </div>
-    
             <div class="form-column">
                 <label for="Cinsiyet">Cinsiyet:</label>
-                <input type="text" name="Cinsiyet" value="<?php echo isset($session->user["Cinsiyet"]) ? $session->user["Cinsiyet"] : ''; ?>" required>
+                <select id="newCinsiyet" name="newCinsiyet" required>
+                    <option value="<?php echo isset($session->user["Cinsiyet"]) ? $session->user["Cinsiyet"] : ''; ?>" disabled selected><?php echo isset($session->user["Cinsiyet"]) ? $session->user["Cinsiyet"] : ''; ?></option>
+                    <option value="Erkek">Erkek</option>
+                    <option value="Kadın">Kadın</option>
+                </select>
             </div>
         </div>
     
         <div class="form-row">
             <div class="form-column">
                 <label for="Email">E-posta:</label>
-                <input type="email" id="Email" name="Email" value="<?php echo isset($session->user["Email"]) ? $session->user["Email"] : ''; ?>">
+                <input type="email" id="newEmail" name="newEmail" value="<?php echo isset($session->user["Email"]) ? $session->user["Email"] : ''; ?>">
             </div>
     
             <div class="form-column">
                 <label for="Tc">TC Kimlik No:</label>
-                <input type="text" id="Tc" name="Tc" value="<?php echo isset($session->user["Tc"]) ? $session->user["Tc"] : ''; ?>">
+                <input type="text" id="newTc" name="newTc" value="<?php echo isset($session->user["Tc"]) ? $session->user["Tc"] : ''; ?>" onkeydown="if (!(event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Tab' || (event.key >= '0' && event.key <= '9'))) event.preventDefault()" maxlength="11">
             </div>
         </div>
     
         <div class="form-row">
             <label for="Telefon">Telefon:</label>
-            <input type="tel" id="Telefon" name="Telefon" value="<?php echo isset($session->user["Telefon"]) ? $session->user["Telefon"] : ''; ?>">
-        </div>
-        <div class="form-row">
-            <label for="Sifre">Şifre:</label>
-            <input type="password" id="Sifre" name="Sifre" value="<?php echo isset($session->user["Sifre"]) ? $session->user["Sifre"] : ''; ?>">
+            <input type="tel" id="newTelefon" name="newTelefon" value="<?php echo isset($session->user["Telefon"]) ? $session->user["Telefon"] : ''; ?>" onkeydown="if (!(event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Tab' || (event.key >= '0' && event.key <= '9'))) event.preventDefault()" maxlength="11">
         </div>
     
         <div class="form-row form-row-center">
-            <button type="submit" name="guncelle">Güncelle</button>
+        <?php if (isset($successMessage1)): ?>
+          <p><?php echo $successMessage1; ?></p>
+          <?php endif; ?>
+            <button type="submit" name="guncelle">Bilgileri Güncelle</button>
         </div>
-    
+        <p id="errorMessage1" style="color: red;"></p>
     </form>
     
       <form action="<?php echo base_url('/sifreDegistir'); ?>" method="post" onsubmit="return sifreKontrol()">
@@ -330,12 +333,12 @@ label {
             </div>
     
         <div class="form-row form-row-center">
-          <?php if (isset($successMessage)): ?>
-          <p><?php echo $successMessage; ?></p>
+          <?php if (isset($successMessage2)): ?>
+          <p><?php echo $successMessage2; ?></p>
           <?php endif; ?>
             <button type="submit" name="guncelle">Şifreyi Değiştir</button>
         </div>
-        <p id="errorMessages" style="color: red;"></p>
+        <p id="errorMessage2" style="color: red;"></p>
       </form>
       
 
@@ -454,7 +457,8 @@ label {
 </body>
 
 <script>
-  function sifreKontrol() {
+  function sifreKontrol() 
+  {
     var phpOldPass = "<?php echo isset($session->user['Sifre']) ? $session->user['Sifre'] : ''; ?>";
     var oldPass = document.getElementById('oldPass').value;
     var newPass = document.getElementById('newPass').value;
@@ -473,7 +477,41 @@ label {
       errorMessages += "Yeni şifreler birbiriyle uyuşmamaktadır.<br>";
     }
 
-    var errorContainer = document.getElementById("errorMessages");
+    var errorContainer = document.getElementById("errorMessage2");
+    errorContainer.innerHTML = errorMessages;
+
+    if (errorMessages !== "") {
+      return false; 
+    } else {
+      return true; 
+    }
+  }
+
+  function bilgiKontrol() {
+    
+    var newAd = document.getElementById('newAdd').value;
+    var newSoyad = document.getElementById('newSoyad').value;
+    var newYas = document.getElementById('newYas').value;
+    var newEposta = document.getElementById('newEmail').value;
+    var newTc = document.getElementById('newTc').value;
+    var newTelefon= document.getElementById('newTelefon').value;
+
+
+    var errorMessages = "";
+
+
+    if (newAd === '' || newSoyad === '' ||  newEposta === '' || newTc === ''|| newTelefon === '') {
+      errorMessages += "Lütfen alanları boş bırakmayınız.<br>";
+    }
+
+    if (newTc.length  !== 11) {
+      errorMessages += "TC kimlik numarası 11 haneli olmak zorundadır!.<br>";
+    }
+    if (newTelefon.length  !== 11) {
+      errorMessages += "TC kimlik numarası 11 haneli olmak zorundadır!.<br>";
+    }
+
+    var errorContainer = document.getElementById("errorMessage1");
     errorContainer.innerHTML = errorMessages;
 
     if (errorMessages !== "") {
@@ -482,6 +520,17 @@ label {
       return true; // Formun gönderilmesine izin verir
     }
   }
+
+  function buGun() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("newYas").value = today;
+    }
+    buGun();
 </script>
 
 

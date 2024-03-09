@@ -73,38 +73,6 @@ class Home extends BaseController
         }
     }
 
-    public function insert(){
-/*
-$data=['registername'=>$this->request->getVar('registername'),
-'registersurname'=>$this->request->getVar('registersurname'),
-'registerbirthdate'=>$this->request->getVar('registerbirthdate'),
-'registergender'=>$this->request->getVar('registergender'),
-'registeremail'=>$this->request->getVar('registeremail'),
-'registerid'=>$this->request->getVar('registerid'),
-'registerphone'=>$this->request->getVar('registerphone'),
-'registerpassword'=>$this->request->getVar('registerpassword')];
-     $db=\Config\Database::connect();
-$builder=$db->table('Yolcular');
-$builder->insert($data);*/
-
-      /*$validation=$this->validate([
-      'registername'=>'required',
-      'registersurname'=>'required',
-      'registerbirthdate'=>'required',
-      'registergender'=>'required',
-      'registeremail'=>'required',
-      'registerid'=>'required',
-      'registerphone'=>'required',
-      'registerpassword'=>'required'     
-      
-      ]);
-      if(!$validation){
-        return view('register',['validation'=>$this->validator]);
-      }else{
-        echo "successs";
-      }*/
-
-    }
     public function services(){
         return view('services');
     }
