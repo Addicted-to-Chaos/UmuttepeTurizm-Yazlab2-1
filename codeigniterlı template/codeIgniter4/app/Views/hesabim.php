@@ -1,3 +1,5 @@
+<?php $session=session(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,69 +235,110 @@ label {
             width: 700px;
             text-align: left;
         }
+
+        .form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container form {
+    width: 48%;
+}
+
+.form-container .form-row {
+    flex-basis: 48%;
+}
+
     </style>
 </head>
 <body>
     <div class="logout-container">
-        <a href="<?php echo base_url('user/cikisYap'); ?>">Çıkış Yap</a>
+        <a href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
     </div>
 
     <h1>HESABIM</h1>
     <br>
-    <div>
-        <!-- Wrap the user information in a form element -->
+    <div class="form-container">
+        
+    
         <form action="" method="post">
 
         <div class="form-row">
             <div class="form-column">
                 <label for="Ad">Ad:</label>
-                <input type="text" id="Ad" name="Ad" value="<?php echo $user['Ad']; ?>">
+                <input type="text" id="Ad" name="Ad" value="<?php echo isset($session->user["Ad"]) ? $session->user["Ad"] : ''; ?>">
             </div>
-
+    
             <div class="form-column">
                 <label for="Soyad">Soyad:</label>
-                <input type="text" id="Soyad" name="Soyad" value="<?php echo $user['Soyad']; ?>">
+                <input type="text" id="Soyad" name="Soyad" value="<?php echo isset($session->user["Soyad"]) ? $session->user["Soyad"] : ''; ?>">
             </div>
         </div>
-
-       <div class="form-row">
+    
+        <div class="form-row">
             <div class="form-column">
                 <label for="Yas">Yaş:</label>
-                <input type="number" id="Yas" name="Yas" value="<?php echo $user['Yas']; ?>" required>
+                <input type="number" id="Yas" name="Yas" value="<?php echo isset($session->user["Yas"]) ? $session->user["Yas"] : ''; ?>" required>
             </div>
-
+    
             <div class="form-column">
-               <label for="Cinsiyet">Cinsiyet:</label>
-            <input type="text" name="Cinsiyet" value="<?php echo $user['Cinsiyet']; ?>" required>
+                <label for="Cinsiyet">Cinsiyet:</label>
+                <input type="text" name="Cinsiyet" value="<?php echo isset($session->user["Cinsiyet"]) ? $session->user["Cinsiyet"] : ''; ?>" required>
             </div>
         </div>
-
+    
         <div class="form-row">
             <div class="form-column">
                 <label for="Email">E-posta:</label>
-                <input type="email" id="Email" name="Email" value="<?php echo $user['Email']; ?>">
+                <input type="email" id="Email" name="Email" value="<?php echo isset($session->user["Email"]) ? $session->user["Email"] : ''; ?>">
             </div>
-
+    
             <div class="form-column">
                 <label for="Tc">TC Kimlik No:</label>
-                <input type="text" id="Tc" name="Tc" value="<?php echo $user['Tc']; ?>">
+                <input type="text" id="Tc" name="Tc" value="<?php echo isset($session->user["Tc"]) ? $session->user["Tc"] : ''; ?>">
             </div>
         </div>
-
+    
         <div class="form-row">
             <label for="Telefon">Telefon:</label>
-            <input type="tel" id="Telefon" name="Telefon" value="<?php echo $user['Telefon']; ?>">
+            <input type="tel" id="Telefon" name="Telefon" value="<?php echo isset($session->user["Telefon"]) ? $session->user["Telefon"] : ''; ?>">
         </div>
         <div class="form-row">
             <label for="Sifre">Şifre:</label>
-            <input type="password" id="Sifre" name="Sifre" value="<?php echo $user['Sifre']; ?>">
+            <input type="password" id="Sifre" name="Sifre" value="<?php echo isset($session->user["Sifre"]) ? $session->user["Sifre"] : ''; ?>">
         </div>
-     
-     <div class="form-row form-row-center">
-         <button type="submit" name="guncelle">Guncelle</button>
-     </div>
+    
+        <div class="form-row form-row-center">
+            <button type="submit" name="guncelle">Güncelle</button>
+        </div>
+    
+    </form>
+    
+      <form action="<?php echo base_url('/sifreDegistir'); ?>" method="post" onsubmit="return sifreKontrol()">
 
-        </form>
+          <div class="form-row">
+            
+                <label for="Password">Eski Şifre:</label>
+                <input type="password" id="oldPass" name="oldPass">
+    
+                <label for="Password">Yeni Şifre:</label>
+                <input type="password" id="newPass" name="newPass">
+
+                <label for="Password">Yeni Şifre Yeniden:</label>
+                <input type="password" id="reNewPass" name="reNewPass">
+            </div>
+    
+        <div class="form-row form-row-center">
+          <?php if (isset($successMessage)): ?>
+          <p><?php echo $successMessage; ?></p>
+          <?php endif; ?>
+            <button type="submit" name="guncelle">Şifreyi Değiştir</button>
+        </div>
+        <p id="errorMessages" style="color: red;"></p>
+      </form>
+      
+
     </div>
     
 <br><br>
@@ -402,10 +445,46 @@ label {
       <div class="fix"></div>
     </div> 
   </div> <!-- bilet 3 son -->
+  
 </div>
 </div>
 
 
 
 </body>
+
+<script>
+  function sifreKontrol() {
+    var phpOldPass = "<?php echo isset($session->user['Sifre']) ? $session->user['Sifre'] : ''; ?>";
+    var oldPass = document.getElementById('oldPass').value;
+    var newPass = document.getElementById('newPass').value;
+    var reNewPass = document.getElementById('reNewPass').value;
+    var errorMessages = "";
+
+    if (phpOldPass !== oldPass) {
+      errorMessages += "Eski şifreniz yanlış girilmiştir.<br>";
+    }
+
+    if (oldPass === '' || newPass === '' || reNewPass === '') {
+      errorMessages += "Lütfen tüm şifre alanlarını doldurunuz.<br>";
+    }
+
+    if (newPass !== reNewPass) {
+      errorMessages += "Yeni şifreler birbiriyle uyuşmamaktadır.<br>";
+    }
+
+    var errorContainer = document.getElementById("errorMessages");
+    errorContainer.innerHTML = errorMessages;
+
+    if (errorMessages !== "") {
+      return false; // Formun gönderimini engeller
+    } else {
+      return true; // Formun gönderilmesine izin verir
+    }
+  }
+</script>
+
+
+
 </html>
+

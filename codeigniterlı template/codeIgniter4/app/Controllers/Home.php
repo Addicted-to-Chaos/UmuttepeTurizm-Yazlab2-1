@@ -46,16 +46,31 @@ class Home extends BaseController
     }
     public function login(){
         
-        return view('login');
+        $session=session();
+        if( $session->has('user') ){
+            return view('hesabim');
+        }else{
+            return view('login');
+        }
     }
-    public function package(){
-        return view('package');
+    public function packages(){
+        return view('packages');
     }
     public function register(){
-        return view('register');
+        $session=session();
+        if( $session->has('user') ){
+            return view('hesabim');
+        }else{
+            return view('register');
+        }
     }
     public function hesabim(){
-        return view('hesabim');
+        $session=session();
+        if( $session->has('user') ){
+            return view('hesabim');
+        }else{
+            return view('login');
+        }
     }
 
     public function insert(){

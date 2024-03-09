@@ -26,3 +26,5 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/dbtest', 'Home::dbtest'); #veritabanının test sayfası
     $routes->post('/girisYap', 'User::girisYap');
     $routes->get('/cikisYap', 'User::cikisYap');
+    $routes->get('/packages', 'User::packages');
+    $routes->post('/sifreDegistir' ,'User::sifreDegistir');

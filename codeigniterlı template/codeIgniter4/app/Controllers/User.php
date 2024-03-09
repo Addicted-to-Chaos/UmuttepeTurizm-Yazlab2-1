@@ -46,11 +46,20 @@ class User extends BaseController
     
         $session = session();
         if ($result) {
-            $session->setFlashdata('login', 'login Successfully');
-            $session->set('user', $result['Yolcu_id']);
+            #$session->set('user', $result['Yolcu_id']);
+            $session->set('user', [
+                'Yolcu_id' => $result['Yolcu_id'],
+                'Email' => $result['Email'],
+                'Sifre' => $result['Sifre'],
+                'Ad' => $result['Ad'],
+                'Soyad' => $result['Soyad'],
+                'Telefon' => $result['Telefon'],
+                'Tc' => $result['Tc'],
+                'Yas' => $result['Yas'],
+                'Cinsiyet' => $result['Cinsiyet'],
+            ]);
             return view('hesabim', ['user' => $result]);
         } else {
-            $session->setFlashdata('login', 'login Failed');
             return view('login');
         }
     }
@@ -62,21 +71,42 @@ public function cikisYap() {
     return view('index');
 }
 
+public function sifreDegistir()
+{
+    $session = session();
+    $userData = $session->get('user');
 
- /*   if($result!=null) {
-      if($result['Sifre']==$this->request->getVar('Sifre'))
-      {
-        echo "<h1> Welcome,".$result['Yolcu_id'];
-      }else {
-        return view('login');
+    if (!$userData) {
+        return redirect()->to('/login');
     }
-    }
-    else {
-        return view('login');
-    }
-*/
 
+    $currentPassword = $this->request->getVar('oldPass');
+    $newPassword = $this->request->getVar('newPass');
+    $confirmPassword = $this->request->getVar('reNewPass');
 
+    if ($userData['Sifre'] !== $currentPassword) {
+        return redirect()->back()->with('error', 'Mevcut şifreniz yanlış.');
+    }
+
+    if ($newPassword !== $confirmPassword) {
+        return redirect()->back()->with('error', 'Yeni şifreler eşleşmiyor.');
+    }
+    $model = new UsersModel();
+    $updateData = [
+        'Sifre' => $newPassword
+    ];
+
+    $model->where('Yolcu_id', $userData['Yolcu_id'])->set($updateData)->update();
+
+    // Oturumu güncelle
+    $userData['Sifre'] = $newPassword;
+    $session->set('user', $userData);
+
+    $successMessage = 'Şifreniz başarıyla güncellendi.';
+
+    // Mesajı view'a gönder
+    return view('hesabim', ['successMessage' => $successMessage]);
+}
 
 
 

@@ -1295,8 +1295,7 @@
         <!-- Template Javascript -->
         <script src="assets/js/main.js"></script>
     </body>
-    <?php $session=session();?>
-<?php echo $session->getFlashdata('login'); ?>
-<hl> Welcome, <?php echo $session->user; ?></hl>
+    <?php $session=session();
+    ?>
 
 </html>
