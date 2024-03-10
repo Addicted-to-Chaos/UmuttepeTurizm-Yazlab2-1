@@ -72,6 +72,9 @@ class Home extends BaseController
             return view('login');
         }
     }
+    public function biletlerim(){
+        return view('biletlerim');
+    }
 
     public function services(){
         return view('services');
