@@ -76,6 +76,10 @@ class Home extends BaseController
         return view('biletlerim');
     }
 
+    public function koltuksecimi(){
+        return view('koltuksecimi');
+    }
+
     public function services(){
         return view('services');
     }
