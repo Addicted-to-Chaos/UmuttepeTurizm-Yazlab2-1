@@ -113,6 +113,9 @@
       <hr style="border-width: 3px; border-color: rgb(190, 192, 199);" >
       <img src="assets/img/direksiyon.png" height="60" width="60"/>
     </div>
+    <div class="row2">
+      <div class="empty-space2"></div>
+    </div>
     <div class="row">
       <div class="seat" id="seat-23"><p style="text-align: center;">24</p></div>
       <div class="seat" id="seat-20"><p style="text-align: center;">21</p></div>
