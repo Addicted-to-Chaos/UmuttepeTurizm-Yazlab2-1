@@ -31,3 +31,4 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/packages', 'User::packages');
     $routes->post('/sifreDegistir' ,'User::sifreDegistir');
     $routes->post('/bilgileriGuncelle' ,'User::bilgileriGuncelle');
+    

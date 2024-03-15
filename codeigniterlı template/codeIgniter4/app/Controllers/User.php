@@ -26,7 +26,17 @@ class User extends BaseController
         $model = new UsersModel();
         $model->insert($data);
 
-    return view('redirect');
+        $email = \Config\Services::email();
+
+        $email->setFrom('umuttepeTurizm@outlook.com', 'UmuttepeTurizm');
+        $email->setTo(strval($data['Email']));
+    
+        $email->setSubject('Kayıt Başarılı');
+        $email->setMessage('Umuttepe Turizm sitesine kaydınız başarıyla yapılmıştır. Eğer kayıt işlemini yapan siz değilseniz lütfen bizimle iletişime geçiniz.');
+
+        $email->send();
+
+        return view('redirect');
 
     }
     

@@ -1,0 +1,235 @@
+INFO - 2024-03-15 12:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 12:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 12:01:13 --> ErrorException: Undefined variable $message
+in APPPATH\Views\register.php on line 157.
+ 1 APPPATH\Views\register.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\register.php', 157)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\register.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('register', [], true)
+ 5 APPPATH\Controllers\Home.php(64): view('register')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 12:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 12:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-15 16:33:37 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-15 16:33:37 --> 220 ZR2P278CA0082.outlook.office365.com Microsoft ESMTP MAIL Service ready at Fri, 15 Mar 2024 16:33:31 +0000
+
+hello: 250-ZR2P278CA0082.outlook.office365.com Hello [46.1.83.20]
+250-SIZE 157286400
+250-PIPELINING
+250-DSN
+250-ENHANCEDSTATUSCODES
+250-STARTTLS
+250-8BITMIME
+250-BINARYMIME
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to send AUTH LOGIN command. Error: 504 5.7.4 Unrecognized authentication type [ZR2P278CA0082.CHEP278.PROD.OUTLOOK.COM 2024-03-15T16:33:37.205Z 08DC4306B68B2568]
+
+ERROR - 2024-03-15 16:35:44 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-15 16:35:44 --> 220 VE1PR08CA0003.outlook.office365.com Microsoft ESMTP MAIL Service ready at Fri, 15 Mar 2024 16:35:38 +0000
+
+hello: 250-VE1PR08CA0003.outlook.office365.com Hello [46.1.83.20]
+250-SIZE 157286400
+250-PIPELINING
+250-DSN
+250-ENHANCEDSTATUSCODES
+250-STARTTLS
+250-8BITMIME
+250-BINARYMIME
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to send AUTH LOGIN command. Error: 504 5.7.4 Unrecognized authentication type [VE1PR08CA0003.eurprd08.prod.outlook.com 2024-03-15T16:35:44.370Z 08DC42E4382CDEA4]
+
+ERROR - 2024-03-15 16:36:43 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A00010B:SSL routines::wrong version number in C:\xampp\htdocs\codeIgniter4\system\Email\Email.php:1897
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1897)
+#1 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1897): fsockopen('ssl://smtp-mail...', 587, NULL, NULL, 20)
+#2 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\codeIgniter4\app\Controllers\Home.php(24): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-03-15 16:36:43 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-15 16:36:43 --> 
+INFO - 2024-03-15 16:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 16:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-15 16:58:28 --> mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email' in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yo...')
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yo...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\codeIgniter4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+#9 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-15 16:58:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 16:58:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 16:58:28 --> [Caused by] mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 16:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-15 16:59:27 --> mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email' in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yo...')
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yo...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\codeIgniter4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(27): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+#9 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-15 16:59:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(27): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 16:59:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(27): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 16:59:27 --> [Caused by] mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(27): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 17:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-15 17:00:46 --> mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email' in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yo...')
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yo...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\codeIgniter4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+#9 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-15 17:00:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 17:00:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-15 17:00:46 --> [Caused by] mysqli_sql_exception: Duplicate entry 'kaan41tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (\'kaan41tor@gmail.com\', \'123\', \'Kaan\', \'Toraman\', \'12345678910\', \'11112222445\', 21, \'Erkek\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(37): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 17:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 17:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -151,6 +151,9 @@
         </div>
      <!--   <input type="submit" name="kaydet" value="Kayıt Ol">-->
      <div class="form-row">
+     <?php if (isset($registerMessage)): ?>
+                  <p><?php echo $registerMessage; ?></p>
+                  <?php endif; ?>
      <button type="submit" class="btn btn-primary" name="kaydet">Kayıt Ol</button>
         </div>
     
@@ -160,4 +163,20 @@
     </form>
     
 </body>
+
+<?php
+if(!empty($_POST["kaydet"])) {
+	$ad = $_POST["Ad"];
+	$soyad = $_POST["Soyad"];
+  $Email = $_POST["Email"];
+	$toEmail = "umuttepeTurizm@outlook.com";
+  
+	$mailHeaders =  
+	"\r\n Merhaba " . $ad." ".$soyad. ",\r\n Kaydınız başarıyla yapılmıştır. Eğer kayıt işlemini yapan siz değilseniz lütfen bizimle irtibata geçiniz.\r\n Saygılar, Umuttepe Turizm";
+
+	if(mail($toEmail, $ad, $mailHeaders)) {
+	    $message = "Kaydınız başarıyla yapılmıştır. Lütfen e-postanızı kontrol ediniz.";
+	}
+}
+?>
 </html>

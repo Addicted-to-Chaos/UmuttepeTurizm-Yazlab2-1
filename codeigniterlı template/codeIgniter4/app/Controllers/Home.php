@@ -101,4 +101,7 @@ class Home extends BaseController
 
         return view('db_deneme', $data);
     }
+
+
+    
 }
