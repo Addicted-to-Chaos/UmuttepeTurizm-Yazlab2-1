@@ -265,27 +265,40 @@ h2#hesap-basligi {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-    
-<h2 id="hesap-basligi">İl Ekle</h2>
-<div class="row">                
-  <div class="container">
-    <div class="form-wrapper">
-        <div class="form-column">
-            <label for="province-code">Plaka Kodu:</label>
-            <input type="text" id="province-code" name="province-code">
-            
-            <label for="province-name">İl Adı:</label>
-            <input type="text" id="province-name" name="province-name">
-            
-            <input type="submit" value="Kaydet">
+                <h2 id="hesap-basligi">İl Ekle</h2>
+<form action="<?php echo site_url('/ilekle'); ?>" method="post">
+    <div class="row">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-column">
+                    <label for="plaka_kodu">Plaka Kodu:</label>
+                    <select id="plaka_kodu" name="plaka_kodu" onchange="updateCityName()">
+                        <?php
+                        // Plaka kodları ve il adları
+                        $plaka_il = array(
+                            "01" => "Ankara",
+                            "02" => "Adıyaman",
+                            "03" => "Afyonkarahisar",
+                            // Diğer plaka kodları ve il adları buraya eklenebilir
+                        );
+
+                        // Her bir il için seçenek oluştur
+                        foreach ($plaka_il as $plaka => $il) {
+                            echo "<option value='$plaka'>$plaka</option>"; // Sadece plaka kodunu göster
+                        }
+                        ?>
+                    </select>
+                    
+                    <label for="sehir_adi">İl Adı:</label>
+                    <input type="text" id="sehir_adi" name="sehir_adi" readonly>
+                    
+                    <input type="submit" value="Kaydet">
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
-            
-
-
-              
+</form>          
+          
     </div>
     <!-- End of Page Wrapper -->
 
@@ -334,3 +347,16 @@ h2#hesap-basligi {
 </body>
 
 </html>
+<script>
+    // Seçilen plaka koduna göre il adını güncelle
+    function updateCityName() {
+        var plaka_kodu = document.getElementById("plaka_kodu").value;
+        var sehir_adi_input = document.getElementById("sehir_adi");
+        var selected_city = "<?php echo $plaka_il['01']; ?>"; // Default olarak Ankara'yı seçili göster
+        
+        // Seçilen plaka koduna göre il adını güncelle
+        selected_city = "<?php echo $plaka_il['" + plaka_kodu + "']; ?>";
+
+        sehir_adi_input.value = selected_city;
+    }
+</script>

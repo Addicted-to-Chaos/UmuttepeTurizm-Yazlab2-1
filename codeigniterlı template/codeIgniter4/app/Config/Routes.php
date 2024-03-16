@@ -41,3 +41,6 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/voyage','Home::voyage');
     $routes->post('/seferler' ,'User::seferler');
     $routes->get('/koltuksecimi','Home::koltuksecimi');
+
+    $routes->post('/ekleSefer' ,'User::ekleSefer');
+    $routes->post('/ilekle' ,'User::ilekle');

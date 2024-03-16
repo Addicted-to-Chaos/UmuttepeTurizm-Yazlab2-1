@@ -1,5 +1,6 @@
+<?php $session=session();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>umuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -269,56 +270,66 @@ h2#hesap-basligi {
 <h2 id="hesap-basligi">Sefer Ekle</h2>
                     <!-- Content Row -->
 
-
+<form method="post" action="<?php echo site_url('/ekleSefer'); ?>">    
 <div class="row">                
   <div class="container">
-                        
+               
     <div class="form-wrapper">
+        
         <div class="form-column">
-            <label for="departure-city">Kalkış Şehri:</label>
-            <select id="departure-city" name="departure-city">
-                <option value="istanbul">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">Bursa</option>
-                <option value="antalya">Kocaeli</option>
+            <label for="seferKalkiSehir">Kalkış Şehri:</label>
+            <?php
+                use App\Models\UserModelSehirler;
+                $sehirModel = new UserModelSehirler();
+                $sehirler = $sehirModel->findAll();
+            ?>
+            <select id="seferKalkiSehir" name="seferKalkiSehir">
+            <?php
+            foreach ($sehirler as $sehir) {
+            echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
+            }
+            ?>
             </select>
             
-            <label for="arrival-city">Varış Şehri:</label>
-            <select id="arrival-city" name="arrival-city">
-                <option value="istanbul">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">Bursa</option>
-                <option value="antalya">Kocaeli</option>
+            <label for="seferVarisSehir">Varış Şehri:</label>
+            <select id="seferVarisSehir" name="seferVarisSehir">
+            <?php
+            foreach ($sehirler as $sehir) {
+            echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
+            }
+            ?>
             </select>
             
-            <label for="date">Tarih:</label>
-            <input type="date" id="date" name="date">
+            <label for="seferDate">Tarih:</label>
+            <input type="date" id="seferDate" name="seferDate">
             
             <label for="departure-time">Kalkış Saati:</label>
             <input type="time" id="departure-time" name="departure-time">
             
             <label for="arrival-time">Varış Saati:</label>
-            <input type="time" id="arrival-time" name="arrival-time">
+            <input type="time" id="arrival-time" name="arrival-time" step="1" value="19:30">
         </div>
         <div class="form-column">
             <label for="platform">Peron No:</label>
-            <input type="text" id="platform" name="platform">
+            <input type="text" id="seferPeron" name="seferPeron">
             
             <label for="plate">Plaka:</label>
-            <input type="text" id="plate" name="plate">
+            <input type="text" id="seferPlaka" name="seferPlaka">
             
             <label for="capacity">Kapasite:</label>
-            <input type="number" id="capacity" name="capacity">
+            <input type="number" id="seferKapasite" name="seferKapasite">
             
             <label for="price">Bilet Fiyatı:</label>
-            <input type="text" id="price" name="price">
+            <input type="text" id="seferFiyat" name="seferFiyat">
             
-            <input type="submit" value="Kaydet">
+            <input type="submit" value="Sefer Ekle">
         </div>
+        
     </div>
-    
 </div>
 </div>
+</form>
+
 
               
     </div>
@@ -367,5 +378,5 @@ h2#hesap-basligi {
     <script src="assets/js_/demo/chart-pie-demo.js"></script>
 
 </body>
-
 </html>
+

@@ -1,6 +1,8 @@
 <?php  namespace App\Controllers;
 use App\Models\UsersModel;
 use App\Models\UserModelSeferler;
+use App\Models\UserModeliller;
+
 
 
 
@@ -138,18 +140,14 @@ public function sifreDegistir()
 
 public function bilgileriGuncelle()
 {
-    // Oturumu başlat
     $session = session();
 
-    // Kullanıcı verilerini oturumdan al
     $userData = $session->get('user');
 
-    // Kullanıcı oturumu kontrolü
     if (!$userData) {
         return redirect()->to('login');
     }
 
-    // Yeni bilgileri al
     $newAd = $this->request->getVar('newAdd');
     $newSoyad = $this->request->getVar('newSoyad');
     $newYas = $this->request->getVar('newYas');
@@ -159,7 +157,6 @@ public function bilgileriGuncelle()
     $newTelefon = $this->request->getVar('newTelefon');
 
 
-    // Yeni bilgileri kullanıcı verilerine ekle
     $userData['Ad'] = $newAd;
     $userData['Soyad'] = $newSoyad;
     $userData['Yas'] = $newYas;
@@ -168,10 +165,8 @@ public function bilgileriGuncelle()
     $userData['Tc'] = $newTc;
     $userData['Telefon'] = $newTelefon;
 
-    // Kullanıcı modelini yükle
     $model = new UsersModel();
 
-    // Kullanıcı verilerini güncelle
     $updateData = [
         'Ad' => $newAd,
         'Soyad' => $newSoyad,
@@ -228,6 +223,65 @@ public function seferler()
                         return view('voyage', $data); 
 
 }
+
+
+public function ilekle()
+{             
+    $plaka_kodu = $this->request->getVar('plaka_kodu');
+    $sehir_adi = $this->request->getVar('sehir_adi');  
+
+    $model = new UserModeliller();
+
+    $updateData = [
+        'Plaka_kodu' => $plaka_kodu,
+        'Sehir_adi' => $sehir_adi,      
+    ];    
+
+    // Oturumu güncelle
+    $model->insert($updateData);    
+    return view('ilekle');
+}
+
+public function eklesefer()
+{
+
+
+
+    $kalkisSehir = $this->request->getVar('seferKalkiSehir');
+    $varisSehir = $this->request->getVar('seferVarisSehir');
+    $seferTarih = $this->request->getVar('seferDate');
+    $kalkisSaat=$this->request->getVar('departure-time');
+    $varisSaat = $this->request->getVar('arrival-time');
+    $seferPeron = $this->request->getVar('seferPeron');
+    $seferPlaka = $this->request->getVar('seferPlaka');
+    $seferKapasite = $this->request->getVar('seferKapasite');
+    $seferFiyat = $this->request->getVar('seferFiyat');
+
+
+    $model = new UserModelSeferler();
+
+    $updateData = [
+        'Kalkis_sehir' => $kalkisSehir,
+        'Varis_sehir' => $varisSehir,
+        'Tarih' => $seferTarih,
+        'Kalkis_saat' => $kalkisSaat,
+        'Varis_saat' => $varisSaat,
+        'Peron_no' => $seferPeron,
+        'Plaka' => $seferPlaka,
+        'Kapasite' => $seferKapasite,
+        'Fiyat' => $seferFiyat
+
+    ];
+
+    $model->insert($updateData);
+
+    return view('seferekle');
+
+}
+
+
+
+
 
  }
 

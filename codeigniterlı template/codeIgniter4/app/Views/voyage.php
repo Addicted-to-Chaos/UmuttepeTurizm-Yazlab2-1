@@ -227,26 +227,31 @@
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
             <br>
                 <h1 style="color: #1C357C; ">Aktif Seferler</h1>
+                <hr style="border-width: 2px;color:#1C357C;">
                 <br>
             </div>
             <div class="col-12">
 
-                <?php foreach ($seferler as $sefer): ?>
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                        <div class="service-icon p-4">
-                            <img src="assets/img/bus.png" width="250" class="img-fluid">
-                        </div>
-                        <div class="service-content">
-                            <h2 style="color: #6482B8">Konforlu Koltuk Düzeni</h2>
-                            <p class="mb-0"><b> Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir'] ?>ㅤㅤ
-                            <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
-                            <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?>ㅤㅤ
-                            <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br>
-                        </div>
-                        <button class="btn btn-primary ms-auto mt-20 me-3" style="width: 200px; margin-right: 20px;" onclick="openPopup()">Koltuk Seç</button>
-                    </div>
-                    <br>
-                <?php endforeach; ?>
+            <?php if (empty($seferler)): ?>
+                <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
+<?php else: ?>
+    <?php foreach ($seferler as $sefer): ?>
+        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+            <div class="service-icon p-4">
+                <img src="assets/img/bus.png" width="250" class="img-fluid">
+            </div>
+            <div class="service-content">
+                <h2 style="color: #6482B8">Konforlu Koltuk Düzeni</h2>
+                <p class="mb-0"><b> Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir'] ?>ㅤㅤ
+                <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
+                <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?>ㅤㅤ
+                <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br>
+            </div>
+            <button class="btn btn-primary ms-auto mt-20 me-3" style="width: 200px; margin-right: 20px;" onclick="openPopup()">Koltuk Seç</button>
+        </div>
+        <br>
+    <?php endforeach; ?>
+<?php endif; ?>
             </div>
 
             <!-- Popup -->
