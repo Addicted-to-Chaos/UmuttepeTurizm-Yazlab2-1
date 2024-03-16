@@ -98,6 +98,7 @@
                         <a href="<?= site_url('/services') ?>" class="nav-item nav-link">Hizmetlerimiz</a>
                         <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">Seferler</a>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">İletişim</a>
+                
                        
                     </div>
                     <a href="<?= site_url('/buyTicket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>

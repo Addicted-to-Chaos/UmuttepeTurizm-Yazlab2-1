@@ -141,7 +141,7 @@
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
+                                    <a href="buyTicket" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
                                 </div>
                                 <div class="col-6 text-end px-0">
                                     <a href="#" class="btn-hover btn text-white py-2 px-4"></a>
@@ -166,7 +166,7 @@
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
+                                    <a href="buyTicket" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
                                 </div>
                            
                             </div>
@@ -188,7 +188,7 @@
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
+                                    <a href="buyTicket" class="btn-hover btn text-white py-2 px-4">Seferlere Git</a>
                                 </div>
                             
                             </div>

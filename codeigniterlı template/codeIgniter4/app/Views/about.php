@@ -286,17 +286,17 @@ namespace about
         </div>
         <!-- Subscribe End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5">
+         <!-- Footer Start -->
+         <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <h4 class="mb-4 text-white">İletişime geçin</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> Kocaeli Üniversitesi</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> umuttepeTurizm@outlook</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +123456</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +123456</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -308,24 +308,22 @@ namespace about
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                            <h4 class="mb-4 text-white">Firma</h4>
+                            <a href="about"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Kariyer</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Basın</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Hediye Kartı</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Magazin</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                            <h4 class="mb-4 text-white">Yardım</h4>
+                            <a href="contact"><i class="fas fa-angle-right me-2"></i> İletişim</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gizlilik Sözleşmesi</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Hüküm ve Koşullar</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Çerez Politikası</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -335,12 +333,10 @@ namespace about
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
+                                                <option value="2">Türkçe</option>
+                                                <option value="3">English</option>
                                             </select>
-                                            <label for="select1">English</label>
+                                            <label for="select1">Türkçe</label>
                                         </div>
                                     </form>
                                 </div>
@@ -348,17 +344,15 @@ namespace about
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
+                                                <option value="1">TL</option>
+                                                <option value="2">USD</option>
                                             </select>
-                                            <label for="select1">$</label>
+                                            <label for="select1">₺</label>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <h4 class="text-white mb-3">Payments</h4>
+                            <h4 class="text-white mb-3">Ödeme</h4>
                             <div class="footer-bank-card">
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
