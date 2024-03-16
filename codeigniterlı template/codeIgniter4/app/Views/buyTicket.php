@@ -93,27 +93,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="<?= site_url('/') ?>" class="nav-item nav-link active">Ana Sayfa</a>
+                        <a href="<?= site_url('/') ?>" class="nav-item nav-link">Ana Sayfa</a>
                         <a href="<?= site_url('/about') ?>" class="nav-item nav-link">Hakkımızda</a>
                         <a href="<?= site_url('/services') ?>" class="nav-item nav-link">Hizmetlerimiz</a>
-                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">İndirimli Seferler</a>
-                        <a href="<?= site_url('/blog') ?>" class="nav-item nav-link">Blog</a>
+                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">Seferler</a>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">İletişim</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="<?= site_url('/destination') ?>" class="dropdown-item">Destination</a>
-                                <a href="<?= site_url('/tour') ?>" class="dropdown-item">Explore Tour</a>
-                                <a href="<?= site_url('/booking') ?>" class="dropdown-item">Travel Booking</a>
-                                <a href="<?= site_url('/gallery') ?>" class="dropdown-item">Our Gallery</a>
-                                <a href="<?= site_url('/guides') ?>" class="dropdown-item">Travel Guides</a>
-                                <a href="<?= site_url('/testimonial') ?>" class="dropdown-item">Testimonial</a>
-                                <a href="<?= site_url('/404') ?>" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
                        
                     </div>
-                    <a href="<?= site_url('/buyticket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
+                    <a href="<?= site_url('/buyTicket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
                 </div>
             </nav>
 
@@ -257,9 +244,7 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="assets/img/destination-1.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">New York City</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="assets/img/destination-1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -270,9 +255,7 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="assets/img/destination-2.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Las vegas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="assets/img/destination-2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -283,9 +266,7 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="assets/img/destination-7.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                   
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="assets/img/destination-7.jpg" data-lightbox="destination-7"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -295,11 +276,7 @@
                                         <div class="col-lg-6">
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="assets/img/destination-8.jpg" alt="">
-                                                <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                                </div>
+                                                
                                                 <div class="search-icon">
                                                     <a href="assets/img/destination-8.jpg" data-lightbox="destination-8"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                                 </div>
@@ -311,9 +288,7 @@
                                     <div class="destination-img h-100">
                                         <img class="img-fluid rounded w-100 h-100" src="assets/img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-9.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -324,9 +299,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-4.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -337,9 +310,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -350,9 +321,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -367,9 +336,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -380,9 +347,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -397,9 +362,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                          
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -410,9 +373,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -427,9 +388,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -440,9 +399,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -457,9 +414,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                           
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -470,9 +425,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                          
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -487,9 +440,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                          
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -500,9 +451,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="assets/img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            
                                         </div>
                                         <div class="search-icon">
                                             <a href="assets/img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -529,9 +478,7 @@
                 <div class="tab-class text-center">
                     <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
                         <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#NationalTab-1">
-                                <span class="text-dark" style="width: 250px;">Tüm Geziler</span>
-                            </a>
+                            
                         </li>
                     
                     </ul>
@@ -633,17 +580,17 @@
         </div>
         <!-- Explore Tour Start -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5">
+              <!-- Footer Start -->
+              <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">İletişime geçin</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <a href=""><i class="fas fa-home me-2"></i> Kocaeli Üniversitesi</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> umuttepeTurizm@outlook</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +123456</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +123456</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -656,18 +603,18 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Firma</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Kariyer</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Basın</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Hediye Kartı</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazin</a>
+                            <a href="about"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Kariyer</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Basın</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Hediye Kartı</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Magazin</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Yardım</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> İletişim</a>
+                            <a href="contact"><i class="fas fa-angle-right me-2"></i> İletişim</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Gizlilik Sözleşmesi</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Hüküm ve Koşullar</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Çerez Politikası</a>
@@ -680,12 +627,10 @@
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
+                                                <option value="2">Türkçe</option>
+                                                <option value="3">English</option>
                                             </select>
-                                            <label for="select1">English</label>
+                                            <label for="select1">Türkçe</label>
                                         </div>
                                     </form>
                                 </div>
@@ -693,12 +638,10 @@
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
+                                                <option value="1">TL</option>
+                                                <option value="2">USD</option>
                                             </select>
-                                            <label for="select1">$</label>
+                                            <label for="select1">₺</label>
                                         </div>
                                     </form>
                                 </div>

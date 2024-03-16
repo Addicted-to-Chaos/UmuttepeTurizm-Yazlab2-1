@@ -91,24 +91,12 @@
                         <a href="<?= site_url('/') ?>" class="nav-item nav-link">Ana Sayfa</a>
                         <a href="<?= site_url('/about') ?>" class="nav-item nav-link">Hakkımızda</a>
                         <a href="<?= site_url('/services') ?>" class="nav-item nav-link">Hizmetlerimiz</a>
-                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link active">İndirimli Seferler</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link active">Seferler</a>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">İletişim</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="<?= site_url('/destination') ?>" class="dropdown-item">Destination</a>
-                                <a href="<?= site_url('/tour') ?>" class="dropdown-item">Explore Tour</a>
-                                <a href="<?= site_url('/booking') ?>" class="dropdown-item">Travel Booking</a>
-                                <a href="<?= site_url('/gallery') ?>" class="dropdown-item">Our Gallery</a>
-                                <a href="<?= site_url('/guides') ?>" class="dropdown-item">Travel Guides</a>
-                                <a href="<?= site_url('/testimonial') ?>" class="dropdown-item">Testimonial</a>
-                                <a href="<?= site_url('/404') ?>" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
+                    
                        
                     </div>
-                    <a href="<?= site_url('/buyticket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
+                    <a href="<?= site_url('/buyTicket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
                 </div>
             </nav>
         </div>
@@ -117,10 +105,10 @@
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">İndirimli Seferler</h1>
+                <h3 class="text-white display-3 mb-4">Seferler</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="<?= site_url('/') ?>">Ana Sayfa</a></li>
-                    <li class="breadcrumb-item active text-white">İndirimli Seferler</li>
+                    <li class="breadcrumb-item active text-white">Seferler</li>
                 </ol>    
             </div>
         </div>
@@ -129,6 +117,8 @@
         <!-- Packages Start -->
         <div class="container-fluid packages py-5">
             <div class="container py-5">
+
+
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">İndirim</h5>
                     <h1 class="mb-0">İndirimli Seferler</h1>
@@ -209,101 +199,7 @@
         </div>
         <!-- Packages End -->
 
-        <!-- Tour Booking Start -->
-                <div class="container-fluid search-bar position-relative" style="background: rgb(84, 113, 172);">
-                    <div class="container">
-                        <div id="booking" class="section">
-                            <div class="section-center">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="booking-cta">
-                                            <h1 style="color: rgb(232, 235, 240);">BİLETİNİZİ BUGÜN ALIN</h1>
-                                                    <p>Avantajlı fırsatları kaçırmayın</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-7 col-md-offset-1">
-                                                <div class="booking-form">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <div class="form-checkbox">
-                                                                <label for="gidisdonus">
-                                                                    <input type="radio" id="gidisdonus" name="flight-type">
-                                                                    <span></span>Gidiş - Dönüş
-                                                                </label>
-                                                                <label for="tekyon">
-                                                                    <input type="radio" id="tekyon" name="flight-type">
-                                                                    <span></span>Tek Yön
-                                                                </label>
-                                                            
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <span class="form-label" style="color: rgb(57, 82, 131);" >Nereden</span>
-                                                                    <input class="form-control" type="text" placeholder="Şehir">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <span class="form-label"  style="color: rgb(57, 82, 131);">Nereye</span>
-                                                                    <input class="form-control" type="text" placeholder="Şehir">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <span class="form-label"  style="color: rgb(57, 82, 131);">Gidiş Tarihi</span>
-                                                                    <input class="form-control" type="date" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <span class="form-label"  style="color: rgb(57, 82, 131);">Dönüş Tarihi</span>
-                                                                    <input class="form-control" type="date" required>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <span class="form-label"  style="color: rgb(57, 82, 131);">Yetişkin</span>
-                                                                    <select class="form-control">
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                        <option>3</option>
-                                                                    </select>
-                                                                    <span class="select-arrow"></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <span class="form-label"  style="color: rgb(57, 82, 131);">Çocuk (0-17)</span>
-                                                                    <select class="form-control">
-                                                                        <option>0</option>
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                    </select>
-                                                                    <span class="select-arrow"></span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                        <div class="form-btn" >
-                                                            <button class="submit-btn" >SEFERLERİ GÖSTER</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <!-- Tour Booking End -->
+                
         
         <!-- Subscribe Start -->
         <div class="container-fluid subscribe py-5">
@@ -322,17 +218,18 @@
         </div>
         <!-- Subscribe End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5">
+       
+         <!-- Footer Start -->
+         <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <h4 class="mb-4 text-white">İletişime geçin</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> Kocaeli Üniversitesi</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> umuttepeTurizm@outlook</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +123456</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +123456</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -344,24 +241,22 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                            <h4 class="mb-4 text-white">Firma</h4>
+                            <a href="about"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Kariyer</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Basın</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Hediye Kartı</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Magazin</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                            <h4 class="mb-4 text-white">Yardım</h4>
+                            <a href="contact"><i class="fas fa-angle-right me-2"></i> İletişim</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gizlilik Sözleşmesi</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Hüküm ve Koşullar</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Çerez Politikası</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -371,12 +266,10 @@
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
+                                                <option value="2">Türkçe</option>
+                                                <option value="3">English</option>
                                             </select>
-                                            <label for="select1">English</label>
+                                            <label for="select1">Türkçe</label>
                                         </div>
                                     </form>
                                 </div>
@@ -384,17 +277,15 @@
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
+                                                <option value="1">TL</option>
+                                                <option value="2">USD</option>
                                             </select>
-                                            <label for="select1">$</label>
+                                            <label for="select1">₺</label>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <h4 class="text-white mb-3">Payments</h4>
+                            <h4 class="text-white mb-3">Ödeme</h4>
                             <div class="footer-bank-card">
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>

@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
     <style>
         body {
             display: flex;
@@ -93,7 +95,7 @@ label {
     font-size: 15px; 
 }
         h1 {
-            color: #3498db;
+            color: #1C357C;
             text-align: center; 
         }
 
@@ -111,7 +113,7 @@ label {
         label {
             display: block;
             margin-bottom: 8px;
-            color: #3498db;
+            color: #1C357C;
         }
 
         input {
@@ -143,7 +145,7 @@ label {
         }
 
         button[type="submit"] {
-            background-color: #3498db;
+            background-color: #1C357C;
             color: #fff;
             width: 100%;
             padding: 10px 20px;
@@ -153,7 +155,7 @@ label {
         }
 
         button[type="submit"]:hover {
-            background-color: #2980b9;
+            background-color: rgb(57, 82, 131);
         }
 
 
@@ -229,11 +231,11 @@ label {
 
 
 h2#hesap-basligi {
-  color: #3498db;
+  color: #1C357C;
     }
 
  .left-menu a.active {
-    color: #3498db; /* Change this to the desired blue color */
+    color: #1C357C; /* Change this to the desired blue color */
 }
 
 </style>
@@ -254,6 +256,8 @@ h2#hesap-basligi {
         <hr>
         <a  href="" class="menu-item">Ödeme ve Fatura</a>
        <hr>
+        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <hr>
         <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
         <hr>
 </div>

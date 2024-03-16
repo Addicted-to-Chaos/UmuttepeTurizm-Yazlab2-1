@@ -80,6 +80,19 @@ class Home extends BaseController
         return view('koltuksecimi');
     }
 
+    public function seferekle(){
+        return view('seferekle');
+    }
+    public function ilekle(){
+        return view('ilekle');
+    }
+    public function biletlog(){
+        return view('biletlog');
+    }
+    public function yolculist(){
+        return view('yolculist');
+    }
+
     public function services(){
         return view('services');
     }

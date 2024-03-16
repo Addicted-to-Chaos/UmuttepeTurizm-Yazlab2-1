@@ -26,7 +26,7 @@
         }
 
         h2 {
-            color: rgb(57, 82, 131);
+            color: #1C357C;
         }
 
         label {
@@ -61,7 +61,7 @@
             text-decoration: underline;
         }
         button[type="submit"] {
-            background-color: #3498db;
+            background-color: #1C357C;
             color: #fff;
             width: 100%;
             padding: 10px 20px;

@@ -116,7 +116,7 @@
 }
 
 .left-menu a.active {
-    color: #3498db; /* Change this to the desired blue color */
+    color: #1C357C; 
 }
 
 
@@ -149,7 +149,7 @@
 
 
 h2#hesap-basligi {
-  color: #3498db;
+  color: #1C357C;
     }
 </style>
 </head>
@@ -167,9 +167,11 @@ h2#hesap-basligi {
                 <a  href="" class="menu-item active">Bilet Bilgilerim</a>
                 <hr>
                 <a  href="" class="menu-item">Ödeme ve Fatura</a>
-               <hr>
-                <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
                 <hr>
+        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <hr>
+        <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
+        <hr>
         </div>
 
     <div class="content-wrapper">

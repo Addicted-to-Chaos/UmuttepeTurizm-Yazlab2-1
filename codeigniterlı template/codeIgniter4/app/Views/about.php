@@ -94,24 +94,12 @@ namespace about
                         <a href="<?= site_url('/') ?>" class="nav-item nav-link">Ana Sayfa</a>
                         <a href="<?= site_url('/about') ?>" class="nav-item nav-link  active">Hakkımızda</a>
                         <a href="<?= site_url('/services') ?>" class="nav-item nav-link">Hizmetlerimiz</a>
-                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">İndirimli Seferler</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">Seferler</a>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">İletişim</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="<?= site_url('/destination') ?>" class="dropdown-item">Destination</a>
-                                <a href="<?= site_url('/tour') ?>" class="dropdown-item">Explore Tour</a>
-                                <a href="<?= site_url('/booking') ?>" class="dropdown-item">Travel Booking</a>
-                                <a href="<?= site_url('/gallery') ?>" class="dropdown-item">Our Gallery</a>
-                                <a href="<?= site_url('/guides') ?>" class="dropdown-item">Travel Guides</a>
-                                <a href="<?= site_url('/testimonial') ?>" class="dropdown-item">Testimonial</a>
-                                <a href="<?= site_url('/404') ?>" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
+                       
                        
                     </div>
-                    <a href="<?= site_url('/buyticket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
+                    <a href="<?= site_url('/buyTicket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
                 </div>
             </nav>
 
@@ -136,7 +124,7 @@ namespace about
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
                         <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                            <img src="assets/img/about-img.jpg" class="img-fluid w-100 h-100" alt="">
+                            <img src="assets/img/about-img2.jpg" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(assets/img/about-img-1.png);">
