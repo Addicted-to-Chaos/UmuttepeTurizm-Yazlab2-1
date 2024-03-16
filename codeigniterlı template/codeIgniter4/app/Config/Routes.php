@@ -31,4 +31,9 @@ use CodeIgniter\Router\RouteCollection;
     $routes->get('/packages', 'User::packages');
     $routes->post('/sifreDegistir' ,'User::sifreDegistir');
     $routes->post('/bilgileriGuncelle' ,'User::bilgileriGuncelle');
-    
+    $routes->get('/payment', 'Home::payment');
+    $routes->get('/admin', 'Home::admin');
+    $routes->get('/buyticket','Home::buyticket');
+    $routes->get('/voyage','Home::voyage');
+    $routes->post('/seferler' ,'User::seferler');
+    $routes->get('/koltuksecimi','Home::koltuksecimi');

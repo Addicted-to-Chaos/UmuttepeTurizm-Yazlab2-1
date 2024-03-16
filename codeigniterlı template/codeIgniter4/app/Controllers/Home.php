@@ -92,7 +92,28 @@ class Home extends BaseController
     public function regConnect(){
         return view('regConnect');
     }
-
+    public function payment(){
+        return view('payment');
+    }
+    public function admin() {
+        $session = session();
+    $user = $session->get('user');
+    
+    // Admin kullanıcının e-posta adresi
+    $adminEmail = 'admin@gmail.com';
+    
+    if($user && $user['Email'] === $adminEmail){
+        return view('admin');
+    } else {
+        if($session->has('user')){
+        return view('hesabim');
+        }
+        else{
+            return view('index');
+        }
+    }
+    }
+    
     public function dbtest(){
         $db = \Config\Database::connect();
 
@@ -103,5 +124,16 @@ class Home extends BaseController
     }
 
 
+    public function buyticket(){
+        return view('buyTicket');
+    }
+    
+    public function voyage(){
+        return view('voyage');
+    }
+
+    public function koltuk(){
+        return view('koltuksecimi');
+    }
     
 }

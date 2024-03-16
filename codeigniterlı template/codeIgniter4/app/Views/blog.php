@@ -103,7 +103,7 @@
                         </div>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+                    <a href="<?= site_url('/buyticket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
                 </div>
             </nav>
         </div>

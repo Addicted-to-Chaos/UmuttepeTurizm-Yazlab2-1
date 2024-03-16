@@ -104,7 +104,7 @@
                         </div>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+                    <a href="<?= site_url('/buyticket') ?>" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Bilet Al</a>
                 </div>
             </nav>
         </div>
@@ -197,7 +197,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Bilet Al</button>
                                 </div>
                             </div>
                         </form>

@@ -1,5 +1,7 @@
 <?php  namespace App\Controllers;
 use App\Models\UsersModel;
+use App\Models\UserModelSeferler;
+
 
 
 use CodeIgniter\Controller;
@@ -53,10 +55,26 @@ class User extends BaseController
         $result = $model->where('Email', $this->request->getVar('Email'))
                         ->where('Sifre', $this->request->getVar('Sifre'))
                         ->first();
+
     
         $session = session();
-        if ($result) {
-            #$session->set('user', $result['Yolcu_id']);
+       if ($result) {
+        if ($result['Email'] == 'admin@gmail.com' && $result['Sifre'] == '123') {
+            // Admin girişi yapıldığında
+            $session->set('user', [
+                'Yolcu_id' => $result['Yolcu_id'],
+                'Email' => $result['Email'],
+                'Sifre' => $result['Sifre'],
+                'Ad' => $result['Ad'],
+                'Soyad' => $result['Soyad'],
+                'Telefon' => $result['Telefon'],
+                'Tc' => $result['Tc'],
+                'Yas' => $result['Yas'],
+                'Cinsiyet' => $result['Cinsiyet'],
+            ]);
+            return redirect()->to('admin'); // Admin sayfasına yönlendir
+        } else {
+            // Normal kullanıcı girişi yapıldığında
             $session->set('user', [
                 'Yolcu_id' => $result['Yolcu_id'],
                 'Email' => $result['Email'],
@@ -69,10 +87,11 @@ class User extends BaseController
                 'Cinsiyet' => $result['Cinsiyet'],
             ]);
             return view('index', ['user' => $result]);
-        } else {
-            return view('login');
         }
+    } else {
+        return view('login');
     }
+}
     
     
 public function cikisYap() {
@@ -175,6 +194,41 @@ public function bilgileriGuncelle()
     return view('hesabim', ['successMessage' => $successMessage2, 'user' => $userData]);
 }
 
+public function seferler()
+{
+   
+    $model = new UserModelSeferler();
+        $results = $model->where('Kalkis_sehir', $this->request->getVar('sehirNereden'))
+                        ->where('Varis_sehir', $this->request->getVar('sehirNereye'))
+                        ->where('Tarih', $this->request->getVar('departure-date'))
+                        ->findAll();
 
+                        $seferler = []; 
+
+                        foreach ($results as $result) {
+                            $sefer = [
+                                'Sefer_id' => $result['Sefer_id'],
+                                'Kalkis_sehir' => $result['Kalkis_sehir'],
+                                'Varis_sehir' => $result['Varis_sehir'],
+                                'Tarih' => $result['Tarih'],
+                                'Kalkis_saat' => $result['Kalkis_saat'],
+                                'Varis_saat' => $result['Varis_saat'],
+                                'Peron_no' => $result['Peron_no'],
+                                'Plaka' => $result['Plaka'],
+                                'Kapasite'=> $result['Kapasite'],
+                                'Dolu_koltuk'=> $result['Dolu_koltuk'],
+                                'Bos_koltuk'=> $result['Bos_koltuk'],
+                                'Fiyat'=> $result['Fiyat']
+                            ];
+                            $seferler[] = $sefer; 
+                        }
+                    
+                        $data['seferler'] = $seferler; 
+                    
+                        return view('voyage', $data); 
+
+}
 
  }
+
+ ?>
