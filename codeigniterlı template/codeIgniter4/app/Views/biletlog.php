@@ -1,5 +1,6 @@
+<?php $session=session();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>UmuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -250,14 +251,37 @@ th {
             veritabanini degistirdik diyodunuz son halini bana atarsaniz bakarim bu kisma-->
 
             <!-- Simdilik ornek satir -->
-            <tr>
-                <td>1</td>
-                <td>6ÖS08032024170312334ABC567</td>
-                <td>1</td>
-                <td>15</td>
-                <td>Satin Alindi</td>
-                <td>2024-03-08 21:25:54</td>
-            </tr>
+            <?php
+    use App\Models\UserModelBiletLog;
+    use App\Models\UserModelBiletler;
+
+    $biletLogModel = new UserModelBiletLog();
+    $biletLog = $biletLogModel->findAll();
+
+    $biletlerModel = new UserModelBiletler();
+    $bilet = $biletlerModel->findAll();
+
+    if(empty($biletLog)){
+        echo '<p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>';
+    } else {
+        $counter = 1;
+        foreach ($biletLog as $bilLog) {
+            
+            $bil = $bilet[$counter - 1]; 
+
+            echo '<tr>';
+            echo '<td>'.$bilLog['Bilet_id'].'</td>'; 
+            echo '<td>'.$bil['PNR_kodu'].'</td>';
+            echo '<td>'.$bil['Yolcu_id'].'</td>';
+            echo '<td>'.$bil['Koltuk_id'].'</td>';
+            echo '<td>'.$bilLog['Durum'].'</td>';
+            echo '<td>'.$bilLog['Islem_tarihi'].'</td>';
+            echo '</tr>';
+            $counter++;
+        }
+    }
+?>
+
         </tbody>
     </table>
 </div>

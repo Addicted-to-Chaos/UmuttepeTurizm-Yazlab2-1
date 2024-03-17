@@ -236,6 +236,7 @@
                 <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
 <?php else: ?>
     <?php foreach ($seferler as $sefer): ?>
+        
         <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
             <div class="service-icon p-4">
                 <img src="assets/img/bus.png" width="250" class="img-fluid">
@@ -246,130 +247,15 @@
                 <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
                 <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?>ㅤㅤ
                 <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br>
+                <input type="text"> 
+                <b>Sefer : </b><?= $sefer['Sefer_id'] ?></p><br>
             </div>
-            <button class="btn btn-primary ms-auto mt-20 me-3" style="width: 200px; margin-right: 20px;" onclick="openPopup()">Koltuk Seç</button>
+            <button class="btn btn-primary ms-auto mt-20 me-3" style="width: 200px; margin-right: 20px;" onclick="goToSeatSelection(<?= $sefer['Sefer_id'] ?>)">Koltuk Seç</button>
         </div>
         <br>
     <?php endforeach; ?>
 <?php endif; ?>
             </div>
-
-            <!-- Popup -->
-            <div id="popup" class="popup">
-                <div class="popup-content">
-                    <!-- Kapatma düğmesi -->
-                    <span class="close" onclick="closePopup()">×</span>
-                    <!-- İçerik -->
-                    <br>
-                    <h2 style="text-align: center; color: #1C357C;">Koltuk Seç</h2>
-                    <div class="content-wrapper">
-                        <div class="bus-layout">
-                            <div class="row">
-                                <div class="seat" id="seat-23">
-                                    <p style="text-align: center;">23</p>
-                                </div>
-                                <div class="seat" id="seat-20">
-                                    <p style="text-align: center;">20</p>
-                                </div>
-                                <div class="seat" id="seat-17">
-                                    <p style="text-align: center;">17</p>
-                                </div>
-                                <div class="seat" id="seat-16">
-                                    <p style="text-align: center;">16</p>
-                                </div>
-                                <div class="seat" id="seat-13">
-                                    <p style="text-align: center;">13</p>
-                                </div>
-                                <div class="seat" id="seat-10">
-                                    <p style="text-align: center;">10</p>
-                                </div>
-                                <div class="seat" id="seat-7">
-                                    <p style="text-align: center;">7</p>
-                                </div>
-                                <div class="seat" id="seat-4">
-                                    <p style="text-align: center;">4</p>
-                                </div>
-                                <div class="seat" id="seat-1">
-                                    <p style="text-align: center;">1</p>
-                                </div>
-                                <hr style="border-width: 3px; border-color: rgb(190, 192, 199);">
-                                <img src="assets/img/direksiyon.png" height="60" width="60" />
-                            </div>
-                            <div class="row2">
-                                <div class="empty-space2"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat" id="seat-23">
-                                    <p style="text-align: center;">24</p>
-                                </div>
-                                <div class="seat" id="seat-20">
-                                    <p style="text-align: center;">21</p>
-                                </div>
-                                <div class="seat" id="seat-18">
-                                    <p style="text-align: center;">18</p>
-                                </div>
-                                <img src="assets/img/kapi.png" height="60" width="60" />
-                                <div class="seat" id="seat-14">
-                                    <p style="text-align: center;">14</p>
-                                </div>
-                                <div class="seat" id="seat-11">
-                                    <p style="text-align: center;">11</p>
-                                </div>
-                                <div class="seat" id="seat-8">
-                                    <p style="text-align: center;">8</p>
-                                </div>
-                                <div class="seat" id="seat-5">
-                                    <p style="text-align: center;">5</p>
-                                </div>
-                                <div class="seat" id="seat-2">
-                                    <p style="text-align: center;">2</p>
-                                </div>
-                                <hr>
-                                <img src="assets/img/kapi.png" height="60" width="60" />
-                            </div>
-                            <div class="row">
-                                <div class="seat" id="seat-25">
-                                    <p style="text-align: center;">25</p>
-                                </div>
-                                <div class="seat" id="seat-22">
-                                    <p style="text-align: center;">22</p>
-                                </div>
-                                <div class="seat" id="seat-19">
-                                    <p style="text-align: center;">19</p>
-                                </div>
-                                <img src="assets/img/kapi.png" height="60" width="60" />
-                                <div class="seat" id="seat-15">
-                                    <p style="text-align: center;">15</p>
-                                </div>
-                                <div class="seat" id="seat-12">
-                                    <p style="text-align: center;">12</p>
-                                </div>
-                                <div class="seat" id="seat-9">
-                                    <p style="text-align: center;">9</p>
-                                </div>
-                                <div class="seat" id="seat-6">
-                                    <p style="text-align: center;">6</p>
-                                </div>
-                                <div class="seat" id="seat-3">
-                                    <p style="text-align: center;">3</p>
-                        
-                                </div>
-                                <hr>
-                                <img src="assets/img/kapi.png" height="60" width="60" />
-
-                            </div>
-                            <!-- Daha fazla sıra eklemek için aynı yapının kopyalarını ekleyebilirsiniz -->
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Services End -->
-
-            
-
             <!-- JavaScript Libraries -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -382,51 +268,13 @@
             <!-- Template Javascript -->
             <script src="assets/js/main.js"></script>
 </body>
-
-</html>
 <script>
-    function openPopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "block";
+    var globalSeferId; 
+
+    function goToSeatSelection(seferId) {
+        globalSeferId = seferId;
+        window.location.href = "<?php echo site_url('/koltuksecimi?sefer_id=') ?>" + seferId;
     }
-
-    function closePopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "none";
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-    // Popup'ı açan butonu seç
-    const openPopupBtn = document.querySelector('.btn-primary');
-    // Popup'ı seç
-    const popup = document.getElementById('popup');
-    // Popup'ta kapatma düğmesini seç
-    const closePopupBtn = document.querySelector('.close');
-    // Koltukları seç
-    const seats = document.querySelectorAll('.seat');
-
-    // Popup'ı açan butona tıklanınca
-    openPopupBtn.addEventListener('click', function () {
-        // Popup'ı görünür hale getir
-        popup.style.display = 'block';
-    });
-
-    // Popup'ta kapatma düğmesine tıklanınca
-    closePopupBtn.addEventListener('click', function () {
-        // Popup'ı gizle
-        popup.style.display = 'none';
-    });
-
-    // Her bir koltuk için dinleyici ekle
-    seats.forEach(seat => {
-        seat.addEventListener('click', function () {
-            // Sürücü koltuğu değilse
-            if (!seat.classList.contains('driver-seat')) {
-                // Koltuğun seçili durumunu değiştir
-                seat.classList.toggle('secili');
-            }
-        });
-    });
-});
-
 </script>
+</html>
+

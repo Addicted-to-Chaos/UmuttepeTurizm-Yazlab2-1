@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>umuttepeTurizm Admin</title>
+    <title>UmuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -270,20 +270,20 @@ h2#hesap-basligi {
 <h2 id="hesap-basligi">Sefer Ekle</h2>
                     <!-- Content Row -->
 
-<form method="post" action="<?php echo site_url('/ekleSefer'); ?>">    
+<form method="post" action="<?php echo site_url('/ekleSefer'); ?>" onsubmit="return bilgiKontrol()">    
 <div class="row">                
   <div class="container">
                
     <div class="form-wrapper">
         
         <div class="form-column">
-            <label for="seferKalkiSehir">Kalkış Şehri:</label>
+            <label for="seferKalkisSehir">Kalkış Şehri:</label>
             <?php
                 use App\Models\UserModelSehirler;
                 $sehirModel = new UserModelSehirler();
                 $sehirler = $sehirModel->findAll();
             ?>
-            <select id="seferKalkiSehir" name="seferKalkiSehir">
+            <select id="seferKalkisSehir" name="seferKalkisSehir">
             <?php
             foreach ($sehirler as $sehir) {
             echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
@@ -294,9 +294,9 @@ h2#hesap-basligi {
             <label for="seferVarisSehir">Varış Şehri:</label>
             <select id="seferVarisSehir" name="seferVarisSehir">
             <?php
-            foreach ($sehirler as $sehir) {
-            echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
-            }
+                foreach ($sehirler as $sehir) {
+                echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
+                }
             ?>
             </select>
             
@@ -323,11 +323,15 @@ h2#hesap-basligi {
             <input type="text" id="seferFiyat" name="seferFiyat">
             
             <input type="submit" value="Sefer Ekle">
+<p id="errorMessage" style="color: red;"></p>
+
         </div>
-        
     </div>
+
 </div>
+
 </div>
+
 </form>
 
 
@@ -378,5 +382,45 @@ h2#hesap-basligi {
     <script src="assets/js_/demo/chart-pie-demo.js"></script>
 
 </body>
+<script>
+function bilgiKontrol() {
+    
+    var seferKalkisSehir = document.getElementById('seferKalkisSehir').value;
+    var seferVarisSehir = document.getElementById('seferVarisSehir').value;
+
+    var seferDate = document.getElementById('seferDate').value;
+    var kalkisSaat = document.getElementById('departure-time').value;
+    var varisSaat = document.getElementById('arrival-time').value;
+    var seferPeron = document.getElementById('seferPeron').value;
+    var seferPlaka = document.getElementById('seferPlaka').value;
+    var seferKapasite= document.getElementById('seferKapasite').value;
+    var seferFiyat= document.getElementById('seferFiyat').value;
+
+
+    var errorMessages = "";
+
+
+    if (seferDate === '' || kalkisSaat === '' ||  varisSaat === '' || seferPeron === ''|| seferPlaka === ''||seferKapasite === ''||seferFiyat === '') {
+      errorMessages += "Lütfen alanları boş bırakmayınız.<br>";
+    }
+
+    if(seferVarisSehir ===null){
+        errorMessages += "Sefer varış şehri seçiniz.<br>";
+    }
+    if(seferKalkisSehir ===null){
+        errorMessages += "Sefer kalkış şehri seçiniz.<br>";
+    }
+
+    var errorContainer = document.getElementById("errorMessage");
+    errorContainer.innerHTML = errorMessages;
+
+    if (errorMessages !== "") {
+      return false; 
+    } else {
+      return true; 
+    }
+  }
+  </script>
+
 </html>
 

@@ -44,3 +44,5 @@ use CodeIgniter\Router\RouteCollection;
 
     $routes->post('/ekleSefer' ,'User::ekleSefer');
     $routes->post('/ilekle' ,'User::ilekle');
+    $routes->post('/koltuksec' ,'User::koltuksec');
+    

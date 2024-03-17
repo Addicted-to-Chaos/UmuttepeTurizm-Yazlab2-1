@@ -1,5 +1,10 @@
+<?php $session=session();?>
+<?php
+$sefer_id = $_GET['sefer_id'];
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,7 +103,23 @@
 <body>
 <h2 id="hesap-basligi" style="text-align:center;">KOLTUK SEÇİMİ</h2>
 
+<?php
+
+use App\Models\UserModelBiletler;
+
+//seferler getir bilet ata koltuk seç
+
+
+    $bilet = $biletler->where('Sefer_id', $sefer_id);
+    
+
+?>
+
+
 <div class="content-wrapper">
+<div class="text-center mt-4">
+        <a href="#" onclick="history.back();" class="back-btn">Geri Dön</a>
+         </div>
   <div class="bus-layout">
     <div class="row">
       <div class="seat" id="seat-23"><p style="text-align: center;">23</p></div>
@@ -144,20 +165,46 @@
     </div>
     <!-- Daha fazla sıra eklemek için aynı yapının kopyalarını ekleyebilirsiniz -->
   </div>
+  <button id="confirmButton" style="position: fixed; bottom: 20px; right: 20px;">Confirm Selection</button>
+  <div class="text-center mt-4">
+  <button id="confirmButton" style="position: fixed; bottom: 20px; right: 20px;">Confirm Selection</button>
+      
+         </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
     const seats = document.querySelectorAll('.seat');
+    let lastClickedSeatId = null; // Son tıklanan koltuğun ID'sini saklamak için değişken
 
     seats.forEach(seat => {
       seat.addEventListener('click', function () {
         if (!seat.classList.contains('driver-seat')) {
-          seat.classList.toggle('secili');
+          if (lastClickedSeatId) {
+            // Eğer zaten bir koltuk seçildiyse, seçilen koltuğun rengini eski haline getir
+            const lastClickedSeat = document.getElementById(lastClickedSeatId);
+            lastClickedSeat.classList.remove('secili');
+          }
+          // Son tıklanan koltuğun ID'sini güncelle
+          lastClickedSeatId = this.id;
+          seat.classList.add('secili');
         }
       });
     });
   });
+
+    const seats = document.querySelectorAll('.seat');
+
+seats.forEach(seat => {
+  seat.addEventListener('click', function() {
+    const seatId = this.id;
+    // "seat-" kısmını kaldırarak sadece numarayı alın
+    const seatNumber = seatId.split('-')[1];
+    console.log('Tıklanan koltuğun numarası:', seatNumber);
+  });
+});
+  
 </script>
 </body>
+
 </html>

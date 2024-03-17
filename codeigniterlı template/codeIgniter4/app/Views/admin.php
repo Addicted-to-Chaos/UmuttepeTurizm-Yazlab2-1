@@ -1,5 +1,6 @@
+<?php $session=session();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>UmuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -180,9 +181,9 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                              
+                                
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<?php echo site_url('/cikisYap'); ?>" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Çıkış Yap
                                 </a>
@@ -403,15 +404,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Çıkış Yapmak İstediğinize Emin misiniz ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Mevcut oturumunuzu sonlandırmaya hazırsanız aşağıdan "Çıkış Yap"ı seçin.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                    <a class="btn btn-primary" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
                 </div>
             </div>
         </div>

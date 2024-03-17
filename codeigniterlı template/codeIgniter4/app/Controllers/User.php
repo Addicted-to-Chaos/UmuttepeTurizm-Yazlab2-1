@@ -224,17 +224,30 @@ public function seferler()
 
 }
 
-
 public function ilekle()
 {             
-    $plaka_kodu = $this->request->getVar('plaka_kodu');
-    $sehir_adi = $this->request->getVar('sehir_adi');  
+    $Plaka_kodu = $this->request->getVar('Plaka_kodu');
+    $Sehir_adi = $this->request->getVar('Sehir_adi');
+
+    // Plaka kodu seçilmediyse hata göster
+    if(empty($Plaka_kodu)) {
+        return redirect()->to(site_url('/ilekle'))->with('message', 'Lütfen bir plaka kodu seçin.');
+    }
 
     $model = new UserModeliller();
 
+    // Veritabanında belirli bir plaka kodunun kaydının olup olmadığını kontrol et
+    $existingRecord = $model->where('Plaka_kodu', $Plaka_kodu)->first();
+
+    if($existingRecord) {
+        // Eğer plaka kodu zaten kayıtlı ise kullanıcıya bilgi ver
+        return redirect()->to(site_url('/ilekle'))->with('message', 'Bu plaka kodu zaten kayıtlı.');
+    }
+
+    // Plaka kodu kayıtlı değilse ekleme işlemine devam et
     $updateData = [
-        'Plaka_kodu' => $plaka_kodu,
-        'Sehir_adi' => $sehir_adi,      
+        'Plaka_kodu' => $Plaka_kodu,
+        'Sehir_adi' => $Sehir_adi      
     ];    
 
     // Oturumu güncelle
@@ -242,12 +255,13 @@ public function ilekle()
     return view('ilekle');
 }
 
+
 public function eklesefer()
 {
 
 
 
-    $kalkisSehir = $this->request->getVar('seferKalkiSehir');
+    $kalkisSehir = $this->request->getVar('seferKalkisSehir');
     $varisSehir = $this->request->getVar('seferVarisSehir');
     $seferTarih = $this->request->getVar('seferDate');
     $kalkisSaat=$this->request->getVar('departure-time');
@@ -269,7 +283,9 @@ public function eklesefer()
         'Peron_no' => $seferPeron,
         'Plaka' => $seferPlaka,
         'Kapasite' => $seferKapasite,
-        'Fiyat' => $seferFiyat
+        'Fiyat' => $seferFiyat,
+        'Dolu_koltuk'=>0,
+        'Bos_koltuk'=>$seferKapasite
 
     ];
 
@@ -280,9 +296,37 @@ public function eklesefer()
 }
 
 
+public function koltuksec()
+{
+   
+    $model = new UserModelSeferler();
+        $results = $model->where('Kalkis_sehir', $this->request->getVar('sehirNereden'))
+                        ->where('Varis_sehir', $this->request->getVar('sehirNereye'))
+                        ->where('Tarih', $this->request->getVar('departure-date'))
+                        ->findAll();
 
+                        $seferler = []; 
 
-
- }
-
+                        foreach ($results as $result) {
+                            $sefer = [
+                                'Sefer_id' => $result['Sefer_id'],
+                                'Kalkis_sehir' => $result['Kalkis_sehir'],
+                                'Varis_sehir' => $result['Varis_sehir'],
+                                'Tarih' => $result['Tarih'],
+                                'Kalkis_saat' => $result['Kalkis_saat'],
+                                'Varis_saat' => $result['Varis_saat'],
+                                'Peron_no' => $result['Peron_no'],
+                                'Plaka' => $result['Plaka'],
+                                'Kapasite'=> $result['Kapasite'],
+                                'Dolu_koltuk'=> $result['Dolu_koltuk'],
+                                'Bos_koltuk'=> $result['Bos_koltuk'],
+                                'Fiyat'=> $result['Fiyat']
+                            ];
+                            $seferler[] = $sefer; 
+                        }
+                    
+                        $data['seferler'] = $seferler; 
+                    
+                        return view('koltuksecimi', $data); 
+} }
  ?>

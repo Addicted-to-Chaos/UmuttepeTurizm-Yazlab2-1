@@ -259,7 +259,14 @@ h2#hesap-basligi {
         <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
         <hr>
         <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
-        <hr>
+        
+        <?php 
+       if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
+ <hr>
+    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Hesabı</a>
+    <hr>
+<?php endif; ?>
+        
 </div>
 
 

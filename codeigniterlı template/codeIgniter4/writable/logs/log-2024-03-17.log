@@ -1,0 +1,11 @@
+INFO - 2024-03-17 00:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 00:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-17 00:01:32 --> ParseError: syntax error, unexpected token ";", expecting identifier or variable or "{" or "$"
+in APPPATH\Views\koltuksecimi.php on line 112.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 3 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

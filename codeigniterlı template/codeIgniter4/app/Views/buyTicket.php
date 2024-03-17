@@ -145,7 +145,7 @@
                                                 $sehirler = $sehirModel->findAll();
                                                 ?>
                                                 <select class="form-control" id="sehirNereden" name="sehirNereden" required>
-                                                    <option value="" selected disabled>Şehir Seçiniz</option> <!-- İlk seçenek -->
+                                                    <option value="" selected disabled>Şehir Seçiniz</option>
                                                     <?php
                                                     foreach ($sehirler as $sehir) {
                                                         echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';
@@ -159,7 +159,7 @@
                                                     <div class="form-group">
                                                     <span class="form-label" style="color: rgb(57, 82, 131);">Nereye</span>
                                                 <select class="form-control" id="sehirNereye" name="sehirNereye" required>
-                                                    <option value="" selected disabled>Şehir Seçiniz</option> <!-- İlk seçenek -->
+                                                    <option value="" selected disabled>Şehir Seçiniz</option> 
                                                     <?php
                                                     foreach ($sehirler as $sehir) {
                                                         echo '<option value="' . $sehir['Plaka_kodu'] . '">' . $sehir['Sehir_adi'] . '</option>';

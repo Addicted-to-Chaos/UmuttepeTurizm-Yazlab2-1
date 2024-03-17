@@ -1,5 +1,6 @@
+<?php $session=session();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>UmuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -236,10 +237,10 @@ th {
     <table>
         <thead>
             <tr>
-                <th>Yolcu ID</th>
-                <th>Email</th>
+                <th>Sıra</th>
                 <th>Ad</th>
                 <th>Soyad</th>
+                <th>E-Posta</th>
                 <th>Telefon</th>
                 <th>Yaş</th>
                 <th>Cinsiyet</th>
@@ -248,24 +249,29 @@ th {
         <tbody>
             <!-- Veritabanından çekilecek kullanıcı bilgileri body kısmına echo ile falan yerleştirilecek -->
             <!-- Şimdilik örnek satır -->
-            <tr>
-                <td>1</td>
-                <td>ornek@email.com</td>
-                <td>John</td>
-                <td>Doe</td>
-                <td>555-1234</td>
-                <td>30</td>
-                <td>Erkek</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>ornek2@email.com</td>
-                <td>Jane</td>
-                <td>Doe</td>
-                <td>555-5678</td>
-                <td>25</td>
-                <td>Kadın</td>
-            </tr>
+
+            <?php
+             use App\Models\UsersModel;
+             $yolcularModel = new UsersModel();
+             $yolcular = $yolcularModel->findAll();
+                if(empty($yolcular)){
+                echo '<p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>';
+                }
+                else{
+                $counter = 1;
+                foreach ($yolcular as $yolcu) {
+                echo '<tr>';
+                echo '<td>'.$counter.'</td>';
+                echo '<td>'.$yolcu['Ad'].'</td>';
+                echo '<td>'.$yolcu['Soyad'].'</td>';
+                echo '<td>'.$yolcu['Email'].'</td>';
+                echo '<td>'.$yolcu['Telefon'].'</td>';
+                echo '<td>'.$yolcu['Yas'].'</td>';
+                echo '<td>'.$yolcu['Cinsiyet'].'</td>';
+                $counter++;
+                }}
+            ?>
+
             <!-- Birden fazla kullanıcı için aynı formatta satırlar eklenmeli -->
         </tbody>
     </table>
