@@ -14,6 +14,10 @@ use CodeIgniter\Controller;
 class User extends BaseController
 {
 
+    private $db;
+    public function __construct(){
+        $this->db=db_connect();
+    }
     public function kayitOl(){
 
         $dogumTarihi = $this->request->getVar('Yas'); // Doğum tarihini al
@@ -290,21 +294,22 @@ public function eklesefer()
         #'Bos_koltuk'=>$seferKapasite
 
     ];
-    $db = \Config\Database::connect();
+    $db = db_connect();
 
     $insertID = $model->insert($updateData);
     $procedureName = 'KoltuklariSefereEkle';
     $query = "CALL $procedureName(?)";
-    $result = $db->query($query, [$insertID]);
-    if ($insertID) {
-        $this->$db->query("CALL KoltuklariSefereEkle($insertID)");
-        $model->transComplete(); 
-        $message = 'Sefer Başarı ile eklenmiştir.';
-    } else {
-        $model->transRollback(); 
-        $message = 'Sefer eklenirken bir hata oluştu.';
-    }
+    $result = $this->db->query($query, [$insertID]);
 
+    if ($result)
+        {
+            $message='Sefer başarıyla eklenmiştir';
+        }
+        else
+        {
+            $error = $this->db->error();
+            $message = "Hata oluştu: " . $error['message'];
+        }
 
     return view('seferekle',['message' => $message]);
 
