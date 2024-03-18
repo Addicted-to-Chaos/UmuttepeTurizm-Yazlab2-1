@@ -270,7 +270,7 @@ public function eklesefer()
     $varisSaat = $this->request->getVar('arrival-time');
     $seferPeron = $this->request->getVar('seferPeron');
     $seferPlaka = $this->request->getVar('seferPlaka');
-    $seferKapasite = $this->request->getVar('seferKapasite');
+    #$seferKapasite = $this->request->getVar('seferKapasite');
     $seferFiyat = $this->request->getVar('seferFiyat');
 
 
@@ -284,16 +284,29 @@ public function eklesefer()
         'Varis_saat' => $varisSaat,
         'Peron_no' => $seferPeron,
         'Plaka' => $seferPlaka,
-        'Kapasite' => $seferKapasite,
+        #'Kapasite' => $seferKapasite,
         'Fiyat' => $seferFiyat,
-        'Dolu_koltuk'=>0,
-        'Bos_koltuk'=>$seferKapasite
+        'Dolu_koltuk'=>0
+        #'Bos_koltuk'=>$seferKapasite
 
     ];
+    $db = \Config\Database::connect();
 
-    $model->insert($updateData);
+    $insertID = $model->insert($updateData);
+    $procedureName = 'KoltuklariSefereEkle';
+    $query = "CALL $procedureName(?)";
+    $result = $db->query($query, [$insertID]);
+    if ($insertID) {
+        $this->$db->query("CALL KoltuklariSefereEkle($insertID)");
+        $model->transComplete(); 
+        $message = 'Sefer Başarı ile eklenmiştir.';
+    } else {
+        $model->transRollback(); 
+        $message = 'Sefer eklenirken bir hata oluştu.';
+    }
 
-    return view('seferekle');
+
+    return view('seferekle',['message' => $message]);
 
 }
 

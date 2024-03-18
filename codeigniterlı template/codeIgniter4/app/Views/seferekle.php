@@ -316,14 +316,17 @@ h2#hesap-basligi {
             <label for="plate">Plaka:</label>
             <input type="text" id="seferPlaka" name="seferPlaka">
             
-            <label for="capacity">Kapasite:</label>
-            <input type="number" id="seferKapasite" name="seferKapasite">
+            <!--<label for="capacity">Kapasite:</label>
+            <input type="number" id="seferKapasite" name="seferKapasite">-->
             
             <label for="price">Bilet Fiyatı:</label>
             <input type="text" id="seferFiyat" name="seferFiyat">
             
             <input type="submit" value="Sefer Ekle">
 <p id="errorMessage" style="color: red;"></p>
+<?php if (isset($message)) {
+    echo '<p id="errorMessage" style="color: green;">' . $message . '</p>';
+}?>
 
         </div>
     </div>
@@ -393,14 +396,13 @@ function bilgiKontrol() {
     var varisSaat = document.getElementById('arrival-time').value;
     var seferPeron = document.getElementById('seferPeron').value;
     var seferPlaka = document.getElementById('seferPlaka').value;
-    var seferKapasite= document.getElementById('seferKapasite').value;
     var seferFiyat= document.getElementById('seferFiyat').value;
 
 
     var errorMessages = "";
 
 
-    if (seferDate === '' || kalkisSaat === '' ||  varisSaat === '' || seferPeron === ''|| seferPlaka === ''||seferKapasite === ''||seferFiyat === '') {
+    if (seferDate === '' || kalkisSaat === '' ||  varisSaat === '' || seferPeron === ''|| seferPlaka === ''||seferFiyat === '') {
       errorMessages += "Lütfen alanları boş bırakmayınız.<br>";
     }
 
