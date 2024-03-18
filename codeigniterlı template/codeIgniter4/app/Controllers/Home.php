@@ -148,5 +148,7 @@ class Home extends BaseController
     public function koltuk(){
         return view('koltuksecimi');
     }
+
+    
     
 }

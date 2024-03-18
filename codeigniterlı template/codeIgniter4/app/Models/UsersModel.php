@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 class UsersModel  extends Model{
 
     protected $table='yolcular';
-    protected $allowedFields=['Email','Sifre','Ad','Soyad','Telefon','Tc','Yas','Cinsiyet'];
+    protected $allowedFields=['Yolcu_id','Email','Sifre','Ad','Soyad','Telefon','Tc','Yas','Cinsiyet','Bakiye'];
 }
 
 

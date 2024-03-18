@@ -45,4 +45,11 @@ use CodeIgniter\Router\RouteCollection;
     $routes->post('/ekleSefer' ,'User::ekleSefer');
     $routes->post('/ilekle' ,'User::ilekle');
     $routes->post('/koltuksec' ,'User::koltuksec');
+
+    $routes->post('/kartodeme' ,'User::kartodeme');
+    $routes->post('/bakiyeodeme' ,'User::bakiyeodeme');
+    
+    $routes->post('/odendi' ,'User::odendi');
+
+
     

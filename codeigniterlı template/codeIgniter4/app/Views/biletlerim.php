@@ -1,3 +1,6 @@
+<?php $session=session(); 
+use App\Models\UserModelBiletler;?>
+
 <html>
 <head>
 <style>
@@ -180,83 +183,59 @@ h2#hesap-basligi {
 
             <br><br>
             <!--BİLET 1-->
-  <div class="item">
-    <div class="item-left">
-      <h3>Ankara -> Bursa </h3><br>
-      <hr>
-      <div class="sce">
-        <div class="icon">
-          <i class="fa fa-table"></i>
-        </div>
-      </div>
-      <div class="fix"></div>
-      <div class="loc">
-        <div class="icon">
-          <i class="fa fa-map-marker"></i>
-        </div>
-        <p><b>PNR Kodu:</b> 12345678</p>
-        <p>Sefer Tarihi : 2024-03-29<br/> 
-            Saat: 12:00:00 <br> 
-            Peron no: 30 <br> 
-            Koltuk no: 5 <br> 
-            Bilet Durumu : Rezerve <br> 
-      </div>
-      <div class="fix"></div>
-    </div> 
-  </div> <!-- bilet 1 son -->
+            <?php
+            use App\Models\UserModelSeferler;
+            use App\Models\UserModelBiletLog;
+
+
+            $seferModel = new UserModelSeferler();
+            $biletLogModel=new UserModelBiletLog();
+
+            $biletModel = new UserModelBiletler();
+            $biletler = $biletModel->findAll();
+            if(empty($biletler)){
+
+              echo '<div><p style="color:red;">Kayıt bilet bulunmamaktadır.</p> </div>';
+            }
+            else{
+
+            
+            
+            foreach ($biletler as $bilet) 
+            {
+              $sefer=$seferModel->where('Sefer_id',$bilet['Sefer_id'])->first();
+              $log=$biletLogModel->where('Bilet_id',$bilet['Bilet_id'])->first();
+
+              echo '<div class="item">';
+              echo '<div class="item-left">';
+              echo  '<h3>'.$sefer['Kalkis_sehir'].' ->'.$sefer['Varis_sehir'].'</h3><br>';
+              echo  '<hr>';
+              echo  '<div class="sce">';
+              echo   '<div class="icon">';
+              echo    '<i class="fa fa-table"></i>';
+              echo  '</div>';
+              echo  '</div>';
+              echo  '<div class="fix"></div>';
+              echo  '<div class="loc">';
+              echo   '<div class="icon">';
+              echo   '<i class="fa fa-map-marker"></i>';
+              echo    '</div>';
+              echo   '<p><b>PNR Kodu:</b>'.$bilet['PNR_kodu'].'</p>';
+              echo    '<p>Sefer Tarihi :'.$sefer['Tarih'].'<br/>'; 
+              echo    'Saat:'.$sefer['Kalkis_saat'].'<br>'; 
+              echo        'Peron no:'.$sefer['Peron_no'].'<br>'; 
+              echo        'Koltuk no:'.$bilet['Koltuk_id'].' <br>'; 
+              echo        'Bilet Durumu :'.$log['Durum'].' <br>'; 
+              echo  '</div>';
+              echo  '<div class="fix"></div>';
+              echo'</div>'; 
+              echo '</div>';
+            }
+          }
+            ?>
   
-  <!--BİLET 2-->
-  <div class="item">
-    <div class="item-left">
-        <h3>Ankara -> Bursa </h3><br>
-        <hr>
-        <div class="sce">
-          <div class="icon">
-            <i class="fa fa-table"></i>
-          </div>
-        </div>
-        <div class="fix"></div>
-        <div class="loc">
-          <div class="icon">
-            <i class="fa fa-map-marker"></i>
-          </div>
-          <p><b>PNR Kodu:</b> 12345678</p>
-          <p>Sefer Tarihi : 2024-03-29<br/> 
-              Saat: 12:00:00 <br> 
-              Peron no: 30 <br> 
-              Koltuk no: 5 <br> 
-              Bilet Durumu : Rezerve <br> 
-        </div>
-        <div class="fix"></div>
-      </div>
-  </div> <!-- bilet 2 son -->
-
-
-   <!--BİLET 3-->
-   <div class="item">
-    <div class="item-left">
-        <h3>Ankara -> Bursa </h3><br>
-        <hr>
-        <div class="sce">
-          <div class="icon">
-            <i class="fa fa-table"></i>
-          </div>
-        </div>
-        <div class="fix"></div>
-        <div class="loc">
-          <div class="icon">
-            <i class="fa fa-map-marker"></i>
-          </div>
-          <p><b>PNR Kodu:</b> 12345678</p>
-          <p>Sefer Tarihi : 2024-03-29<br/> 
-              Saat: 12:00:00 <br> 
-              Peron no: 30 <br> 
-              Koltuk no: 5 <br> 
-              Bilet Durumu : Rezerve <br> 
-        </div>
-        <div class="fix"></div>
-      </div>
-  </div> <!-- bilet 3 son -->
+  
+  
         </div>
     </div>
 
