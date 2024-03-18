@@ -21,7 +21,7 @@ else
   <style>
     body {
       margin: 0;
-      background-color: #f2f2f2;
+      background-color: #F7F7F7;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -31,7 +31,7 @@ else
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #f2f2f2;
+      background-color: #F7F7F7;
       margin: -50px 0 0;
     }
 
@@ -45,7 +45,14 @@ else
     .row {
       display: flex;
       justify-content: space-around;
+      margin-bottom: 10px;
+    }
+
+    .row2 {
+      display: flex;
+      justify-content: space-around;
       margin-bottom: 20px;
+      margin-left: 20px;
     }
 
     .seat {
@@ -96,27 +103,142 @@ else
     }
 
     .seat.kadin {
-      background-color: #dc54c7;
+      background-color: #FF95DF;
     }
     .seat.erkek {
-      background-color: #3f4bee;
+      background-color: #6FB2F2;
     }
     .seat.secili {
-      background-color: #3abb47;
+      background-color: #81CB3B ;
     }
     .seat.rezerve
     {
-      background-color: #fcb603;
+      background-color: #FBC070 ;
     }
     h2#hesap-basligi {
-  color: #3498db;
+  color: #1C357C;
+    }
+      .control-panel {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .control-panel3 {
+      position: fixed;
+      top: 190px;
+      right: 20px;
+      padding: 10px;
+      margin-right: 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .control-panel2 {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+
+    .control-panel2 button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      font-size: 16px;
+      background-color: #1C357C;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .control-panel2 button:hover {
+      background-color: #6482B8;
+    }
+
+    #bakiye {
+      font-weight: bold;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      margin-left: 20px;
+      font-size: 12px;
+      background-color: #1C357C;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #6482B8;
+    }
+
+    select {
+      padding: 8px 16px;
+      font-size: 12px;
+      border-radius: 5px;
     }
   </style>
   <title>Otobüs Koltuk Seçimi</title>
 </head>
 <body>
 <h2 id="hesap-basligi" style="text-align:center;">KOLTUK SEÇİMİ</h2>
+<div class="control-panel3">
+    <div style="float: left; margin-right: 10px;">
+        <p style="color: #FF95DF; margin: 0;">■</p>
+    </div>
+    <div style="float: left;">
+        <p style="margin: 0; color: black;">Kadın yolcu</p>
+    </div>
+    <div style="clear: both;"></div>
 
+    <div style="float: left; margin-right: 10px;">
+        <p style="color: #6FB2F2; margin: 0;">■</p>
+    </div>
+    <div style="float: left;">
+        <p style="margin: 0; color: black;">Erkek yolcu</p>
+    </div>
+    <div style="clear: both;"></div>
+
+    <div style="float: left; margin-right: 10px;">
+        <p style="color: #FBC070; margin: 0;">■</p>
+    </div>
+    <div style="float: left;">
+        <p style="margin: 0; color: black;">Rezerve Koltuk</p>
+    </div>
+    <div style="clear: both;"></div>
+
+    <div style="float: left; margin-right: 10px;">
+        <p style="color: #81CB3B; margin: 0;">■</p>
+    </div>
+    <div style="float: left;">
+        <p style="margin: 0; color: black;">Seçili Koltuk</p>
+    </div>
+    <div style="clear: both;"></div>
+
+  <div id="bakiyeYetersiz"  style="color:red; display: none;">Bakiye Yetersiz</div><br>
+  <div id="error-message"  style="color:red; display: none;">Lütfen koltuk seçiniz.</div>
+
+</div>
+
+
+<div class="control-panel2" style="position: absolute; top: 10px; left: 10px;"><button onclick="history.back();">Geri</button><br><br></div>
+
+<div class="control-panel" style="position: absolute; top: 80px; left: 20px;">
+<?php 
+$bakiye = isset($session->user["Bakiye"]) ? $session->user["Bakiye"] : 0;
+echo 'Bakiyeniz : <span id="bakiye">'. $bakiye . ' ₺</span>';
+$yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
+?>
+</div>
 <?php
 
 use App\Models\UserModelKoltuklar;
@@ -139,20 +261,15 @@ for ($i = 0; $i < $uzunluk; $i++) {
 ?>
 
 <div class="content-wrapper">
-<?php 
-$bakiye = isset($session->user["Bakiye"]) ? $session->user["Bakiye"] : 0;
-echo $bakiye . ' ₺';
-$yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
-?>
 
-<div class="text-center mt-4">
-        <a href="#" onclick="history.back();" class="back-btn">Geri Dön</a>
-         </div>
-         <form method="post" onsubmit="return validateForm()"> 
+
+
+  <form method="post" onsubmit="return validateForm()"> 
   <div class="bus-layout">
     <div class="row">
       <?php 
       $yolcuCinsiyeti = new UsersModel();
+      
       
       //23
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[22]['Yolcu_id'])->first();
@@ -163,11 +280,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-23" style="background-color: #3f4bee;"><p style="text-align: center;  ">23</p></div>';
+            echo '<div class="seat rezerve" id="seat-23" style="background-color: #6FB2F2;"><p style="text-align: center;  ">23</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-23" style="background-color: #dc54c7;"><p style="text-align: center;  ">23</p></div>';
+            echo '<div class="seat rezerve" id="seat-23" style="background-color: #FF95DF;"><p style="text-align: center;  ">23</p></div>';
           }
         }
         else if($koltuklarArray[22]['Koltuk_durum']== 'Rezerve')
@@ -188,11 +305,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-20"style="background-color: #3f4bee;"><p style="text-align: center; ">20</p></div>';
+            echo '<div class="seat rezerve" id="seat-20"style="background-color: #6FB2F2;"><p style="text-align: center; ">20</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-20" style="background-color: #dc54c7;"><p style="text-align: center; ">20</p></div>';
+            echo '<div class="seat rezerve" id="seat-20" style="background-color: #FF95DF;"><p style="text-align: center; ">20</p></div>';
           }
         }
         else if($koltuklarArray[19]['Koltuk_durum']== 'Rezerve')
@@ -213,11 +330,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-17"style="background-color: #3f4bee;"><p style="text-align: center; ">17</p></div>';
+            echo '<div class="seat rezerve" id="seat-17"style="background-color: #6FB2F2;"><p style="text-align: center; ">17</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-17" style="background-color: #dc54c7;"><p style="text-align: center; ">17</p></div>';
+            echo '<div class="seat rezerve" id="seat-17" style="background-color: #FF95DF;"><p style="text-align: center; ">17</p></div>';
           }
         }
         else if($koltuklarArray[16]['Koltuk_durum']== 'Rezerve')
@@ -238,11 +355,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-16" style="background-color: #3f4bee;"><p style="text-align: center; ">16</p></div>';
+            echo '<div class="seat rezerve" id="seat-16" style="background-color: #6FB2F2;"><p style="text-align: center; ">16</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-16" style="background-color: #dc54c7;"><p style="text-align: center; ">16</p></div>';
+            echo '<div class="seat rezerve" id="seat-16" style="background-color: #FF95DF;"><p style="text-align: center; ">16</p></div>';
           }
         }
         else if($koltuklarArray[15]['Koltuk_durum']== 'Rezerve')
@@ -263,11 +380,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-13" style="background-color: #3f4bee;"><p style="text-align: center; ">13</p></div>';
+            echo '<div class="seat rezerve" id="seat-13" style="background-color: #6FB2F2;"><p style="text-align: center; ">13</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-13" style="background-color: #dc54c7;"><p style="text-align: center; ">13</p></div>';
+            echo '<div class="seat rezerve" id="seat-13" style="background-color: #FF95DF;"><p style="text-align: center; ">13</p></div>';
           }
         }
         else if($koltuklarArray[12]['Koltuk_durum']== 'Rezerve')
@@ -288,11 +405,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-10" style="background-color: #3f4bee;"><p style="text-align: center; ">10</p></div>';
+            echo '<div class="seat rezerve" id="seat-10" style="background-color: #6FB2F2;"><p style="text-align: center; ">10</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-10" style="background-color: #dc54c7;"><p style="text-align: center; ">10</p></div>';
+            echo '<div class="seat rezerve" id="seat-10" style="background-color: #FF95DF;"><p style="text-align: center; ">10</p></div>';
           }
         }
         else if($koltuklarArray[9]['Koltuk_durum']== 'Rezerve')
@@ -313,11 +430,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-7" style="background-color: #3f4bee;"><p style="text-align: center; ">7</p></div>';
+            echo '<div class="seat rezerve" id="seat-7" style="background-color: #6FB2F2;"><p style="text-align: center; ">7</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-7" style="background-color: #dc54c7;"><p style="text-align: center; ">7</p></div>';
+            echo '<div class="seat rezerve" id="seat-7" style="background-color: #FF95DF;"><p style="text-align: center; ">7</p></div>';
           }
         }
         else if($koltuklarArray[6]['Koltuk_durum']== 'Rezerve')
@@ -338,11 +455,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-4" style="background-color: #3f4bee;"><p style="text-align: center; ">4</p></div>';
+            echo '<div class="seat rezerve" id="seat-4" style="background-color: #6FB2F2;"><p style="text-align: center; ">4</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-4" style="background-color: #dc54c7;"><p style="text-align: center; ">4</p></div>';
+            echo '<div class="seat rezerve" id="seat-4" style="background-color: #FF95DF;"><p style="text-align: center; ">4</p></div>';
           }
         }
         else if($koltuklarArray[3]['Koltuk_durum']== 'Rezerve')
@@ -363,11 +480,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-1" style="background-color: #3f4bee;"><p style="text-align: center; ">1</p></div>';
+            echo '<div class="seat rezerve" id="seat-1" style="background-color: #6FB2F2;"><p style="text-align: center; ">1</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-1" style="background-color: #dc54c7;"><p style="text-align: center; ">1</p></div>';
+            echo '<div class="seat rezerve" id="seat-1" style="background-color: #FF95DF;"><p style="text-align: center; ">1</p></div>';
           }
         }
         else if($koltuklarArray[0]['Koltuk_durum']== 'Rezerve')
@@ -396,11 +513,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-24" style="background-color: #3f4bee;"><p style="text-align: center; ">24</p></div>';
+            echo '<div class="seat rezerve" id="seat-24" style="background-color: #6FB2F2;"><p style="text-align: center; ">24</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-24" style="background-color: #dc54c7;"><p style="text-align: center; ">24</p></div>';
+            echo '<div class="seat rezerve" id="seat-24" style="background-color: #FF95DF;"><p style="text-align: center; ">24</p></div>';
           }
         }
         else if($koltuklarArray[23]['Koltuk_durum']== 'Rezerve')
@@ -421,11 +538,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-21" style="background-color: #3f4bee;"><p style="text-align: center; ">21</p></div>';
+            echo '<div class="seat rezerve" id="seat-21" style="background-color: #6FB2F2;"><p style="text-align: center; ">21</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-21" style="background-color: #dc54c7;"><p style="text-align: center; ">21</p></div>';
+            echo '<div class="seat rezerve" id="seat-21" style="background-color: #FF95DF;"><p style="text-align: center; ">21</p></div>';
           }
         }
         else if($koltuklarArray[20]['Koltuk_durum']== 'Rezerve')
@@ -446,11 +563,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-18" style="background-color: #3f4bee;"><p style="text-align: center; ">18</p></div>';
+            echo '<div class="seat rezerve" id="seat-18" style="background-color: #6FB2F2;"><p style="text-align: center; ">18</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-18" style="background-color: #dc54c7;"><p style="text-align: center; ">18</p></div>';
+            echo '<div class="seat rezerve" id="seat-18" style="background-color: #FF95DF;"><p style="text-align: center; ">18</p></div>';
           }
         }
         else if($koltuklarArray[17]['Koltuk_durum']== 'Rezerve')
@@ -472,11 +589,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-14" style="background-color: #3f4bee;"><p style="text-align: center; ">14</p></div>';
+            echo '<div class="seat rezerve" id="seat-14" style="background-color: #6FB2F2;"><p style="text-align: center; ">14</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-14" style="background-color: #dc54c7;"><p style="text-align: center; ">14</p></div>';
+            echo '<div class="seat rezerve" id="seat-14" style="background-color: #FF95DF;"><p style="text-align: center; ">14</p></div>';
           }
         }
         else if($koltuklarArray[13]['Koltuk_durum']== 'Rezerve')
@@ -497,11 +614,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-11" style="background-color: #3f4bee;"><p style="text-align: center; ">11</p></div>';
+            echo '<div class="seat rezerve" id="seat-11" style="background-color: #6FB2F2;"><p style="text-align: center; ">11</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-11" style="background-color: #dc54c7;"><p style="text-align: center; ">11</p></div>';
+            echo '<div class="seat rezerve" id="seat-11" style="background-color: #FF95DF;"><p style="text-align: center; ">11</p></div>';
           }
         }
         else if($koltuklarArray[10]['Koltuk_durum']== 'Rezerve')
@@ -522,11 +639,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-8" style="background-color: #3f4bee;"><p style="text-align: center; ">8</p></div>';
+            echo '<div class="seat rezerve" id="seat-8" style="background-color: #6FB2F2;"><p style="text-align: center; ">8</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-8" style="background-color: #dc54c7;"><p style="text-align: center; ">8</p></div>';
+            echo '<div class="seat rezerve" id="seat-8" style="background-color: #FF95DF;"><p style="text-align: center; ">8</p></div>';
           }
         }
         else if($koltuklarArray[7]['Koltuk_durum']== 'Rezerve')
@@ -547,11 +664,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-5" style="background-color: #3f4bee;"><p style="text-align: center; ">5</p></div>';
+            echo '<div class="seat rezerve" id="seat-5" style="background-color: #6FB2F2;"><p style="text-align: center; ">5</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-5" style="background-color: #dc54c7;"><p style="text-align: center; ">5</p></div>';
+            echo '<div class="seat rezerve" id="seat-5" style="background-color: #FF95DF;"><p style="text-align: center; ">5</p></div>';
           }
         }
         else if($koltuklarArray[4]['Koltuk_durum']== 'Rezerve')
@@ -572,11 +689,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-2" style="background-color: #3f4bee;"><p style="text-align: center; ">2</p></div>';
+            echo '<div class="seat rezerve" id="seat-2" style="background-color: #6FB2F2;"><p style="text-align: center; ">2</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-2" style="background-color: #dc54c7;"><p style="text-align: center; ">2</p></div>';
+            echo '<div class="seat rezerve" id="seat-2" style="background-color: #FF95DF;"><p style="text-align: center; ">2</p></div>';
           }
         }
         else if($koltuklarArray[1]['Koltuk_durum']== 'Rezerve')
@@ -602,11 +719,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-25" style="background-color: #3f4bee;"><p style="text-align: center; ">25</p></div>';
+            echo '<div class="seat rezerve" id="seat-25" style="background-color: #6FB2F2;"><p style="text-align: center; ">25</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-25" style="background-color: #dc54c7;"><p style="text-align: center; ">25</p></div>';
+            echo '<div class="seat rezerve" id="seat-25" style="background-color: #FF95DF;"><p style="text-align: center; ">25</p></div>';
           }
         }
         else if($koltuklarArray[24]['Koltuk_durum']== 'Rezerve')
@@ -627,11 +744,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-22" style="background-color: #3f4bee;"><p style="text-align: center; ">22</p></div>';
+            echo '<div class="seat rezerve" id="seat-22" style="background-color: #6FB2F2;"><p style="text-align: center; ">22</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-22" style="background-color: #dc54c7;"><p style="text-align: center; ">22</p></div>';
+            echo '<div class="seat rezerve" id="seat-22" style="background-color: #FF95DF;"><p style="text-align: center; ">22</p></div>';
           }
         }
         else if($koltuklarArray[21]['Koltuk_durum']== 'Rezerve')
@@ -652,11 +769,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-19" style="background-color: #3f4bee;"><p style="text-align: center; ">19</p></div>';
+            echo '<div class="seat rezerve" id="seat-19" style="background-color: #6FB2F2;"><p style="text-align: center; ">19</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-19" style="background-color: #dc54c7;"><p style="text-align: center; ">19</p></div>';
+            echo '<div class="seat rezerve" id="seat-19" style="background-color: #FF95DF;"><p style="text-align: center; ">19</p></div>';
           }
         }
         else if($koltuklarArray[18]['Koltuk_durum']== 'Rezerve')
@@ -678,11 +795,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-15" style="background-color: #3f4bee;"><p style="text-align: center; ">15</p></div>';
+            echo '<div class="seat rezerve" id="seat-15" style="background-color: #6FB2F2;"><p style="text-align: center; ">15</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-15" style="background-color: #dc54c7;"><p style="text-align: center; ">15</p></div>';
+            echo '<div class="seat rezerve" id="seat-15" style="background-color: #FF95DF;"><p style="text-align: center; ">15</p></div>';
           }
         }
         else if($koltuklarArray[14]['Koltuk_durum']== 'Rezerve')
@@ -703,11 +820,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-12" style="background-color: #3f4bee;"><p style="text-align: center; ">12</p></div>';
+            echo '<div class="seat rezerve" id="seat-12" style="background-color: #6FB2F2;"><p style="text-align: center; ">12</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-12" style="background-color: #dc54c7;"><p style="text-align: center; ">12</p></div>';
+            echo '<div class="seat rezerve" id="seat-12" style="background-color: #FF95DF;"><p style="text-align: center; ">12</p></div>';
           }
         }
         else if($koltuklarArray[11]['Koltuk_durum']== 'Rezerve')
@@ -728,11 +845,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-9" style="background-color: #3f4bee;"><p style="text-align: center; ">9</p></div>';
+            echo '<div class="seat rezerve" id="seat-9" style="background-color: #6FB2F2;"><p style="text-align: center; ">9</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-9" style="background-color: #dc54c7;"><p style="text-align: center; ">9</p></div>';
+            echo '<div class="seat rezerve" id="seat-9" style="background-color: #FF95DF;"><p style="text-align: center; ">9</p></div>';
           }
         }
         else if($koltuklarArray[8]['Koltuk_durum']== 'Rezerve')
@@ -753,11 +870,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-6" style="background-color: #3f4bee;"><p style="text-align: center; ">6</p></div>';
+            echo '<div class="seat rezerve" id="seat-6" style="background-color: #6FB2F2;"><p style="text-align: center; ">6</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-6" style="background-color: #dc54c7;"><p style="text-align: center; ">6</p></div>';
+            echo '<div class="seat rezerve" id="seat-6" style="background-color: #FF95DF;"><p style="text-align: center; ">6</p></div>';
           }
         }
         else if($koltuklarArray[5]['Koltuk_durum']== 'Rezerve')
@@ -778,11 +895,11 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         {
           if($yolcu['Cinsiyet']=='Erkek')
           {
-            echo '<div class="seat rezerve" id="seat-3" style="background-color: #3f4bee;"><p style="text-align: center; ">3</p></div>';
+            echo '<div class="seat rezerve" id="seat-3" style="background-color: #6FB2F2;"><p style="text-align: center; ">3</p></div>';
           }
           else if($yolcu['Cinsiyet']=='Kadın')
           {
-            echo '<div class="seat rezerve" id="seat-3" style="background-color: #dc54c7;"><p style="text-align: center; ">3</p></div>';
+            echo '<div class="seat rezerve" id="seat-3" style="background-color: #FF95DF;"><p style="text-align: center; ">3</p></div>';
           }
         }
         else if($koltuklarArray[2]['Koltuk_durum']== 'Rezerve')
@@ -799,6 +916,7 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
       ?>
     </div>
   </div>
+  <br><br>
   
   <select id="biletFiyat" name="biletFiyat" required>
     <option value="" selected disabled>Bilet Seçiniz</option>
@@ -815,17 +933,22 @@ $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
   <?php echo '.<input type="hidden" name="seferr" id="seferr" value='.$sefer_id.'>'?>
   <?php echo '.<input type="hidden" name="yolcuu" id="yolcuu" value='.$yolcuu_id.'>'?>
 
+  
   <input type="submit" value="Bakiye ile Öde"formaction="<?= site_url('/bakiyeodeme') ?>"id="bakiyeOdeBtn">
   <input type="submit" value="Kart ile Öde"formaction="<?= site_url('/kartodeme') ?>">
   <input type="submit" value="Aracı ile Öde"formaction=" ">
 
   </form>
-  <br>
-  <div id="bakiyeYetersiz"  style="color:red; display: none;">Bakiye Yetersiz</div><br>
-  <div id="error-message"  style="color:red; display: none;">Lütfen koltuk seçiniz.</div>
-         </div>
+
+ </div>
+ <br>
 </div>
+
+
+
 <!--BU SCRİPTLERİ ELLEMEYİN (KAAN) -->
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var divElements = document.querySelectorAll("[id^='seat-']");

@@ -22,7 +22,17 @@
 }
 
 body{
-    background-color:#3ecc6d;
+    background-color:#E2E3E4;
+}
+form .fas.fa-calendar-alt {
+    color: #6482B8;
+}
+
+form .fas.fa-lock {
+    color: #6482B8;
+}
+form .far.fa-user {
+    color: #6482B8;
 }
 
 .container {
@@ -34,8 +44,8 @@ body{
 .card.box1 {
     width: 350px;
     height: 500px;
-    background-color: #3ecc6d;
-    color: #baf0c3;
+    background-color: #1C357C;
+    color: #fff;
     border-radius: 0
 }
 
@@ -54,15 +64,15 @@ body{
     width: 20px;
     background-color: transparent;
     border: none;
-    color: #3ecc6d
+    color: #1C357C
 }
 
 .box2 .btn.btn-primary.bar:hover {
-    color: #baf0c3
+    color: #1C357C
 }
 
 .box1 .btn.btn-primary {
-    background-color: #57c97d;
+    background-color: #1C357C;
     width: 45px;
     height: 45px;
     display: flex;
@@ -72,7 +82,7 @@ body{
 }
 
 .box1 .btn.btn-primary:hover {
-    background-color: #f6f8f7;
+    background-color: #1C357C;
     color: #57c97d
 }
 
@@ -101,13 +111,13 @@ body{
 }
 
 .nav.nav-tabs .nav-item .nav-link:hover {
-    border-bottom: 2px solid #3ecc6d;
-    color: #05cf48
+    border-bottom: 2px solid #6482B8;
+    color: #6482B8
 }
 
 .nav.nav-tabs .nav-item .nav-link.active {
     border: none;
-    border-bottom: 2px solid #3ecc6d
+    border-bottom: 2px solid #6482B8
 }
 
 .form-control {
@@ -136,7 +146,7 @@ img {
     position: absolute;
     right: 0px;
     bottom: 9px;
-    color: #57c97d;
+    color: #6482B8;
     cursor: pointer;
     transition: 0.3s;
     font-size: 14px
@@ -154,7 +164,7 @@ img {
 }
 
 .btn-outline-primary:hover {
-    background-color: #05cf48;
+    background-color: #6482B8;
     border: 1px solid #ddd
 }
 
@@ -163,8 +173,8 @@ img {
 .btn-outline-primary.active,
 .btn-outline-primary.dropdown-toggle.show,
 .btn-outline-primary:active {
-    color: #baf0c3;
-    background-color: #3ecc6d;
+    color: #6482B8;
+    background-color: #1C357C;
     box-shadow: none;
     border: 1px solid #ddd
 }
@@ -189,12 +199,12 @@ form .btn.btn-primary {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #3ecc6d;
+    background-color: #1C357C;
     border: 1px solid #ddd
 }
 
 form .btn.btn-primary:hover {
-    background-color: #05cf48
+    background-color: #6482B8
 }
 
 @media (max-width:750px) {
@@ -223,19 +233,21 @@ form .btn.btn-primary:hover {
 </head>
 <body>
     <div class="container bg-light d-md-flex align-items-center">
+       <!-- Butonun olduğu kısım -->
+       <a href="#" onclick="window.history.back();" class="btn btn-danger position-absolute top-0 start-0 m-3">İptal</a>
+       <!-- Diğer içerikler -->
        <div class="card box1 shadow-sm p-md-5 p-md-5 p-4">
           <div class="fw-bolder mb-4"><span class="ps-1"><?php echo $biletFiyat?>₺</span></div>
           <div class="d-flex flex-column">
              <div class="border-bottom mb-4"></div>
              <div class="d-flex flex-column mb-5">
     <span class="far fa-calendar-alt text"><span class="ps-2">Ödeme Tarihi:</span></span>
-    <span class="ps-3 datePlaceholder">22 July, 2018</span>
+    <span class="ps-3 datePlaceholder">Tarih</span><br><br>
+    <h6>Sayın Müşterimiz, ödemeyle ilgili herhangi bir sorununuz olduğunda bizimle email üzerinden veya telefon numaramızdan iletişime geçin. Size her konuda yardımcı olmaktan mutluluk duyarız.
+<br><br>
+Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
 </div>
 
-             <div class="d-flex align-items-center justify-content-between text mt-5">
-                <div class="d-flex flex-column text"> <span>Müşteri Hizmetleri:</span> <span>7/24 Online</span> </div>
-                <div class="btn btn-primary rounded-circle"><span class="fas fa-comment-alt"></span></div>
-             </div>
           </div>
        </div>
        <div class="card box2 shadow-sm">
@@ -274,7 +286,7 @@ form .btn.btn-primary:hover {
                    </div>
                 </div>
                 <div class="col-12 px-md-5 px-4 mt-3">
-                <?php echo $biletFiyat?>
+               
                 <input type="hidden"id="seferId" name="seferId" value="<?php echo $seferId?>">
                 <input type="hidden"id="koltukId" name="koltukId" value="<?php echo $koltukId?>">
                 <input type="hidden"id="pnrKodu" name="pnrKodu" value="<?php echo $pnrKodu?>">
@@ -305,5 +317,22 @@ document.getElementById('expireDate').addEventListener('input', function (e) {
 
     document.getElementById('expireDate').value = input;
 });
+
+
+// Bugünün tarihini al
+var bugun = new Date();
+
+// Tarih formatını ayarla (örneğin: "18 Mart 2024" gibi)
+var tarihFormati = bugun.getDate() + ' ' + ayAdiniGetir(bugun.getMonth()) + ' ' + bugun.getFullYear();
+
+// HTML içeriğini güncelle
+document.querySelector('.datePlaceholder').textContent = tarihFormati;
+
+// Ay adını al
+function ayAdiniGetir(ay) {
+    var aylar = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+    return aylar[ay];
+}
+
 </script>
 </html>

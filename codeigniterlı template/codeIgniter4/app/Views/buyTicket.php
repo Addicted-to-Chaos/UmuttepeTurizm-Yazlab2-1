@@ -66,7 +66,7 @@
                             <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> <?php echo isset($session->user['Ad']) ? $session->user['Ad'] : ''; ?></small></a>
                             <div class="dropdown-menu rounded">
                                 <a href="<?= site_url('/hesabim') ?>" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Profilim</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Hesap Ayarları</a>
+                                <a href="biletlerim" class="dropdown-item"><i class="fas fa-cog me-2"></i> Biletlerim</a>
                                 <a href="<?php echo site_url('/cikisYap'); ?>" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Çıkış Yap</a>
                             </div>
                         </div>
@@ -96,7 +96,6 @@
                         <a href="<?= site_url('/') ?>" class="nav-item nav-link">Ana Sayfa</a>
                         <a href="<?= site_url('/about') ?>" class="nav-item nav-link">Hakkımızda</a>
                         <a href="<?= site_url('/services') ?>" class="nav-item nav-link">Hizmetlerimiz</a>
-                        <a href="<?= site_url('/packages') ?>" class="nav-item nav-link">Seferler</a>
                         <a href="<?= site_url('/contact') ?>" class="nav-item nav-link">İletişim</a>
                 
                        

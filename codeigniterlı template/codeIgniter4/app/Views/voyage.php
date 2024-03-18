@@ -221,7 +221,7 @@
             
 
         <div class="text-center mt-4">
-        <a href="#" onclick="history.back();" class="back-btn">Geri Dön</a>
+        <a href="#" onclick="history.back();" class="back-btn">Geri</a>
          </div>
 
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
@@ -234,6 +234,9 @@
 
             <?php if (empty($seferler)): ?>
                 <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
+
+
+
 <?php else: ?>
     <?php foreach ($seferler as $sefer): ?>
         
@@ -243,14 +246,27 @@
             </div>
             <div class="service-content">
                 <h2 style="color: #6482B8">Konforlu Koltuk Düzeni</h2>
-                <p class="mb-0"><b> Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir'] ?>ㅤㅤ
+                <p ><b> Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir']?>ㅤㅤ
                 <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
                 <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?>ㅤㅤ
-                <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br>
-                <input type="text"> 
+                <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br> 
                 <b>Sefer : </b><?= $sefer['Sefer_id'] ?></p><br>
             </div>
-            <button class="btn btn-primary ms-auto mt-20 me-3" style="width: 200px; margin-right: 20px;" onclick="goToSeatSelection(<?= $sefer['Sefer_id'] ?>)">Koltuk Seç</button>
+
+            <div class="d-flex align-items-center" style="margin-left: auto; margin-right: 20px;">
+    <!-- Fiyat bilgisi -->
+    <div class="me-3" style="margin-bottom: 35px; font-size: 26px; font-weight: bold;">
+    ㅤㅤ<?= $sefer['Fiyat'] ?>₺
+    </div>
+    <!-- Buton -->
+    <button class="btn btn-primary mt-20" style="width: 200px;" onclick="goToSeatSelection(<?= $sefer['Sefer_id'] ?>)">
+        Koltuk Seç
+    </button>
+</div>
+
+
+
+        
         </div>
         <br>
     <?php endforeach; ?>
