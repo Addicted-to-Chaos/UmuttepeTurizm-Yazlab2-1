@@ -1,0 +1,129 @@
+INFO - 2024-03-19 00:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 00:30:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?)' at line 1 in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL Rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 00:30:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?)' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:30:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?)' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(?)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(?)')
+ 3 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:30:18 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?)' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL RezervasyonIptal(?)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(?)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(?)')
+ 4 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-19 00:31:37 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4 in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL Rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 00:31:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:31:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 3 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:31:37 --> [Caused by] mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 4 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 00:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 00:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 00:31:47 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4 in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL Rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 00:31:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:31:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 3 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 00:31:47 --> [Caused by] mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(\'1\',\'PPT2MZ\',\'3\',\'15\')')
+ 4 APPPATH\Controllers\User.php(509): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

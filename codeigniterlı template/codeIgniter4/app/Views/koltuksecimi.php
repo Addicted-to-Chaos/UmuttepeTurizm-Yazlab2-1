@@ -234,15 +234,26 @@ else
 
 <div class="control-panel" style="position: absolute; top: 80px; left: 20px;">
 <?php 
-$bakiye = isset($session->user["Bakiye"]) ? $session->user["Bakiye"] : 0;
-echo 'Bakiyeniz : <span id="bakiye">'. $bakiye . ' ₺</span>';
+use App\Models\UsersModel;
+
 $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
+
+$yolcuModel=new UsersModel();
+$yolcu=$yolcuModel->where('Yolcu_id',$yolcuu_id)->first();
+
+if (isset($yolcu['Bakiye'])) {
+  $bakiye = $yolcu['Bakiye'];
+} else {
+  $bakiye = 0;
+}
+echo 'Bakiyeniz : <span id="bakiye">'. $bakiye . ' ₺</span>';
+
 ?>
 </div>
 <?php
 
 use App\Models\UserModelKoltuklar;
-use App\Models\UsersModel;
+
 
 $koltukModel = new UserModelKoltuklar();
 $koltuklar = $koltukModel->where('Sefer_id',$sefer_id)->findAll();
@@ -918,6 +929,8 @@ for ($i = 0; $i < $uzunluk; $i++) {
   </div>
   <br><br>
   
+
+
   <select id="biletFiyat" name="biletFiyat" required>
     <option value="" selected disabled>Bilet Seçiniz</option>
     <?php
@@ -925,7 +938,12 @@ for ($i = 0; $i < $uzunluk; $i++) {
     use App\Models\UserModelSeferler;
     $seferModel = new UserModelSeferler();
     $sefer = $seferModel->where("Sefer_id", $sefer_id)->first();
-    echo '<option value="' . $sefer['Fiyat'] . '"> Satın Al - ' . $sefer['Fiyat'] . '₺</option>';
+
+    echo '<option value="' . $sefer['Fiyat']. '"> Normal-'.$sefer['Fiyat'].'₺</option>';
+    echo '<option value="' . $sefer['Fiyat']-($sefer['Fiyat']*15/100) . '"> Öğrenci - %15 indirim</option>';
+    echo '<option value="' . $sefer['Fiyat']-($sefer['Fiyat']*15/100) . '"> 65 Yaş ve Üstü - %15 indirim</option>';
+    echo '<option value="' . $sefer['Fiyat']-($sefer['Fiyat']*15/100) . '"> Memur - %15 indirim</option>';
+    echo '<option value="0"> Güvenlik Gücü - Bedava</option>';
     echo '<option value="200"> Rezerve Et - 200₺</option>';
   ?>
   </select>

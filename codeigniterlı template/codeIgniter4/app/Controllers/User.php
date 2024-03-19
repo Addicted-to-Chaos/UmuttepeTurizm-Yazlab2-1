@@ -446,8 +446,9 @@ public function bakiyeodeme()
     $seferId = $this->request->getVar('seferId');
     $koltukId = $this->request->getVar('koltukId');
     $pnrKodu = $this->request->getVar('pnrKodu');
-    $yolcuId = $this->request->getVar('yolcuId');
+    $yolcuId = $this->request->getVar('yolcuu');
     $biletFiyat = $this->request->getVar('biletFiyat');
+    $bakiye=$this->request->getVar('bakiye');
 
     $data = [
         'kartNumara' => $kartNumara,
@@ -458,7 +459,8 @@ public function bakiyeodeme()
         'koltukId' =>$koltukId,
         'pnrKodu' =>$pnrKodu,
         'yolcuId'=>$yolcuId,
-        'biletFiyat'=>$biletFiyat
+        'biletFiyat'=>$biletFiyat,
+        'bakiye'=>$bakiye
     ];
 
     
@@ -491,7 +493,38 @@ public function bakiyeodeme()
     return view ('odendi', $data);
 }
 
+public function rezervasyonIptal(){
+
+    $db = db_connect();
+
+    $seferIdVar = $this->request->getVar('seferId');
+    $biletIdVar = $this->request->getVar('pnrKodu');
+    $yolcuIdVar  = $this->request->getVar('yolcuId');
+    $koltukIdVar  = $this->request->getVar('koltukId');
+    
+    $bakiye=$this->request->getVar('bakiye');
+
+    $procedureName = 'RezervasyonIptal';
+    $query = "CALL $procedureName(?,?,?,?)";
+    $result = $this->db->query($query, [$seferIdVar,$biletIdVar,$yolcuIdVar,$koltukIdVar]);
+
+    if ($result)
+        {
+            $message='Sefer başarıyla eklenmiştir';
+        }
+        else
+        {
+            $error = $this->db->error();
+            $message = "Hata oluştu: " . $error['message'];
+        }
+
+    return view('seferekle',['message' => $message]);
+
 }
+
+}
+
+
 
 function generatePNR($length = 6) {
     $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';

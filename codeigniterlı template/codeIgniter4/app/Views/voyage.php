@@ -233,44 +233,44 @@
             <div class="col-12">
 
             <?php if (empty($seferler)): ?>
-                <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
-
-
-
+    <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
 <?php else: ?>
     <?php foreach ($seferler as $sefer): ?>
-        
-        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-            <div class="service-icon p-4">
-                <img src="assets/img/bus.png" width="250" class="img-fluid">
+        <?php 
+        $seferTarihi = strtotime($sefer['Tarih']); 
+        $bugununTarihi = strtotime(date('Y-m-d'));
+        ?>
+        <?php if ($bugununTarihi < $seferTarihi): ?>
+            <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                <div class="service-icon p-4">
+                    <img src="assets/img/bus.png" width="250" class="img-fluid">
+                </div>
+                <div class="service-content">
+                    <h2 style="color: #6482B8">Konforlu Koltuk Düzeni</h2>
+                    <p><b>Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir'] ?> ㅤㅤ
+                    <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
+                    <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?> ㅤㅤ
+                    <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br>
+                    <b>Sefer : </b><?= $sefer['Sefer_id'] ?></p><br>
+                </div>
+                <div class="d-flex align-items-center" style="margin-left: auto; margin-right: 20px;">
+                    <!-- Fiyat bilgisi -->
+                    <div class="me-3" style="margin-bottom: 35px; font-size: 26px; font-weight: bold;">
+                    ㅤㅤ<?= $sefer['Fiyat'] ?>₺
+                    </div>
+                    <!-- Buton -->
+                    <button class="btn btn-primary mt-20" style="width: 200px;" onclick="goToSeatSelection(<?= $sefer['Sefer_id'] ?>)">
+                        Koltuk Seç
+                    </button>
+                </div>
             </div>
-            <div class="service-content">
-                <h2 style="color: #6482B8">Konforlu Koltuk Düzeni</h2>
-                <p ><b> Kalkış Şehri : </b><?=  $sefer['Kalkis_sehir']?>ㅤㅤ
-                <b>Varış Şehri : </b><?= $sefer['Varis_sehir'] ?> ㅤㅤ
-                <b>Sefer Tarihi : </b><?= $sefer['Tarih'] ?>ㅤㅤ
-                <b>Kalkış Saati : </b><?= $sefer['Kalkis_saat'] ?></p><br> 
-                <b>Sefer : </b><?= $sefer['Sefer_id'] ?></p><br>
-            </div>
-
-            <div class="d-flex align-items-center" style="margin-left: auto; margin-right: 20px;">
-    <!-- Fiyat bilgisi -->
-    <div class="me-3" style="margin-bottom: 35px; font-size: 26px; font-weight: bold;">
-    ㅤㅤ<?= $sefer['Fiyat'] ?>₺
-    </div>
-    <!-- Buton -->
-    <button class="btn btn-primary mt-20" style="width: 200px;" onclick="goToSeatSelection(<?= $sefer['Sefer_id'] ?>)">
-        Koltuk Seç
-    </button>
-</div>
-
-
-
-        
-        </div>
-        <br>
+            <br>
+        <?php else: ?>
+    <p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>
+        <?php endif; ?>
     <?php endforeach; ?>
 <?php endif; ?>
+
             </div>
             <!-- JavaScript Libraries -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

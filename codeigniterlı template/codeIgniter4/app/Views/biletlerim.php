@@ -1,4 +1,5 @@
-<?php $session=session(); 
+<?php $session=session();
+use App\Models\UserModeliller; 
 use App\Models\UserModelBiletler;?>
 
 <html>
@@ -26,17 +27,10 @@ use App\Models\UserModelBiletler;?>
   overflow: hidden;
   margin: 10px
 }
-.container .item-left {
+.container .item-right, .container .item-left {
   float: left;
   padding: 20px 
 }
-
-.container .item-right {
-    float: left;
-    padding: 20px;
-    margin-right: -10px; /* Sağ tarafa olan uzaklık */
-}
-
 
 .container .item-left {
   width: 71%;
@@ -161,22 +155,6 @@ use App\Models\UserModelBiletler;?>
 h2#hesap-basligi {
   color: #1C357C;
     }
-    .cancel-button {
-    background-color: #F25454  ; /* Kırmızı arka plan */
-    color: #fff; /* Beyaz metin rengi */
-    border: none; /* Kenarlık yok */
-    padding: 5px 5px; /* Buton içi boşluk */
-    margin-left: 50px;
-    border-radius: 5px; /* Yuvarlatılmış kenarlar */
-    cursor: pointer; /* İmleç tipi: el işareti */
-}
-
-
-
-.cancel-button:hover {
-    background-color: #EC221C; /* Butona fare geldiğinde koyu kırmızı */
-}
-
 </style>
 </head>
 
@@ -209,7 +187,7 @@ h2#hesap-basligi {
             <?php
             use App\Models\UserModelSeferler;
             use App\Models\UserModelBiletLog;
-
+            $sehirler=new UserModeliller();
 
             $seferModel = new UserModelSeferler();
             $biletLogModel=new UserModelBiletLog();
@@ -222,50 +200,50 @@ h2#hesap-basligi {
             }
             else{
 
-            
-            
-                foreach ($biletler as $bilet) {
-                    // Bilet bilgilerini al
-                    $sefer = $seferModel->where('Sefer_id', $bilet['Sefer_id'])->first();
-                    $log = $biletLogModel->where('Bilet_id', $bilet['Bilet_id'])->first();
                 
-                    // Bilet bloğunu oluştur
-                    echo '<div class="item">';
-                    echo '<div class="item-left">';
-                    echo '<h3>' . $bilet['Kalkis_Sehir'] . ' -> ' . $bilet['Varis_Sehir'] . '</h3><br>';
-                    echo '<hr>';
-                    echo '<div class="sce">';
-                    echo '<div class="icon">';
-                    echo '<i class="fa fa-table"></i>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<div class="fix"></div>';
-                    echo '<div class="loc">';
-                    echo '<div class="icon">';
-                    echo '<i class="fa fa-map-marker"></i>';
-                    echo '</div>';
-                    echo '<p><b>PNR Kodu : </b>' . $bilet['PNR_kodu'] . '</p>';
-                    echo '<p><b>Sefer Tarihi :</b>' . $sefer['Tarih'] . '<br/>';
-                    echo '<b>Saat : </b>' . $bilet['Kalkis_Saat'] . '<br>';
-                    echo '<b>Peron no : </b>' . $sefer['Peron_no'] . '<br>';
-                    echo '<b>Koltuk no : </b>' . $bilet['Koltuk_no'] . ' <br>';
-                    echo '<b>Bilet Durumu : </b>' . $log['Durum'] . ' <br>';
-                    echo '</div>';
-                    echo '<div class="fix"></div>';
-                
-               
-                    echo '</div>';
-                
-                    // İptal butonunu ekleyelim
-                    echo '<div class="item-right">';
-                    echo '<form action="iptal_et.php" method="POST">'; // iptal işlemi için bir sayfa belirtmelisiniz
-                    echo '<input type="hidden" name="bilet_id" value="' . $bilet['Bilet_id'] . '">'; // iptal edilecek bileti tanımlamak için gizli bir alan
-                    echo '<button class="cancel-button" type="submit">İptal Et</button>'; // İptal butonu
-                    echo '</form>';
-                    echo '</div>';
-                
-                 
-                    echo '</div>';
+                foreach ($biletler as $bilet) 
+                {
+                    echo '<form action="' .site_url('/rezervasyonIptal'). '" method="post">';
+                  $sefer=$seferModel->where('Sefer_id',$bilet['Sefer_id'])->first();
+                  $log=$biletLogModel->where('Bilet_id',$bilet['Bilet_id'])->first();
+
+                  
+                  $sehir1=$sehirler->where('Plaka_kodu',$sefer['Kalkis_sehir'])->first();
+                  $sehir2=$sehirler->where('Plaka_kodu',$sefer['Varis_sehir'])->first();
+
+                  echo '<div class="item">';
+                  echo '<div class="item-left">';
+                  echo  '<h3>'.$sehir1['Sehir_adi'].' ->'.$sehir2['Sehir_adi'].'</h3><br>';
+                  echo  '<hr>';
+                  echo  '<div class="sce">';
+                  echo   '<div class="icon">';
+                  echo    '<i class="fa fa-table"></i>';
+                  echo  '</div>';
+                  echo  '</div>';
+                  echo  '<div class="fix"></div>';
+                  echo  '<div class="loc">';
+                  echo   '<div class="icon">';
+                  echo   '<i class="fa fa-map-marker"></i>';
+                  echo    '</div>';
+                  echo   '<p><b>PNR Kodu:</b>'.$bilet['PNR_kodu'].'</p>';
+                  echo    '<p>Sefer Tarihi :'.$sefer['Tarih'].'<br/>'; 
+                  echo    'Saat:'.$sefer['Kalkis_saat'].'<br>'; 
+                  echo        'Peron no:'.$sefer['Peron_no'].'<br>'; 
+                  echo        'Koltuk no:'.$bilet['Koltuk_id'].' <br>'; 
+                  echo        'Bilet Durumu :'.$log['Durum'].' <br>';  
+                  echo  '</div>';
+                  if ($log['Durum'] == 'Rezerve') { //burası düzenlenecek suedaaaaaaaaaaaaaaaağğğğğ
+                    echo '<input type="hidden"id="pnrKodu" name="pnrKodu" value="'.$bilet['PNR_kodu'].'">';
+                    echo '<input type="hidden"id="seferId" name="seferId" value="'.$bilet['Sefer_id'].'">';
+                    echo '<input type="hidden"id="yolcuId" name="yolcuId" value="'.$bilet['Yolcu_id'].'">';
+                    echo '<input type="hidden"id="koltukId" name="koltukId" value="'.$bilet['Koltuk_id'].'">';
+
+                    echo'<input type="submit"Sil">';
+                 }
+                  echo  '<div class="fix"></div>';
+                  echo'</div>'; 
+                  echo '</div>';
+                  echo '</form>';
                 }
           }
             ?>

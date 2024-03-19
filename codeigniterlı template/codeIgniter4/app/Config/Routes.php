@@ -50,6 +50,9 @@ use CodeIgniter\Router\RouteCollection;
     $routes->post('/bakiyeodeme' ,'User::bakiyeodeme');
     
     $routes->post('/odendi' ,'User::odendi');
+    
+    $routes->post('/rezervasyonIptal' ,'User::rezervasyonIptal');
+
 
 
     

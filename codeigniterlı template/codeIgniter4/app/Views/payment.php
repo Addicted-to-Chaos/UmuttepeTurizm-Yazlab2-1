@@ -293,7 +293,6 @@ Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
                 <input type="hidden"id="yolcuId" name="yolcuId" value="<?php echo $yolcuId?>">
                 <input type="hidden"id="biletFiyat" name="biletFiyat" value="<?php echo $biletFiyat?>">
 
-
                    <button type="submit" class="btn btn-primary w-100"><?php echo $biletFiyat?>₺</button>
                 </div>
              </div>
