@@ -127,3 +127,1161 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 17:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 17:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 17:18:38 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\biletlerim.php on line 211.
+ 1 APPPATH\Views\biletlerim.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 211)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 17:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 17:19:52 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\biletlerim.php on line 210.
+ 1 APPPATH\Views\biletlerim.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 210)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:08:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\biletlerim.php on line 210.
+ 1 APPPATH\Views\biletlerim.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 210)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:13:56 --> ErrorException: Undefined array key "Kalkis_saat"
+in APPPATH\Views\biletlerim.php on line 228.
+ 1 APPPATH\Views\biletlerim.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_saat"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 228)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:13:58 --> ErrorException: Undefined array key "Kalkis_saat"
+in APPPATH\Views\biletlerim.php on line 228.
+ 1 APPPATH\Views\biletlerim.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_saat"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 228)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:13:58 --> ErrorException: Undefined array key "Kalkis_saat"
+in APPPATH\Views\biletlerim.php on line 228.
+ 1 APPPATH\Views\biletlerim.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_saat"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 228)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:13:59 --> ErrorException: Undefined array key "Kalkis_saat"
+in APPPATH\Views\biletlerim.php on line 228.
+ 1 APPPATH\Views\biletlerim.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_saat"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 228)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:14:32 --> ErrorException: Undefined array key "Peron_no"
+in APPPATH\Views\biletlerim.php on line 229.
+ 1 APPPATH\Views\biletlerim.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Peron_no"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 229)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:14:49 --> ErrorException: Undefined array key "Kalkis_S  aat"
+in APPPATH\Views\biletlerim.php on line 228.
+ 1 APPPATH\Views\biletlerim.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_S  aat"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 228)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:14:57 --> ErrorException: Undefined array key "Koltuk_No"
+in APPPATH\Views\biletlerim.php on line 230.
+ 1 APPPATH\Views\biletlerim.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Koltuk_No"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 230)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:46:37 --> ErrorException: Undefined array key 22
+in APPPATH\Views\koltuksecimi.php on line 286.
+ 1 APPPATH\Views\koltuksecimi.php(286): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 22', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 286)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 18:49:17 --> ErrorException: Undefined array key 22
+in APPPATH\Views\koltuksecimi.php on line 286.
+ 1 APPPATH\Views\koltuksecimi.php(286): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 22', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 286)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 18:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 18:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 18:59:16 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE) in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(''...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(''...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(''...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(373): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 18:59:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(373): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 18:59:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'\',\'9\',\'11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'\',\'9\',\'11\')')
+ 3 APPPATH\Controllers\User.php(373): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 18:59:16 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(\'\',\'9\',\'11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'\',\'9\',\'11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'\',\'9\',\'11\')')
+ 4 APPPATH\Controllers\User.php(373): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-19 19:00:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE) in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(''...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(''...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(''...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(376): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 19:00:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(376): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:00:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'\',\'9\',\'11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'\',\'9\',\'11\')')
+ 3 APPPATH\Controllers\User.php(376): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:00:00 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`umuttepe`.`biletler`, CONSTRAINT `biletler_ibfk_1` FOREIGN KEY (`Yolcu_id`) REFERENCES `yolcular` (`Yolcu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(\'\',\'9\',\'11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'\',\'9\',\'11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'\',\'9\',\'11\')')
+ 4 APPPATH\Controllers\User.php(376): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 19:06:03 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 19:06:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:06:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:06:03 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',NULL,NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 4 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 19:06:36 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 19:06:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:06:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:06:36 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',NULL,NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 4 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 19:39:41 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 19:39:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:39:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:39:41 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',NULL,NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 4 APPPATH\Controllers\User.php(476): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 19:46:45 --> ErrorException: Undefined variable $pnrKodu
+in APPPATH\Views\payment.php on line 292.
+ 1 APPPATH\Views\payment.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pnrKodu', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\payment.php', 292)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\payment.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('payment', [], true)
+ 5 APPPATH\Controllers\User.php(382): view('payment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kartodeme()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 19:48:02 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(489): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-19 19:48:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(489): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:48:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 APPPATH\Controllers\User.php(489): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 19:48:02 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',NULL,NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',NULL,NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',NULL,NULL)')
+ 4 APPPATH\Controllers\User.php(489): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 19:48:25 --> ErrorException: Undefined array key "Yolcu_id"
+in APPPATH\Views\biletlerim.php on line 225.
+ 1 APPPATH\Views\biletlerim.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Yolcu_id"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 225)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 19:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 19:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 20:38:49 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp-mail.outlook.com failed: Bilinen b�yle bir ana bilgisayar yok.  in C:\xampp\htdocs\codeIgniter4\system\Email\Email.php:1897
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1897)
+#1 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1897): fsockopen('smtp-mail.outlo...', 587, NULL, NULL, 20)
+#2 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\codeIgniter4\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(48): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+#7 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-03-19 20:38:49 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-19 20:38:49 --> 
+INFO - 2024-03-19 20:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 20:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:02:57 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 769.
+ 1 APPPATH\Views\koltuksecimi.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 769)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:03:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 769.
+ 1 APPPATH\Views\koltuksecimi.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 769)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:03:34 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 769.
+ 1 APPPATH\Views\koltuksecimi.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 769)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:04:07 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 769.
+ 1 APPPATH\Views\koltuksecimi.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 769)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:13:33 --> ErrorException: Array to string conversion
+in APPPATH\Views\koltuksecimi.php on line 732.
+ 1 APPPATH\Views\koltuksecimi.php(732): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 732)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:14:40 --> ErrorException: Array to string conversion
+in APPPATH\Views\koltuksecimi.php on line 732.
+ 1 APPPATH\Views\koltuksecimi.php(732): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 732)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:17:56 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 731.
+ 1 APPPATH\Views\koltuksecimi.php(731): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 731)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:18:04 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 731.
+ 1 APPPATH\Views\koltuksecimi.php(731): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 731)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:18:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 731.
+ 1 APPPATH\Views\koltuksecimi.php(731): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 731)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:18:37 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 731.
+ 1 APPPATH\Views\koltuksecimi.php(731): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 731)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:19:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 769.
+ 1 APPPATH\Views\koltuksecimi.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 769)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:23:01 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:23:02 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:27:35 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:27:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:28:08 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:28:09 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:28:10 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 522.
+ 1 APPPATH\Views\koltuksecimi.php(522): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 522)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:32:20 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:32:24 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:33:29 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:33:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:33:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:34 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:39 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:40 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:56 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:57 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:36:58 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:37:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:37:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:37:37 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 773.
+ 1 APPPATH\Views\koltuksecimi.php(773): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 773)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:39:49 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:39:50 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:39:58 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:40:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:40:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:40:34 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 21:40:35 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 747.
+ 1 APPPATH\Views\koltuksecimi.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 747)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 21:42:29 --> mysqli_sql_exception: CONSTRAINT `yolcular.Bakiye` failed for `umuttepe`.`yolcular` in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `yolcula...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `yolcula...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `yolcula...')
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `yolcula...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\codeIgniter4\system\Model.php(807): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(488): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#9 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-19 21:42:29 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `yolcular.Bakiye` failed for `umuttepe`.`yolcular`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `yolcular` SET `Bakiye` = :Bakiye:
+WHERE `Yolcu_id` = :Yolcu_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\User.php(488): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 21:42:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `yolcular.Bakiye` failed for `umuttepe`.`yolcular`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `yolcular` SET `Bakiye` = -297.5
+WHERE `Yolcu_id` = \'4\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `yolcular` SET `Bakiye` = -297.5
+WHERE `Yolcu_id` = \'4\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `yolcular` SET `Bakiye` = :Bakiye:
+WHERE `Yolcu_id` = :Yolcu_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update(null, [...])
+ 7 APPPATH\Controllers\User.php(488): CodeIgniter\Model->update()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 21:42:29 --> [Caused by] mysqli_sql_exception: CONSTRAINT `yolcular.Bakiye` failed for `umuttepe`.`yolcular`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `yolcular` SET `Bakiye` = -297.5
+WHERE `Yolcu_id` = \'4\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `yolcular` SET `Bakiye` = -297.5
+WHERE `Yolcu_id` = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `yolcular` SET `Bakiye` = -297.5
+WHERE `Yolcu_id` = \'4\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `yolcular` SET `Bakiye` = :Bakiye:
+WHERE `Yolcu_id` = :Yolcu_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\User.php(488): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 21:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 21:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 22:20:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 626.
+ 1 APPPATH\Views\koltuksecimi.php(626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 626)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 22:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 22:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 22:20:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 626.
+ 1 APPPATH\Views\koltuksecimi.php(626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 626)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 22:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 22:22:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 626.
+ 1 APPPATH\Views\koltuksecimi.php(626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 626)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 22:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 22:24:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\koltuksecimi.php on line 709.
+ 1 APPPATH\Views\koltuksecimi.php(709): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php', 709)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\koltuksecimi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('koltuksecimi', [], true)
+ 5 APPPATH\Controllers\Home.php(80): view('koltuksecimi')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->koltuksecimi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 22:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -185,35 +185,22 @@ h2#hesap-basligi {
             <br><br>
             <!--BİLET 1-->
             <?php
-            use App\Models\UserModelSeferler;
-            use App\Models\UserModelBiletLog;
-            $sehirler=new UserModeliller();
+            use App\Models\UserModelBiletLogView;
+            $biletLogViewModel=new UserModelBiletLogView();
+            $biletLogViews=$biletLogViewModel->findAll();
 
-            $seferModel = new UserModelSeferler();
-            $biletLogModel=new UserModelBiletLog();
+            if(empty($biletLogViews)){
 
-            $biletModel = new UserModelBiletler();
-            $biletler = $biletModel->findAll();
-            if(empty($biletler)){
-
-              echo '<div><p style="color:red;">Kayıt bilet bulunmamaktadır.</p> </div>';
+              echo '<div><p style="color:red;">Kayıtlı bilet bulunmamaktadır.</p> </div>';
             }
             else{
 
                 
-                foreach ($biletler as $bilet) 
+                foreach ($biletLogViews as $bilet) 
                 {
-                    echo '<form action="' .site_url('/rezervasyonIptal'). '" method="post">';
-                  $sefer=$seferModel->where('Sefer_id',$bilet['Sefer_id'])->first();
-                  $log=$biletLogModel->where('Bilet_id',$bilet['Bilet_id'])->first();
-
-                  
-                  $sehir1=$sehirler->where('Plaka_kodu',$sefer['Kalkis_sehir'])->first();
-                  $sehir2=$sehirler->where('Plaka_kodu',$sefer['Varis_sehir'])->first();
-
                   echo '<div class="item">';
                   echo '<div class="item-left">';
-                  echo  '<h3>'.$sehir1['Sehir_adi'].' ->'.$sehir2['Sehir_adi'].'</h3><br>';
+                  echo  '<h3>'.$bilet['Kalkis_Sehir'].' ->'.$bilet['Varis_Sehir'].'</h3><br>';
                   echo  '<hr>';
                   echo  '<div class="sce">';
                   echo   '<div class="icon">';
@@ -225,25 +212,21 @@ h2#hesap-basligi {
                   echo   '<div class="icon">';
                   echo   '<i class="fa fa-map-marker"></i>';
                   echo    '</div>';
-                  echo   '<p><b>PNR Kodu:</b>'.$bilet['PNR_kodu'].'</p>';
-                  echo    '<p>Sefer Tarihi :'.$sefer['Tarih'].'<br/>'; 
-                  echo    'Saat:'.$sefer['Kalkis_saat'].'<br>'; 
-                  echo        'Peron no:'.$sefer['Peron_no'].'<br>'; 
-                  echo        'Koltuk no:'.$bilet['Koltuk_id'].' <br>'; 
-                  echo        'Bilet Durumu :'.$log['Durum'].' <br>';  
+                  echo   '<p><b>PNR Kodu: </b>'.$bilet['PNR_kodu'].'</p>';
+                  echo    '<p>Sefer Tarihi: '.$bilet['Sefer_Tarihi'].'<br/>'; 
+                  echo    'Saat:'.$bilet['Kalkis_Saat'].'<br>'; 
+                  echo        'Peron no: '.$bilet['Peron_No'].'<br>'; 
+                  echo        'Koltuk no: '.$bilet['Koltuk_no'].' <br>'; 
+                  echo        'Bilet Durumu: '.$bilet['Durum'].' <br>';  
                   echo  '</div>';
-                  if ($log['Durum'] == 'Rezerve') { //burası düzenlenecek suedaaaaaaaaaaaaaaaağğğğğ
-                    echo '<input type="hidden"id="pnrKodu" name="pnrKodu" value="'.$bilet['PNR_kodu'].'">';
-                    echo '<input type="hidden"id="seferId" name="seferId" value="'.$bilet['Sefer_id'].'">';
-                    echo '<input type="hidden"id="yolcuId" name="yolcuId" value="'.$bilet['Yolcu_id'].'">';
-                    echo '<input type="hidden"id="koltukId" name="koltukId" value="'.$bilet['Koltuk_id'].'">';
+                  if ($bilet['Durum'] == 'Rezerve') { //burası düzenlenecek suedaaaaaaaaaaaaaaaağğğğğ
+                    
 
                     echo'<input type="submit"Sil">';
                  }
                   echo  '<div class="fix"></div>';
                   echo'</div>'; 
                   echo '</div>';
-                  echo '</form>';
                 }
           }
             ?>

@@ -289,7 +289,6 @@ Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
                
                 <input type="hidden"id="seferId" name="seferId" value="<?php echo $seferId?>">
                 <input type="hidden"id="koltukId" name="koltukId" value="<?php echo $koltukId?>">
-                <input type="hidden"id="pnrKodu" name="pnrKodu" value="<?php echo $pnrKodu?>">
                 <input type="hidden"id="yolcuId" name="yolcuId" value="<?php echo $yolcuId?>">
                 <input type="hidden"id="biletFiyat" name="biletFiyat" value="<?php echo $biletFiyat?>">
 

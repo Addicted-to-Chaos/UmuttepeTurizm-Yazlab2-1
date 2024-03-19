@@ -356,7 +356,6 @@ public function kartodeme()
     $yolcuId = $this->request->getVar('yolcuu');
     $seferId = $this->request->getVar('seferr');
     $koltukId = $this->request->getVar('seat');
-    $pnrKodu = generatePNR(6);
     $biletFiyat = $this->request->getVar('biletFiyat');
 
 
@@ -364,10 +363,24 @@ public function kartodeme()
         'yolcuId' => $yolcuId,
         'seferId' => $seferId,
         'koltukId' => $koltukId,
-        'pnrKodu' => $pnrKodu,
         'biletFiyat' =>$biletFiyat
     ];
-    return view('payment', $data); 
+    $db = db_connect();
+
+
+    if($biletFiyat==0)
+    {
+        //'Satin Alindi';
+        $procedureName = 'biletal';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+ 
+        return view ('odendi', $data);
+    }
+    else
+    {
+        return view('payment', $data); 
+    }
 }
 
 public function odendi()
@@ -379,7 +392,6 @@ public function odendi()
     $kartIsım = $this->request->getVar('kartIsım');
     $seferId = $this->request->getVar('seferId');
     $koltukId = $this->request->getVar('koltukId');
-    $pnrKodu = $this->request->getVar('pnrKodu');
     $yolcuId = $this->request->getVar('yolcuId');
     $biletFiyat = $this->request->getVar('biletFiyat');
 
@@ -390,47 +402,34 @@ public function odendi()
         'kartIsım' => $kartIsım,
         'seferId' =>$seferId,
         'koltukId' =>$koltukId,
-        'pnrKodu' =>$pnrKodu,
         'yolcuId'=>$yolcuId,
         'biletFiyat'=>$biletFiyat
     ];
-
-    $biletData=[
-        'PNR_kodu'=>$pnrKodu,
-        'Yolcu_id'=>$yolcuId,
-        'Sefer_id'=>$seferId,
-        'Koltuk_id' => $koltukId
-    ];
-
-    $biletModel=new UserModelBiletler();
-    $biletModel->insert($biletData);
-
-    $seciliBilet=$biletModel->where('PNR_kodu',$pnrKodu)->first();
-
-    $biletLogModel=new UserModelBiletLog();
-    $durum='';
-    $currentDateTime = date('Y-m-d H:i:s');
+   
     if($biletFiyat>=300){
-        $durum='Satin Alindi';
+        //'Satin Alindi';
+        $procedureName = 'biletal';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+
     }
     else{
-        $durum='Rezerve';
-    }
-    $biletLogData=[
-        'Bilet_id'=>$seciliBilet['Bilet_id'],
-        'Durum'=>$durum,
-        'Islem_tarihi'=>$currentDateTime
-    ];
-    $biletLogModel->insert($biletLogData);
 
-    $koltukModel=new UserModelKoltuklar();
-   
-    $koltukdata=[
-        'Yolcu_id'=>$yolcuId,
-        'Durum'=>$durum
-    ];
-    $koltukModel->where('Koltuk_no',$koltukId)->where('Sefer_id',$seferId)->set($koltukdata)->update();
-    
+        if($biletFiyat>0)
+        {
+        //'Rezerve';
+        $procedureName = 'rezervasyon';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+        }
+        else
+        {
+            //'Güvenlik Kuvveti';
+            $procedureName = 'biletal';
+            $query = "CALL $procedureName(?,?,?)";
+            $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+        }
+    }
 
 
     return view ('odendi', $data);
@@ -439,57 +438,57 @@ public function odendi()
 
 public function bakiyeodeme()
 {
-    $kartNumara = $this->request->getVar('kartNumara');
-    $expireDate = $this->request->getVar('expireDate');
-    $cvv = $this->request->getVar('cvv');
-    $kartIsım = $this->request->getVar('kartIsım');
-    $seferId = $this->request->getVar('seferId');
-    $koltukId = $this->request->getVar('koltukId');
-    $pnrKodu = $this->request->getVar('pnrKodu');
+    $seferId = $this->request->getVar('seferr');
+    $koltukId = $this->request->getVar('seat');
     $yolcuId = $this->request->getVar('yolcuu');
     $biletFiyat = $this->request->getVar('biletFiyat');
-    $bakiye=$this->request->getVar('bakiye');
 
     $data = [
-        'kartNumara' => $kartNumara,
-        'expireDate' => $expireDate,
-        'cvv' => $cvv,
-        'kartIsım' => $kartIsım,
         'seferId' =>$seferId,
         'koltukId' =>$koltukId,
-        'pnrKodu' =>$pnrKodu,
         'yolcuId'=>$yolcuId,
-        'biletFiyat'=>$biletFiyat,
-        'bakiye'=>$bakiye
+        'biletFiyat'=>$biletFiyat
     ];
 
     
+    
+
+    $db = db_connect();
+
+
+    if($biletFiyat>=300){
+        //'Satin Alindi';
+        $procedureName = 'biletal';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+    }
+    else{
+        if($biletFiyat>0)
+        {
+        //'Rezerve';
+        $procedureName = 'rezervasyon';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+
+        }
+        else
+        {
+            //'Güvenlik Kuvveti';
+            $procedureName = 'biletal';
+            $query = "CALL $procedureName(?,?,?)";
+            $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
+        }
+    }
     $model = new UsersModel();
     $yanıt=$model->where('Yolcu_id',$yolcuId)->first();
     $bakiye=$yanıt['Bakiye']-$biletFiyat;
     $updateData=[
         'Bakiye'=>$bakiye
     ];
-
     $model->where('Yolcu_id', $yolcuId)->set($updateData)->update();
 
+    
 
-    if($biletFiyat>=300){
-        $durum='Satin Alindi';
-    }
-    else{
-        $durum='Rezerve';
-    }
-    $koltukModel=new UserModelKoltuklar();
-   
-    $koltukdata=[
-        'Yolcu_id'=>$yolcuId,
-        'Durum'=>$durum
-    ];
-    $koltukModel->where('Koltuk_no',$koltukId)->where('Sefer_id',$seferId)->set($koltukdata)->update();
-
-    echo "Ödeme Yapıldı Yönlendiriliyorsunuz..."; 
-    sleep(2);
     return view ('odendi', $data);
 }
 
@@ -526,17 +525,6 @@ public function rezervasyonIptal(){
 
 
 
-function generatePNR($length = 6) {
-    $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $pnr = '';
-
-    for ($i = 0; $i < $length; $i++) {
-        $pnr .= $characters[rand(0, $charactersLength - 1)];
-    }
-
-    return $pnr;
-}
 
  
  ?>

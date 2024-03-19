@@ -247,7 +247,6 @@ if (isset($yolcu['Bakiye'])) {
   $bakiye = 0;
 }
 echo 'Bakiyeniz : <span id="bakiye">'. $bakiye . ' ₺</span>';
-
 ?>
 </div>
 <?php
@@ -260,7 +259,7 @@ $koltuklar = $koltukModel->where('Sefer_id',$sefer_id)->findAll();
 
 $koltuklarArray=[];
 $uzunluk = count($koltuklar);
-$koltuklarArray = array(); // Yeni bir dizi oluştur
+$koltuklarArray = array();
 
 for ($i = 0; $i < $uzunluk; $i++) {
     $koltuklarArray[$i] = array(
@@ -282,7 +281,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
       $yolcuCinsiyeti = new UsersModel();
       
       
-      //23
+      //23 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[22]['Yolcu_id'])->first();
 
       if($koltuklarArray[22]['Koltuk_no'] == '23')
@@ -308,7 +307,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //20
+      //20 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[19]['Yolcu_id'])->first();
         if($koltuklarArray[19]['Koltuk_no'] == '20')
       {
@@ -333,7 +332,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //17
+      //17 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[16]['Yolcu_id'])->first();
       if($koltuklarArray[16]['Koltuk_no'] == '17')
       {
@@ -358,7 +357,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //16
+      //16 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[15]['Yolcu_id'])->first();
       if($koltuklarArray[15]['Koltuk_no'] == '16')
       {
@@ -383,7 +382,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //13
+      //13 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[12]['Yolcu_id'])->first();
       if($koltuklarArray[12]['Koltuk_no'] == '13')
       {
@@ -408,7 +407,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //10
+      //10 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[9]['Yolcu_id'])->first();
       if($koltuklarArray[9]['Koltuk_no'] == '10')
       {
@@ -433,7 +432,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //7
+      //7 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[15]['Yolcu_id'])->first();
       if($koltuklarArray[6]['Koltuk_no'] == '7')
       {
@@ -458,7 +457,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //4
+      //4 tekli 
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[3]['Yolcu_id'])->first();
       if($koltuklarArray[3]['Koltuk_no'] == '4')
       {
@@ -483,7 +482,7 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
       }
 
-      //1
+      //1 tekli
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[0]['Yolcu_id'])->first();
       if($koltuklarArray[0]['Koltuk_no'] == '1')
       {
@@ -518,7 +517,10 @@ for ($i = 0; $i < $uzunluk; $i++) {
       <?php
       //24
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[23]['Yolcu_id'])->first();
-        if($koltuklarArray[23]['Koltuk_no'] == '24')
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[24]['Yolcu_id'])->first();
+
+
+      if($koltuklarArray[23]['Koltuk_no'] == '24')
       {
         if($koltuklarArray[23]['Koltuk_durum'] == 'Satin Alindi')
         {
@@ -537,12 +539,30 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[23]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat " id="seat-24"><input type="radio" name="seat" id="seat" value="24">24</div>';
+          
+          if($koltuklarArray[24]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-24"><input type="radio" name="seat" id="seat" value="24">24</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-24"><input type="radio" name="seat" id="seat" value="24">24</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-24" style="background-color: #bfbfbf;"><p style="text-align: center; ">24</p></div>';
+            }
+          }
+          
         }
       }
 
       //21
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[20]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[21]['Yolcu_id'])->first();
+
         if($koltuklarArray[20]['Koltuk_no'] == '21')
       {
         if($koltuklarArray[20]['Koltuk_durum'] == 'Satin Alindi')
@@ -562,12 +582,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[20]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-21"><input type="radio" name="seat" id="seat" value="21">21</div>';
+          if($koltuklarArray[21]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-21"><input type="radio" name="seat" id="seat" value="21">21</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-21"><input type="radio" name="seat" id="seat" value="21">21</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-21" style="background-color: #bfbfbf;"><p style="text-align: center; ">21</p></div>';
+            }
+          }
         }
       }
 
       //18
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[17]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[18]['Yolcu_id'])->first();
+
         if($koltuklarArray[17]['Koltuk_no'] == '18')
       {
         if($koltuklarArray[17]['Koltuk_durum'] == 'Satin Alindi')
@@ -587,13 +623,29 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[17]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-18"><input type="radio" name="seat" id="seat" value="18">18</div>';
+          if($koltuklarArray[18]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-18"><input type="radio" name="seat" id="seat" value="18">18</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-18"><input type="radio" name="seat" id="seat" value="18">18</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-18" style="background-color: #bfbfbf;"><p style="text-align: center; ">18</p></div>';
+            }
+          }
         }
       }
       echo '<img src="assets/img/kapi.png" height="60" width="60"/>';
 
       //14
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[13]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[14]['Yolcu_id'])->first();
+
         if($koltuklarArray[13]['Koltuk_no'] == '14')
       {
         if($koltuklarArray[13]['Koltuk_durum'] == 'Satin Alindi')
@@ -613,12 +665,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[13]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-14"><input type="radio" name="seat" id="seat" value="14">14</div>';
+          if($koltuklarArray[14]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-14"><input type="radio" name="seat" id="seat" value="14">14</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-14"><input type="radio" name="seat" id="seat" value="14">14</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-14" style="background-color: #bfbfbf;"><p style="text-align: center; ">14</p></div>';
+            }
+          }
         }
       }
 
       //11
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[10]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[11]['Yolcu_id'])->first();
+
         if($koltuklarArray[10]['Koltuk_no'] == '11')
       {
         if($koltuklarArray[10]['Koltuk_durum'] == 'Satin Alindi')
@@ -638,12 +706,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[10]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-11"><input type="radio" name="seat" id="seat" value="11">11</div>';
+          if($koltuklarArray[11]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-11"><input type="radio" name="seat" id="seat" value="11">11</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-11"><input type="radio" name="seat" id="seat" value="11">11</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-11" style="background-color: #bfbfbf;"><p style="text-align: center; ">11</p></div>';
+            }
+          }
         }
       }
 
       //8
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[7]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[8]['Yolcu_id'])->first();
+
         if($koltuklarArray[7]['Koltuk_no'] == '8')
       {
         if($koltuklarArray[7]['Koltuk_durum'] == 'Satin Alindi')
@@ -663,12 +747,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[7]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-8"><input type="radio" name="seat" id="seat" value="8">8</div>';
+          if($koltuklarArray[8]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-8"><input type="radio" name="seat" id="seat" value="8">8</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-8"><input type="radio" name="seat" id="seat" value="8">8</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-8" style="background-color: #bfbfbf;"><p style="text-align: center; ">8</p></div>';
+            }
+          }
         }
       }
 
       //5
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[4]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[5]['Yolcu_id'])->first();
+
         if($koltuklarArray[4]['Koltuk_no'] == '5')
       {
         if($koltuklarArray[4]['Koltuk_durum'] == 'Satin Alindi')
@@ -688,12 +788,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[4]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-5"><input type="radio" name="seat" id="seat" value="5">5</div>';
+          if($koltuklarArray[5]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-5"><input type="radio" name="seat" id="seat" value="5">5</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-5"><input type="radio" name="seat" id="seat" value="5">5</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-5" style="background-color: #bfbfbf;"><p style="text-align: center; ">5</p></div>';
+            }
+          }
         }
       }
 
       //2
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[1]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[2]['Yolcu_id'])->first();
+
         if($koltuklarArray[1]['Koltuk_no'] == '2')
       {
         if($koltuklarArray[1]['Koltuk_durum'] == 'Satin Alindi')
@@ -713,7 +829,21 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[1]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-2"><input type="radio" name="seat" id="seat" value="2">2</div>';
+          if($koltuklarArray[2]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-2"><input type="radio" name="seat" id="seat" value="2">2</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-2"><input type="radio" name="seat" id="seat" value="2">2</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-2" style="background-color: #bfbfbf;"><p style="text-align: center; ">2</p></div>';
+            }
+          }
         }
       }
       echo '<hr>';
@@ -724,7 +854,9 @@ for ($i = 0; $i < $uzunluk; $i++) {
       <?php
       //25
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[24]['Yolcu_id'])->first();
-        if($koltuklarArray[24]['Koltuk_no'] == '25')
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[23]['Yolcu_id'])->first();
+
+      if($koltuklarArray[24]['Koltuk_no'] == '25')
       {
         if($koltuklarArray[24]['Koltuk_durum'] == 'Satin Alindi')
         {
@@ -743,12 +875,29 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[24]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-25"><input type="radio" name="seat" id="seat" value="25">25</div>';
+
+          if($koltuklarArray[23]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-25"><input type="radio" name="seat" id="seat" value="25">25</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-25"><input type="radio" name="seat" id="seat" value="25">25</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-25" style="background-color: #bfbfbf;"><p style="text-align: center; ">25</p></div>';
+            }
+          }
         }
       }
 
       //22
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[21]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[20]['Yolcu_id'])->first();
+
         if($koltuklarArray[21]['Koltuk_no'] == '22')
       {
         if($koltuklarArray[21]['Koltuk_durum'] == 'Satin Alindi')
@@ -768,12 +917,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[21]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-22"><input type="radio" name="seat" id="seat" value="22">22</div>';
+          if($koltuklarArray[20]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-22"><input type="radio" name="seat" id="seat" value="22">22</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-22"><input type="radio" name="seat" id="seat" value="22">22</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-22" style="background-color: #bfbfbf;"><p style="text-align: center; ">22</p></div>';
+            }
+          }
         }
       }
 
       //19
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[18]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[17]['Yolcu_id'])->first();
+
         if($koltuklarArray[18]['Koltuk_no'] == '19')
       {
         if($koltuklarArray[18]['Koltuk_durum'] == 'Satin Alindi')
@@ -793,13 +958,30 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[18]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-19"><input type="radio" name="seat" id="seat" value="19">19</div>';
+          if($koltuklarArray[17]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-19"><input type="radio" name="seat" id="seat" value="19">19</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-19"><input type="radio" name="seat" id="seat" value="19">19</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-19" style="background-color: #bfbfbf;"><p style="text-align: center; ">19</p></div>';
+            
+            }
+          }
         }
       }
       echo '<img src="assets/img/kapi.png" height="60" width="60"/>';
 
       //15
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[14]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[13]['Yolcu_id'])->first();
+
         if($koltuklarArray[14]['Koltuk_no'] == '15')
       {
         if($koltuklarArray[14]['Koltuk_durum'] == 'Satin Alindi')
@@ -819,12 +1001,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[14]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-15"><input type="radio" name="seat" id="seat" value="15">15</div>';
+          if($koltuklarArray[13]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-15"><input type="radio" name="seat" id="seat" value="15">15</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-15"><input type="radio" name="seat" id="seat" value="15">15</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-15" style="background-color: #bfbfbf;"><p style="text-align: center; ">15</p></div>';
+            }
+          }
         }
       }
 
       //12
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[11]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[10]['Yolcu_id'])->first();
+
         if($koltuklarArray[11]['Koltuk_no'] == '12')
       {
         if($koltuklarArray[11]['Koltuk_durum'] == 'Satin Alindi')
@@ -844,12 +1042,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[11]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-12"><input type="radio" name="seat" id="seat" value="12">12</div>';
+          if($koltuklarArray[10]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-12"><input type="radio" name="seat" id="seat" value="12">12</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-12"><input type="radio" name="seat" id="seat" value="12">12</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-12" style="background-color: #bfbfbf;"><p style="text-align: center; ">12</p></div>';
+            }
+          }
         }
       }
 
       //9
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[8]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[7]['Yolcu_id'])->first();
+
         if($koltuklarArray[8]['Koltuk_no'] == '9')
       {
         if($koltuklarArray[8]['Koltuk_durum'] == 'Satin Alindi')
@@ -869,12 +1083,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[8]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-9"><input type="radio" name="seat" id="seat" value="9">9</div>';
+          if($koltuklarArray[7]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-9"><input type="radio" name="seat" id="seat" value="9">9</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-9"><input type="radio" name="seat" id="seat" value="9">9</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-9" style="background-color: #bfbfbf;"><p style="text-align: center; ">9</p></div>';
+            }
+          }
         }
       }
 
       //6
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[5]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[4]['Yolcu_id'])->first();
+
         if($koltuklarArray[5]['Koltuk_no'] == '6')
       {
         if($koltuklarArray[5]['Koltuk_durum'] == 'Satin Alindi')
@@ -894,12 +1124,28 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[5]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-6"><input type="radio" name="seat" id="seat" value="6">6</div>';
+          if($koltuklarArray[4]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-6"><input type="radio" name="seat" id="seat" value="6">6</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-6"><input type="radio" name="seat" id="seat" value="6">6</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-6" style="background-color: #bfbfbf;"><p style="text-align: center; ">6</p></div>';
+            }
+          }
         }
       }
       
       //3
       $yolcu = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[2]['Yolcu_id'])->first();
+      $yolcu2 = $yolcuCinsiyeti->where('Yolcu_id',$koltuklarArray[1]['Yolcu_id'])->first();
+
         if($koltuklarArray[2]['Koltuk_no'] == '3')
       {
         if($koltuklarArray[2]['Koltuk_durum'] == 'Satin Alindi')
@@ -919,7 +1165,21 @@ for ($i = 0; $i < $uzunluk; $i++) {
         }
         else if($koltuklarArray[2]['Koltuk_durum'] == 'Musait')
         {
-          echo '<div class="seat" id="seat-3"><input type="radio" name="seat" id="seat" value="3">3</div>';
+          if($koltuklarArray[1]['Koltuk_durum'] == 'Musait')
+          {
+            echo '<div class="seat " id="seat-3"><input type="radio" name="seat" id="seat" value="3">3</div>';
+          }
+          else
+          {
+            if($yolcu2['Cinsiyet']==$session->user["Cinsiyet"])
+            {
+            echo '<div class="seat " id="seat-3"><input type="radio" name="seat" id="seat" value="3">3</div>';
+            }
+            else
+            {
+            echo '<div class="seat rezerve" id="seat-3" style="background-color: #bfbfbf;"><p style="text-align: center; ">3</p></div>';
+            }
+          }
         }
       }
       echo '<hr>';
