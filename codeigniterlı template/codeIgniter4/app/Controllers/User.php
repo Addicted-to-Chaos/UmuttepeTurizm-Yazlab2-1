@@ -461,7 +461,10 @@ public function bakiyeodeme()
     ];
 
     
-    
+    $model = new UsersModel();
+    $yanıt=$model->where('Yolcu_id',$yolcuId)->first();
+    $bakiye=$yanıt['Bakiye']-$biletFiyat;
+if($bakiye>$biletFiyat){
 
     $db = db_connect();
 
@@ -489,9 +492,7 @@ public function bakiyeodeme()
             $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
         }
     }
-    $model = new UsersModel();
-    $yanıt=$model->where('Yolcu_id',$yolcuId)->first();
-    $bakiye=$yanıt['Bakiye']-$biletFiyat;
+    
     $updateData=[
         'Bakiye'=>$bakiye
     ];
@@ -500,6 +501,14 @@ public function bakiyeodeme()
     
 
     return view ('odendi', $data);
+}
+else{
+    $gonder=[
+        'message'=>'Yetersiz Bakiye',
+        'Sefer'=>$seferId
+    ];
+    return view('koltuksecimi',$gonder);
+}
 }
 
 public function bakiyeEkle()

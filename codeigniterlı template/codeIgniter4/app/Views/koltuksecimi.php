@@ -5,6 +5,11 @@ if(isset($_GET['sefer_id']) && !empty($_GET['sefer_id']))
 {
   $sefer_id = $_GET['sefer_id'];
 }
+else if(!empty($Sefer))
+{
+  $sefer_id = $Sefer;
+
+}
 else
 {
   header("Location: voyage");
@@ -224,7 +229,12 @@ else
     </div>
     <div style="clear: both;"></div>
 
-  <div id="bakiyeYetersiz"  style="color:red; display: none;">Bakiye Yetersiz</div><br>
+    <?php
+    if(!empty($message)){
+      echo '<br>';
+      echo'<div id="bakiy"  style="color:red;">Bakiye Yetersiz</div><br>';
+    }
+    ?>
   <div id="error-message"  style="color:red; display: none;">Lütfen koltuk seçiniz.</div>
 
 </div>
@@ -1211,7 +1221,6 @@ for ($i = 0; $i < $uzunluk; $i++) {
   <?php echo '.<input type="hidden" name="seferr" id="seferr" value='.$sefer_id.'>'?>
   <?php echo '.<input type="hidden" name="yolcuu" id="yolcuu" value='.$yolcuu_id.'>'?>
 
-  
   <input type="submit" value="Bakiye ile Öde"formaction="<?= site_url('/bakiyeodeme') ?>"id="bakiyeOdeBtn">
   <input type="submit" value="Kart ile Öde"formaction="<?= site_url('/kartodeme') ?>">
 

@@ -46,6 +46,13 @@ use Endroid\QrCode\Writer\PngWriter;
   border-left: 3px dotted #999;
 } 
 
+.container .item-right {
+    float: left;
+    padding: 20px;
+    margin-right: -10px; /* Sağ tarafa olan uzaklık */
+}
+
+
 .container .item-left .sce .icon, .container .item-left .sce p,
 .container .item-left .loc .icon, .container .item-left .loc p{
     float: left;
@@ -163,6 +170,24 @@ use Endroid\QrCode\Writer\PngWriter;
 h2#hesap-basligi {
   color: #1C357C;
     }
+
+    .cancel-button {
+    background-color: #F25454  ; /* Kırmızı arka plan */
+    color: #fff; /* Beyaz metin rengi */
+    border: none; /* Kenarlık yok */
+    padding: 5px 5px; /* Buton içi boşluk */
+    width: 85px;
+    margin-top: -50px;
+    margin-left: 250px;
+    border-radius: 5px; /* Yuvarlatılmış kenarlar */
+    cursor: pointer; /* İmleç tipi: el işareti */
+}
+
+
+
+.cancel-button:hover {
+    background-color: #EC221C; /* Butona fare geldiğinde koyu kırmızı */
+}
 </style>
 </head>
 
@@ -183,8 +208,8 @@ h2#hesap-basligi {
         <hr>
         <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
         <hr>
-        <hr>
-        <a class="menu-item">Bakiye: <?php echo $session->user['Bakiye']?></a>
+       
+
         <?php 
        if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
  <hr>
@@ -217,21 +242,23 @@ h2#hesap-basligi {
                 {
                 
                   echo '<div class="item">';
+                  
                   echo '<form method="post" action="'.site_url('/askiyaAl').'">';
 
                   echo '<div class="item-left">';
-                  echo  '<h3>'.$bilet['Kalkis_Sehir'].' ->'.$bilet['Varis_Sehir'].'</h3><br>';
+                  echo  '<h3>'.$bilet['Kalkis_Sehir'].' ->'.$bilet['Varis_Sehir'].'</h3><br>'; 
                   echo  '<hr>';
                   echo  '<div class="sce">';
-                  echo   '<div class="icon">';
-                  echo    '<i class="fa fa-table"></i>';
+                  echo  '<div class="icon">';
+                  echo  '<i class="fa fa-table"></i>';
                   echo  '</div>';
                   echo  '</div>';
+                  
                   echo  '<div class="fix"></div>';
                   echo  '<div class="loc">';
-                  echo   '<div class="icon">';
-                  echo   '<i class="fa fa-map-marker"></i>';
-                  echo    '</div>';
+                  echo  '<div class="icon">';
+                  echo  '<i class="fa fa-map-marker"></i>';
+                  echo  '</div>';
                   if ($bilet['Durum'] != 'Rezerve') { 
                     echo   '<p><b>PNR Kodu: </b>'.$bilet['PNR_kodu'].'</p>';
                  }
@@ -249,6 +276,7 @@ h2#hesap-basligi {
                  }
                  else
                  {
+                    
 
                     $qr_Bilgi='PNR Kodu: '.$bilet['PNR_kodu']."\r\n" .'Saat:'.$bilet['Kalkis_Saat']. "\r\n". 'Yolcu:'.$bilet['Yolcu_Ad'].' '.$bilet['Yolcu_Soyad']."\r\n" .'Koltuk: '.$bilet['Koltuk_no'];
                     $qr_code=QrCode::create($qr_Bilgi)
@@ -257,13 +285,13 @@ h2#hesap-basligi {
                     $result=$writer->write($qr_code);
                     
                     header("Content-Type:".$result->getMimeType());
-                    echo '<div id="qrCodeContainer">';
+                    echo '<div id="qrCodeContainer" style="margin-left:250px;">';
                     echo $result->getString();
                     echo '</div>';
                     echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';
-                    
-                    echo'<input type="submit"value="Bileti İptal Et">';
-                    
+                    echo '<div class="item-right">';
+                    echo '<input class="cancel-button" type="submit"value="İptal Et">';
+                    echo '</div>';
 
                  }
                   echo  '<div class="fix"></div>';
