@@ -188,6 +188,10 @@
                                                     
                                                 </div>
                                             </form>
+                                            <?php
+                                            if(!empty($message))
+                                            echo '<p style="color:red;">'.$message.'</p>';
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

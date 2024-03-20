@@ -1,6 +1,14 @@
 <?php $session=session();
+use Endroid\QrCode\Writer\SvgWriter;
+use Endroid\QrCode\Writer\Result\SvgResult;
 use App\Models\UserModeliller; 
-use App\Models\UserModelBiletler;?>
+use App\Models\UserModelBiletler;
+
+require "vendor/autoload.php";
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
+?>
+
 
 <html>
 <head>
@@ -187,18 +195,23 @@ h2#hesap-basligi {
             <?php
             use App\Models\UserModelBiletLogView;
             $biletLogViewModel=new UserModelBiletLogView();
-            $biletLogViews=$biletLogViewModel->findAll();
+            $biletLogViews=$biletLogViewModel->where('Yolcu_Ad',$session->user["Ad"])->where('Yolcu_Soyad',$session->user["Soyad"])->findAll();
 
             if(empty($biletLogViews)){
 
               echo '<div><p style="color:red;">Kayıtlı bilet bulunmamaktadır.</p> </div>';
             }
             else{
-
+                if (isset($message)) {
+                    echo '<p id="errorMessage" style="color: green;">' . $message . '</p>';
+                }
                 
                 foreach ($biletLogViews as $bilet) 
                 {
+                
                   echo '<div class="item">';
+                  echo '<form method="post" action="'.site_url('/askiyaAl').'">';
+
                   echo '<div class="item-left">';
                   echo  '<h3>'.$bilet['Kalkis_Sehir'].' ->'.$bilet['Varis_Sehir'].'</h3><br>';
                   echo  '<hr>';
@@ -212,20 +225,43 @@ h2#hesap-basligi {
                   echo   '<div class="icon">';
                   echo   '<i class="fa fa-map-marker"></i>';
                   echo    '</div>';
-                  echo   '<p><b>PNR Kodu: </b>'.$bilet['PNR_kodu'].'</p>';
+                  if ($bilet['Durum'] != 'Rezerve') { 
+                    echo   '<p><b>PNR Kodu: </b>'.$bilet['PNR_kodu'].'</p>';
+                 }
                   echo    '<p>Sefer Tarihi: '.$bilet['Sefer_Tarihi'].'<br/>'; 
                   echo    'Saat:'.$bilet['Kalkis_Saat'].'<br>'; 
                   echo        'Peron no: '.$bilet['Peron_No'].'<br>'; 
                   echo        'Koltuk no: '.$bilet['Koltuk_no'].' <br>'; 
                   echo        'Bilet Durumu: '.$bilet['Durum'].' <br>';  
                   echo  '</div>';
-                  if ($bilet['Durum'] == 'Rezerve') { //burası düzenlenecek suedaaaaaaaaaaaaaaaağğğğğ
+                  if ($bilet['Durum'] == 'Rezerve') { 
+                    echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';
+                    
+                    echo'<input type="submit"value="Bileti İptal Et">';
+                    
+                 }
+                 else
+                 {
+
+                    $qr_Bilgi='PNR Kodu: '.$bilet['PNR_kodu']."\r\n" .'Saat:'.$bilet['Kalkis_Saat']. "\r\n". 'Yolcu:'.$bilet['Yolcu_Ad'].' '.$bilet['Yolcu_Soyad']."\r\n" .'Koltuk: '.$bilet['Koltuk_no'];
+                    $qr_code=QrCode::create($qr_Bilgi)
+                    ->setSize(100);
+                    $writer=new SvgWriter;
+                    $result=$writer->write($qr_code);
+                    
+                    header("Content-Type:".$result->getMimeType());
+                    echo '<div id="qrCodeContainer">';
+                    echo $result->getString();
+                    echo '</div>';
+                    echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';
+                    
+                    echo'<input type="submit"value="Bileti İptal Et">';
                     
 
-                    echo'<input type="submit"Sil">';
                  }
                   echo  '<div class="fix"></div>';
                   echo'</div>'; 
+                  echo '</form>';
                   echo '</div>';
                 }
           }

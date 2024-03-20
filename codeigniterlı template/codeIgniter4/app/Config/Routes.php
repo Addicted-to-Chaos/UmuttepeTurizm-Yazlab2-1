@@ -53,6 +53,9 @@ use CodeIgniter\Router\RouteCollection;
     
     $routes->post('/rezervasyonIptal' ,'User::rezervasyonIptal');
 
+    $routes->post('/askiyaAl' ,'User::rezervasyonIptal');
+
+
 
 
     

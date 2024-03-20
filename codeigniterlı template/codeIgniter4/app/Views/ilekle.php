@@ -1,5 +1,6 @@
+<?php $session=session();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>UmuttepeTurizm Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor_/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

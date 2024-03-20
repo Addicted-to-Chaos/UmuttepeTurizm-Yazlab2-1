@@ -73,7 +73,13 @@ class Home extends BaseController
         }
     }
     public function biletlerim(){
-        return view('biletlerim');
+        
+        $session=session();
+        if( $session->has('user') ){
+            return view('biletlerim');
+        }else{
+            return view('index');
+        }
     }
 
     public function koltuksecimi(){
@@ -81,13 +87,56 @@ class Home extends BaseController
     }
 
     public function seferekle(){
-        return view('seferekle');
+        $session = session();
+        $user = $session->get('user');
+        
+        $adminEmail = 'admin@gmail.com';
+        
+        if($user && $user['Email'] === $adminEmail){
+            return view('seferekle');
+
+        } else {
+            if($session->has('user')){
+            return view('hesabim');
+            }
+            else{
+                return view('index');
+            }
+        }
     }
     public function ilekle(){
-        return view('ilekle');
+        $session = session();
+        $user = $session->get('user');
+        
+        $adminEmail = 'admin@gmail.com';
+        
+        if($user && $user['Email'] === $adminEmail){
+            return view('ilekle');
+        } else {
+            if($session->has('user')){
+            return view('hesabim');
+            }
+            else{
+                return view('index');
+            }
+        }
     }
     public function biletlog(){
+        $session = session();
+    $user = $session->get('user');
+    
+    $adminEmail = 'admin@gmail.com';
+    
+    if($user && $user['Email'] === $adminEmail){
         return view('biletlog');
+    } else {
+        if($session->has('user')){
+        return view('hesabim');
+        }
+        else{
+            return view('index');
+        }
+    }
     }
     public function yolculist(){
         return view('yolculist');
@@ -109,10 +158,9 @@ class Home extends BaseController
         return view('payment');
     }
     public function admin() {
-        $session = session();
+    $session = session();
     $user = $session->get('user');
     
-    // Admin kullanıcının e-posta adresi
     $adminEmail = 'admin@gmail.com';
     
     if($user && $user['Email'] === $adminEmail){
@@ -142,11 +190,27 @@ class Home extends BaseController
     }
     
     public function voyage(){
-        return view('voyage');
+
+        $session=session();
+        if( $session->has('user') ){
+            return view('voyage');
+        }else{
+            $message='Bilet satın almak için lütfen giriş yapınız';
+            return view('buyticket',['message' => $message]);
+        }
     }
 
     public function koltuk(){
-        return view('koltuksecimi');
+        
+        $session=session();
+        if( $session->has('user') ){
+            return view('koltuksecimi');
+        }else{
+            $message='Bilet satın almak için lütfen giriş yapınız';
+            return view('buyticket',['message' => $message]);
+        }
+            
+            
     }
     
 

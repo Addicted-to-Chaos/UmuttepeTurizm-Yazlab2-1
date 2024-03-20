@@ -31,7 +31,8 @@ class User extends BaseController
             'Telefon' => $this->request->getVar('Telefon'),
             'Tc' => $this->request->getVar('Tc'),
             'Yas' => $yas, // Yaş değerini kullan
-            'Cinsiyet' => $this->request->getVar('Cinsiyet')
+            'Cinsiyet' => $this->request->getVar('Cinsiyet'),
+            'Bakiye'=>0
         ];
     
         $model = new UsersModel();
@@ -200,7 +201,9 @@ public function bilgileriGuncelle()
 
 public function seferler()
 {
-   
+    $session=session();
+    if( $session->has('user') )
+    {  
     $model = new UserModelSeferler();
         $results = $model->where('Kalkis_sehir', $this->request->getVar('sehirNereden'))
                         ->where('Varis_sehir', $this->request->getVar('sehirNereye'))
@@ -230,6 +233,12 @@ public function seferler()
                         $data['seferler'] = $seferler; 
                     
                         return view('voyage', $data); 
+    }
+    else
+    {
+        $message='Bilet satın almak için lütfen giriş yapınız';
+            return view('buyticket',['message' => $message]);
+    }
 
 }
 
@@ -492,32 +501,32 @@ public function bakiyeodeme()
     return view ('odendi', $data);
 }
 
+
+
 public function rezervasyonIptal(){
 
     $db = db_connect();
 
-    $seferIdVar = $this->request->getVar('seferId');
-    $biletIdVar = $this->request->getVar('pnrKodu');
-    $yolcuIdVar  = $this->request->getVar('yolcuId');
-    $koltukIdVar  = $this->request->getVar('koltukId');
+    $biletId = $this->request->getVar('bilId');
+
     
     $bakiye=$this->request->getVar('bakiye');
 
-    $procedureName = 'RezervasyonIptal';
-    $query = "CALL $procedureName(?,?,?,?)";
-    $result = $this->db->query($query, [$seferIdVar,$biletIdVar,$yolcuIdVar,$koltukIdVar]);
+    $procedureName = 'Askiya_Al';
+    $query = "CALL $procedureName(?)";
+    $result = $this->db->query($query, [$biletId]);
 
     if ($result)
         {
-            $message='Sefer başarıyla eklenmiştir';
+            $messageIptal='Bilet iptal edilmiştir. Paranız bakiyenize eklenmiştir.';
         }
         else
         {
             $error = $this->db->error();
-            $message = "Hata oluştu: " . $error['message'];
+            $messageIptal = "Hata oluştu: " . $error['message'];
         }
 
-    return view('seferekle',['message' => $message]);
+    return view('biletlerim',['message' => $messageIptal]);
 
 }
 

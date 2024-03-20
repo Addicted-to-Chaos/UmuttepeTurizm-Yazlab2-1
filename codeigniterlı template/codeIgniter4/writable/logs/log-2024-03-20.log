@@ -1,0 +1,541 @@
+INFO - 2024-03-20 00:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:03:56 --> ErrorException: Undefined variable $biletlerModel
+in APPPATH\Views\biletlerim.php on line 193.
+ 1 APPPATH\Views\biletlerim.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $biletlerModel', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 193)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:04:14 --> ErrorException: Undefined array key "Bilet_id"
+in APPPATH\Views\biletlerim.php on line 196.
+ 1 APPPATH\Views\biletlerim.php(196): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Bilet_id"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 196)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:09:17 --> ErrorException: Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 327.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\codeIgniter4\\system\\Database\\Query.php', 327)
+ 2 SYSTEMPATH\Database\Query.php(327): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(308): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `bilet_log_view`
+WHERE `Islem_tarihi` = :Islem_tarihi:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bilet_log_view`
+WHERE `Islem_tarihi` = :Islem_tarihi:', [...], false)
+ 7 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 9 APPPATH\Views\biletlerim.php(203): CodeIgniter\BaseModel->findAll()
+10 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+13 APPPATH\Controllers\Home.php(79): view('biletlerim')
+14 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:09:46 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 222.
+ 1 APPPATH\Views\biletlerim.php(222): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 222)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:09:47 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 222.
+ 1 APPPATH\Views\biletlerim.php(222): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 222)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:11:22 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 215.
+ 1 APPPATH\Views\biletlerim.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 215)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:11:23 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 215.
+ 1 APPPATH\Views\biletlerim.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 215)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:11:24 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 215.
+ 1 APPPATH\Views\biletlerim.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 215)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:11:24 --> ErrorException: Undefined array key "Kalkis_Sehir"
+in APPPATH\Views\biletlerim.php on line 215.
+ 1 APPPATH\Views\biletlerim.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kalkis_Sehir"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 215)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:12:21 --> ErrorException: Undefined array key "PNR_kodu"
+in APPPATH\Views\biletlerim.php on line 233.
+ 1 APPPATH\Views\biletlerim.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "PNR_kodu"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 233)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:12:31 --> ErrorException: Undefined array key "PNR_kodu"
+in APPPATH\Views\biletlerim.php on line 233.
+ 1 APPPATH\Views\biletlerim.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "PNR_kodu"', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 233)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:22:49 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:23:29 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:23:41 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:27:32 --> Error: Call to undefined method Endroid\QrCode\QrCode::writeString()
+in APPPATH\Views\biletlerim.php on line 238.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 4 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:36:52 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:36:53 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:36:54 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:38 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:40 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:41 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:58 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:58 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-20 00:38:59 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 APPPATH\Views\biletlerim.php(237): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 6 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 00:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 00:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 10:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-20 11:41:40 --> mysqli_sql_exception: Duplicate entry 'kaan44tor@gmail.com' for key 'Email' in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yo...')
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yo...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\codeIgniter4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(39): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+#9 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-20 11:41:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan44tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:, :Bakiye:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 11:41:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'kaan44tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (\'kaan44tor@gmail.com\', \'123\', \'deneme\', \'test\', \'45454545454\', \'11111111111\', 19, \'Kadın\', 0)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (\'kaan44tor@gmail.com\', \'123\', \'deneme\', \'test\', \'45454545454\', \'11111111111\', 19, \'Kadın\', 0)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:, :Bakiye:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(39): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 11:41:40 --> [Caused by] mysqli_sql_exception: Duplicate entry 'kaan44tor@gmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (\'kaan44tor@gmail.com\', \'123\', \'deneme\', \'test\', \'45454545454\', \'11111111111\', 19, \'Kadın\', 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (\'kaan44tor@gmail.com\', \'123\', \'deneme\', \'test\', \'45454545454\', \'11111111111\', 19, \'Kadın\', 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (\'kaan44tor@gmail.com\', \'123\', \'deneme\', \'test\', \'45454545454\', \'11111111111\', 19, \'Kadın\', 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `yolcular` (`Email`, `Sifre`, `Ad`, `Soyad`, `Telefon`, `Tc`, `Yas`, `Cinsiyet`, `Bakiye`) VALUES (:Email:, :Sifre:, :Ad:, :Soyad:, :Telefon:, :Tc:, :Yas:, :Cinsiyet:, :Bakiye:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(39): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->kayitOl()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 11:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-20 11:42:19 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-20 11:42:19 --> 220 VI1PR0902CA0056.outlook.office365.com Microsoft ESMTP MAIL Service ready at Wed, 20 Mar 2024 11:42:09 +0000
+
+hello: 250-VI1PR0902CA0056.outlook.office365.com Hello [46.1.66.167]
+250-SIZE 157286400
+250-PIPELINING
+250-DSN
+250-ENHANCEDSTATUSCODES
+250-STARTTLS
+250-8BITMIME
+250-BINARYMIME
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 SMTP server ready
+
+hello: 250-VI1PR0902CA0056.outlook.office365.com Hello [46.1.66.167]
+250-SIZE 157286400
+250-PIPELINING
+250-DSN
+250-ENHANCEDSTATUSCODES
+250-AUTH LOGIN XOAUTH2
+250-8BITMIME
+250-BINARYMIME
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [VI1PR0902CA0056.eurprd09.prod.outlook.com 2024-03-20T11:42:18.639Z 08DC47C49780464C]
+
+INFO - 2024-03-20 11:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-20 11:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-20 11:45:46 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4 in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(518): CodeIgniter\Database\BaseConnection->query('CALL Rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->askiyaAl()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-20 11:45:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(518): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->askiyaAl()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 11:45:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(NULL,NULL,NULL,NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(NULL,NULL,NULL,NULL)')
+ 3 APPPATH\Controllers\User.php(518): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->askiyaAl()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 11:45:46 --> [Caused by] mysqli_sql_exception: Incorrect number of arguments for PROCEDURE umuttepe.RezervasyonIptal; expected 0, got 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL RezervasyonIptal(NULL,NULL,NULL,NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL RezervasyonIptal(NULL,NULL,NULL,NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL RezervasyonIptal(NULL,NULL,NULL,NULL)')
+ 4 APPPATH\Controllers\User.php(518): CodeIgniter\Database\BaseConnection->query('CALL RezervasyonIptal(?,?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->askiyaAl()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-20 11:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
