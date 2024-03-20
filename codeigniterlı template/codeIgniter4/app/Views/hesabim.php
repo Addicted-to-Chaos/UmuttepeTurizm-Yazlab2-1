@@ -254,12 +254,21 @@ h2#hesap-basligi {
         <hr>
         <a  href="biletlerim" class="menu-item">Bilet Bilgilerim</a>
         <hr>
-        <a  href="" class="menu-item">Ödeme ve Fatura</a>
-       <hr>
+        
         <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
         <hr>
         <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
+        <hr>
+        <?php
+        use App\Models\UsersModel;
+
+        $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
         
+        $yolcuModel=new UsersModel();
+        $yolcu=$yolcuModel->where('Yolcu_id',$yolcuu_id)->first();
+        $bakiye=$yolcu['Bakiye'];
+        ?>
+        <a class="menu-item">Bakiye: <?php echo $bakiye?></a>
         <?php 
        if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
  <hr>
@@ -380,6 +389,20 @@ h2#hesap-basligi {
 
               <br><br><br><br><br>
       
+    </form>
+
+    <form method="post" action="<?php echo base_url('/bakiyeEkle'); ?>">
+    <div class="form-row">
+            <label for="Password">Eklemek İstediğiniz Bakiye Miktarı:</label>
+            <input type="text" id="bakiyeekle" name="bakiyeekle" onkeydown="if (!(event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Tab' || (event.key >= '0' && event.key <= '9'))) event.preventDefault()" maxlength="5">
+        </div>
+        <div class="form-row form-row-center">
+                
+                  <button type="submit" name="guncelle">Kart ile Öde</button>
+                  <?php if (isset($messageBakiye)): ?>
+                <p><?php echo '<p style="color:red;">'.$messageBakiye.'</p>'; ?></p>
+                <?php endif; ?>
+              </div>
     </form>
 </div>
 

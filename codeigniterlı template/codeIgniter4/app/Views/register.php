@@ -137,17 +137,17 @@
 
             <div class="form-column">
                 <label for="Tc">TC Kimlik No:</label>
-                <input type="text" id="Tc" name="Tc" pattern="[0-9]{11}"  required>
+                <input type="text" id="Tc" name="Tc" pattern="[0-9]{11}"  required maxlength="11" minlength="11">
             </div>
         </div>
 
         <div class="form-row">
             <label for="Telefon">Telefon:</label>
-            <input type="tel" id="Telefon" name="Telefon" required>
+            <input type="tel" id="Telefon" name="Telefon" required maxlength="11" minlength="11">
         </div>
         <div class="form-row">
             <label for="Sifre">Şifre:</label>
-            <input type="password" id="Sifre" name="Sifre" required>
+            <input type="password" id="Sifre" name="Sifre" required minlength="8">
         </div>
      <!--   <input type="submit" name="kaydet" value="Kayıt Ol">-->
      <div class="form-row">

@@ -178,12 +178,19 @@ h2#hesap-basligi {
                 <hr>
                 <a  href="" class="menu-item active">Bilet Bilgilerim</a>
                 <hr>
-                <a  href="" class="menu-item">Ödeme ve Fatura</a>
-                <hr>
+                
         <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
         <hr>
         <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
         <hr>
+        <hr>
+        <a class="menu-item">Bakiye: <?php echo $session->user['Bakiye']?></a>
+        <?php 
+       if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
+ <hr>
+    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Hesabı</a>
+    <hr>
+<?php endif; ?>
         </div>
 
     <div class="content-wrapper">

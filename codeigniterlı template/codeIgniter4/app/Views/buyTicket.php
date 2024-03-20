@@ -671,7 +671,7 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">UmuttepeTurizm</a>, Bu bir parodi sitesidir.
                     </div>
                     <div class="col-md-6 text-center text-md-start">
                         
@@ -801,6 +801,8 @@
 
 
 </script>
+
+
 
 
 

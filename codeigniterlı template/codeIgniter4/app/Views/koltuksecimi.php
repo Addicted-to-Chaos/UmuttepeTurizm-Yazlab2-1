@@ -1214,7 +1214,6 @@ for ($i = 0; $i < $uzunluk; $i++) {
   
   <input type="submit" value="Bakiye ile Öde"formaction="<?= site_url('/bakiyeodeme') ?>"id="bakiyeOdeBtn">
   <input type="submit" value="Kart ile Öde"formaction="<?= site_url('/kartodeme') ?>">
-  <input type="submit" value="Aracı ile Öde"formaction=" ">
 
   </form>
 

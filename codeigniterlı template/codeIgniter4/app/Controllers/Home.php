@@ -139,7 +139,22 @@ class Home extends BaseController
     }
     }
     public function yolculist(){
+        $session = session();
+    $user = $session->get('user');
+    
+    $adminEmail = 'admin@gmail.com';
+    
+    if($user && $user['Email'] === $adminEmail){
         return view('yolculist');
+
+    } else {
+        if($session->has('user')){
+        return view('hesabim');
+        }
+        else{
+            return view('index');
+        }
+    }
     }
 
     public function services(){
@@ -155,7 +170,14 @@ class Home extends BaseController
         return view('regConnect');
     }
     public function payment(){
-        return view('payment');
+        $session=session();
+        if( $session->has('user') ){
+            return view('payment');
+        }else{
+            
+            return view('index');
+        }
+        
     }
     public function admin() {
     $session = session();

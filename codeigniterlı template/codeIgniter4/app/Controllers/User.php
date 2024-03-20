@@ -6,6 +6,7 @@ use App\Models\UsersModel;
 use App\Models\UserModelSeferler;
 use App\Models\UserModeliller;
 
+use App\Libraries\ShopierPayment;
 
 
 
@@ -501,7 +502,66 @@ public function bakiyeodeme()
     return view ('odendi', $data);
 }
 
+public function bakiyeEkle()
+{    
+    
+    
+    
+    $session = session();
 
+    $userData = $session->get('user');
+
+    if (!$userData) {
+        return redirect()->to('index');
+    }
+    else
+    {
+        $bakiyeEkleMiktar = $this->request->getVar('bakiyeekle');
+        
+    if($bakiyeEkleMiktar==0)
+    {
+        $messageBakiye='Lütfen geçerli bir miktar giriniz.';
+        return view('hesabim',['messageBakiye' => $messageBakiye]);
+
+    }
+    else
+    {
+        return view('payment2', ['eklenecekBakiye' => $bakiyeEkleMiktar]); 
+    }
+    }
+
+    
+
+
+}
+
+public function eklendi()
+{    
+    $session=session();
+    if( $session->has('user') )
+    {  
+    $userData = $session->get('user');
+
+    $bakiyeEkleMiktar = $this->request->getVar('biletFiyat');
+   
+    $bakiye=$userData['Bakiye']+$bakiyeEkleMiktar;
+
+    $model=new UsersModel();
+    $updateData = [
+        'Bakiye' => $bakiye,
+        
+    ];
+
+    $model->where('Yolcu_id', $userData['Yolcu_id'])->set($updateData)->update();
+    $messageBakiye="Bakiyeniz başarıyla eklenmiştir.";
+    return view('hesabim',['messageBakiye' => $messageBakiye]);
+    }
+    else{
+    return view('index');
+
+    }
+    
+}
 
 public function rezervasyonIptal(){
 
@@ -529,6 +589,7 @@ public function rezervasyonIptal(){
     return view('biletlerim',['message' => $messageIptal]);
 
 }
+
 
 }
 

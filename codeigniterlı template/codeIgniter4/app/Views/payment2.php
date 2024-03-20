@@ -1,8 +1,8 @@
 <?php $session=session(); 
 
 
-if(empty($biletFiyat)){
-    header("Location: buyTicket");
+if(empty($eklenecekBakiye)){
+    header("Location: hesabim");
     exit;}
 
 ?>
@@ -244,7 +244,7 @@ form .btn.btn-primary:hover {
        <a href="#" onclick="window.history.back();" class="btn btn-danger position-absolute top-0 start-0 m-3">İptal</a>
        <!-- Diğer içerikler -->
        <div class="card box1 shadow-sm p-md-5 p-md-5 p-4">
-          <div class="fw-bolder mb-4"><span class="ps-1"><?php echo $biletFiyat?>₺</span></div>
+          <div class="fw-bolder mb-4"><span class="ps-1"><?php echo $eklenecekBakiye?>₺</span></div>
           <div class="d-flex flex-column">
              <div class="border-bottom mb-4"></div>
              <div class="d-flex flex-column mb-5">
@@ -266,7 +266,7 @@ Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
           </ul>
           <div class="px-md-5 px-4 mb-4 d-flex align-items-center">
           </div>
-          <form method="post" action="<?= site_url('/odendi') ?>">
+          <form method="post" action="<?= site_url('/eklendi') ?>">
              <div class="row">
                 <div class="col-12">
                    <div class="d-flex flex-column px-md-5 px-4 mb-4">
@@ -294,12 +294,9 @@ Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
                 </div>
                 <div class="col-12 px-md-5 px-4 mt-3">
                
-                <input type="hidden"id="seferId" name="seferId" value="<?php echo $seferId?>">
-                <input type="hidden"id="koltukId" name="koltukId" value="<?php echo $koltukId?>">
-                <input type="hidden"id="yolcuId" name="yolcuId" value="<?php echo $yolcuId?>">
-                <input type="hidden"id="biletFiyat" name="biletFiyat" value="<?php echo $biletFiyat?>">
+                <input type="hidden"id="biletFiyat" name="biletFiyat" value="<?php echo $eklenecekBakiye?>">
 
-                   <button type="submit" class="btn btn-primary w-100"><?php echo $biletFiyat?>₺</button>
+                   <button type="submit" class="btn btn-primary w-100"><?php echo $eklenecekBakiye?>₺</button>
                 </div>
              </div>
           </form>
