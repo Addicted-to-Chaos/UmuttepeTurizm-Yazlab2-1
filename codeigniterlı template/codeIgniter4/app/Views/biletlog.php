@@ -239,7 +239,8 @@ th {
             <tr>
                 <th>Bilet ID</th>
                 <th>PNR Kodu</th>
-                <th>Yolcu ID</th>
+                <th>Yolcu Ad</th>
+                <th>Yolcu Soyad</th>
                 <th>Koltuk No</th>
                 <th>Durum</th>
                 <th>İşlem Tarihi</th>
@@ -252,32 +253,27 @@ th {
 
             <!-- Simdilik ornek satir -->
             <?php
-    use App\Models\UserModelBiletLog;
-    use App\Models\UserModelBiletler;
+    use App\Models\UserModelBiletLogView;
 
-    $biletLogModel = new UserModelBiletLog();
+    $biletLogModel = new UserModelBiletLogView();
     $biletLog = $biletLogModel->findAll();
 
-    $biletlerModel = new UserModelBiletler();
-    $bilet = $biletlerModel->findAll();
+    
 
     if(empty($biletLog)){
-        echo '<p style="color:red; font-size: 30px;"><b>Aktif Sefer bulunmamaktadır.</b></p>';
+        echo '<p style="color:red; font-size: 30px;"><b>Bilet kaydı bulunmamaktadır.</b></p>';
     } else {
-        $counter = 1;
-        foreach ($biletLog as $bilLog) {
-            
-            $bil = $bilet[$counter - 1]; 
+        foreach ($biletLog as $bilLog) { 
 
             echo '<tr>';
             echo '<td>'.$bilLog['Bilet_id'].'</td>'; 
-            echo '<td>'.$bil['PNR_kodu'].'</td>';
-            echo '<td>'.$bil['Yolcu_id'].'</td>';
-            echo '<td>'.$bil['Koltuk_id'].'</td>';
+            echo '<td>'.$bilLog['PNR_kodu'].'</td>';
+            echo '<td>'.$bilLog['Yolcu_Ad'].'</td>';
+            echo '<td>'.$bilLog['Yolcu_Soyad'].'</td>';
+            echo '<td>'.$bilLog['Koltuk_no'].'</td>';
             echo '<td>'.$bilLog['Durum'].'</td>';
             echo '<td>'.$bilLog['Islem_tarihi'].'</td>';
             echo '</tr>';
-            $counter++;
         }
     }
 ?>
@@ -302,15 +298,15 @@ th {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Çıkış Yapmak İstediğinize Emin misiniz ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Mevcut oturumunuzu sonlandırmaya hazırsanız aşağıdan "Çıkış Yap"ı seçin.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                    <a class="btn btn-primary" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
                 </div>
             </div>
         </div>

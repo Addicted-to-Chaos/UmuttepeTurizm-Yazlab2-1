@@ -1,5 +1,13 @@
 <?php $session=session(); ?>
+<?php
+        use App\Models\UsersModel;
 
+        $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
+       
+        $yolcuModel=new UsersModel();
+        $yolcu=$yolcuModel->where('Yolcu_id',$yolcuu_id)->first();
+        $bakiye=$yolcu['Bakiye'];
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,32 +258,23 @@ h2#hesap-basligi {
 <h2 id="hesap-basligi">Hesap</h2>
 <br>
         <!-- Menu items go here -->
+        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <?php 
+       if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
+ <hr>
+    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Paneli</a>
+    <hr>
+<?php endif; ?>
         <a href="" class="menu-item active">Kullanıcı Bilgilerim </a>
         <hr>
         <a  href="biletlerim" class="menu-item">Bilet Bilgilerim</a>
         <hr>
         
-        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <a class="menu-item">Bakiye: <?php echo $bakiye?></a>
         <hr>
-        <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
         
+<a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
         <hr>
-        <?php
-        use App\Models\UsersModel;
-
-        $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
-       
-        $yolcuModel=new UsersModel();
-        $yolcu=$yolcuModel->where('Yolcu_id',$yolcuu_id)->first();
-        $bakiye=$yolcu['Bakiye'];
-        ?>
-        <a class="menu-item">Bakiye: <?php echo $bakiye?></a><hr>
-        <?php 
-       if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
- <hr>
-    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Hesabı</a>
-    <hr>
-<?php endif; ?>
         <form method="post" action="<?php echo base_url('/bakiyeEkle'); ?>">
    
             <label for="Password" style="margin-left:20px;">Hesabıma Bakiye Ekle:</label>

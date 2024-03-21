@@ -286,8 +286,26 @@ public function eklesefer()
     $seferPlaka = $this->request->getVar('seferPlaka');
     #$seferKapasite = $this->request->getVar('seferKapasite');
     $seferFiyat = $this->request->getVar('seferFiyat');
+    $topluSefer = $this->request->getPost('topluSefer');
+    if(!empty($topluSefer)){
+       
+    $procedureName = 'SeferYenile';
+    $query = "CALL $procedureName(?)";
+    $result = $this->db->query($query, 5);
 
+    if ($result)
+        {
+            $message='Seferler başarıyla eklenmiştir';
+        }
+        else
+        {
+            $error = $this->db->error();
+            $message = "Hata oluştu: " . $error['message'];
+        }
 
+    return view('seferekle',['message' => $message]);
+    }
+    else{
     $model = new UserModelSeferler();
 
     $updateData = [
@@ -321,7 +339,7 @@ public function eklesefer()
             $message = "Hata oluştu: " . $error['message'];
         }
 
-    return view('seferekle',['message' => $message]);
+    return view('seferekle',['message' => $message]);}
 
 }
 
@@ -482,7 +500,7 @@ if($bakiye>$biletFiyat){
         $procedureName = 'rezervasyon';
         $query = "CALL $procedureName(?,?,?)";
         $result = $this->db->query($query, [$yolcuId,$seferId,$koltukId]);
-
+        
         }
         else
         {
@@ -544,22 +562,39 @@ public function bakiyeEkle()
 
 }
 
+public function rezerveToBuy()
+{    
+    $session=session();
+    if( $session->has('user') )
+    { 
+   
+    
+    $messageDurum="Bilet durumu değişmiştir.";
+    return view('biletlerim',['biletdurum' => $messageDurum]);
+    }
+    else{
+    return view('index');
+
+    }
+    
+}
 public function eklendi()
 {    
     $session=session();
     if( $session->has('user') )
-    {  
+    { 
     $userData = $session->get('user');
-
-    $bakiyeEkleMiktar = $this->request->getVar('biletFiyat');
-   
-    $bakiye=$userData['Bakiye']+$bakiyeEkleMiktar;
-
     $model=new UsersModel();
+    
+    $a= $model->where('Yolcu_id', $userData['Yolcu_id'])->first();
+    $bakiyeEkleMiktar=0;
+    $bakiyeEkleMiktar = $this->request->getVar('eklenecekBakiye');
+   
+    $bakiye=$a['Bakiye']+$bakiyeEkleMiktar;
     $updateData = [
         'Bakiye' => $bakiye,
-        
     ];
+    
 
     $model->where('Yolcu_id', $userData['Yolcu_id'])->set($updateData)->update();
     $messageBakiye="Bakiyeniz başarıyla eklenmiştir.";
@@ -577,7 +612,14 @@ public function rezervasyonIptal(){
     $db = db_connect();
 
     $biletId = $this->request->getVar('bilId');
+    $request = service('request');
+    $yol = $this->request->getVar('seferrr');
+    $koltuk = $this->request->getVar('koltukk');
 
+
+    $session=session();
+if(!$request->getPost('satinAl'))
+{
     
     $bakiye=$this->request->getVar('bakiye');
 
@@ -595,7 +637,23 @@ public function rezervasyonIptal(){
             $messageIptal = "Hata oluştu: " . $error['message'];
         }
 
-    return view('biletlerim',['message' => $messageIptal]);
+    return view('biletlerim',['message' => $messageIptal]);}
+else
+{
+
+    $procedureName = 'Askiya_Al';
+    $query = "CALL $procedureName(?)";
+    $result = $this->db->query($query, [$biletId]);
+
+    $procedureName = 'biletal';
+        $query = "CALL $procedureName(?,?,?)";
+        $result = $this->db->query($query, [$session->user["Yolcu_id"],$yol,$koltuk]);
+
+        $seferModel=new UserModelSeferler();
+        $sseferId=$seferModel->where('Sefer_id',$yol)->first();
+        $kalan=$sseferId['Fiyat']-200;
+        return view('payment3', ['eklenecekBakiye' => $kalan]); 
+}
 
 }
 

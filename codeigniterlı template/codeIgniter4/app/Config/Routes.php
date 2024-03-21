@@ -49,6 +49,9 @@ use CodeIgniter\Router\RouteCollection;
     $routes->post('/askiyaAl' ,'User::rezervasyonIptal');
     $routes->post('/bakiyeEkle' ,'User::bakiyeEkle');
     $routes->post('/eklendi' ,'User::eklendi');
+    $routes->post('/rezerveToBuy' ,'User::rezerveToBuy');
+
+    
 
     
 

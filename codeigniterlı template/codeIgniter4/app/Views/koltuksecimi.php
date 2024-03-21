@@ -1214,7 +1214,18 @@ for ($i = 0; $i < $uzunluk; $i++) {
     echo '<option value="' . $sefer['Fiyat']-($sefer['Fiyat']*15/100) . '"> 65 Yaş ve Üstü - %15 indirim</option>';
     echo '<option value="' . $sefer['Fiyat']-($sefer['Fiyat']*15/100) . '"> Memur - %15 indirim</option>';
     echo '<option value="0"> Güvenlik Gücü - Bedava</option>';
+
+$seferTarihi = $sefer['Tarih'];
+
+$bugununTarihi = date('Y-m-d');
+
+$ikiGunOnce = date('Y-m-d', strtotime('-2 days', strtotime($seferTarihi)));
+
+if ($ikiGunOnce >= $bugununTarihi) {
     echo '<option value="200"> Rezerve Et - 200₺</option>';
+
+}
+
   ?>
   </select>
   <?php echo '.<input type="hidden" name="bakiye" id="bakiye" value='.$bakiye.'>'?>

@@ -8,7 +8,15 @@ require "vendor/autoload.php";
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
 ?>
+<?php
+        use App\Models\UsersModel;
 
+        $yolcuu_id=isset($session->user["Yolcu_id"]) ? $session->user["Yolcu_id"] : '';
+       
+        $yolcuModel=new UsersModel();
+        $yolcu=$yolcuModel->where('Yolcu_id',$yolcuu_id)->first();
+        $bakiye=$yolcu['Bakiye'];
+        ?>
 
 <html>
 <head>
@@ -194,29 +202,32 @@ h2#hesap-basligi {
 
 <body>
 
-    <div class="left-menu">
+<div class="left-menu">
 
-        <h2 id="hesap-basligi">Hesap</h2>
-        <br>
-                <!-- Menu items go here -->
-                <a href="hesabim" class="menu-item">Kullanıcı Bilgilerim </a>
-                <hr>
-                <a  href="" class="menu-item active">Bilet Bilgilerim</a>
-                <hr>
-                
+<h2 id="hesap-basligi">Hesap</h2>
+<br>
+        <!-- Menu items go here -->
         <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
-        <hr>
-        <a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
-        <hr>
-       
-
         <?php 
        if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
  <hr>
-    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Hesabı</a>
+    <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Paneli</a>
     <hr>
 <?php endif; ?>
-        </div>
+        <a href="" class="menu-item active">Kullanıcı Bilgilerim </a>
+        <hr>
+        <a  href="biletlerim" class="menu-item">Bilet Bilgilerim</a>
+        <hr>
+        
+        <a class="menu-item">Bakiye: <?php echo $bakiye?></a>
+        <hr>
+        
+<a class="menu-item" href="<?php echo site_url('/cikisYap'); ?>">Çıkış Yap</a>
+        <hr>
+       
+        
+        
+</div>
 
     <div class="content-wrapper">
         <div class="container">
@@ -235,6 +246,9 @@ h2#hesap-basligi {
             }
             else{
                 if (isset($message)) {
+                    echo '<p id="errorMessage" style="color: green;">' . $message . '</p>';
+                }
+                if (isset($biletDurum)) {
                     echo '<p id="errorMessage" style="color: green;">' . $message . '</p>';
                 }
                 
@@ -270,8 +284,12 @@ h2#hesap-basligi {
                   echo  '</div>';
                   if ($bilet['Durum'] == 'Rezerve') { 
                     echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';
-                    
-                    echo'<input type="submit"value="Bileti İptal Et">';
+                    echo '<input type="hidden" name="seferrr" id="sefer"value='.$bilet['Sefer_id'].'>';
+                    echo '<input type="hidden" name="koltukk" id="koltukk"value='.$bilet['Koltuk_no'].'>';
+
+                    echo'<input type="submit"id="satinAl" name="satinAl" value="Bileti Satın Al">';
+                    echo '<input class="cancel-button" type="submit"value="İptal Et">';
+
                     
                  }
                  else

@@ -1,0 +1,714 @@
+INFO - 2024-03-21 07:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 07:23:20 --> ErrorException: Undefined array key 6
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 07:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 07:29:11 --> mysqli_sql_exception: PROCEDURE umuttepe.Askiya_Al does not exist in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(586): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 07:29:11 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE umuttepe.Askiya_Al does not exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(586): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 07:29:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE umuttepe.Askiya_Al does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'10\')')
+ 3 APPPATH\Controllers\User.php(586): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 07:29:11 --> [Caused by] mysqli_sql_exception: PROCEDURE umuttepe.Askiya_Al does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'10\')')
+ 4 APPPATH\Controllers\User.php(586): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 07:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 07:34:34 --> Error connecting to the database: mysqli_sql_exception: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'umuttepe', 3306, '', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codeIgniter4\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codeIgniter4\app\Views\hesabim.php(269): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codeIgniter4\system\View\View.php(228): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\codeIgniter4\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\codeIgniter4\system\Common.php(1178): CodeIgniter\View\View->render('hesabim', Array, true)
+#10 C:\xampp\htdocs\codeIgniter4\app\Controllers\Home.php(70): view('hesabim')
+#11 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\Home->hesabim()
+#12 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\codeIgniter4\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\codeIgniter4\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\codeIgniter4\app\Views\hesabim.php(269): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\codeIgniter4\system\View\View.php(228): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\codeIgniter4\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\codeIgniter4\system\Common.php(1178): CodeIgniter\View\View->render('hesabim', Array, true)
+#9 C:\xampp\htdocs\codeIgniter4\app\Controllers\Home.php(70): view('hesabim')
+#10 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\Home->hesabim()
+#11 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2024-03-21 07:34:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `yolcular`
+WHERE `Yolcu_id` = :Yolcu_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Views\hesabim.php(269): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\hesabim.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('hesabim', [], true)
+ 9 APPPATH\Controllers\Home.php(70): view('hesabim')
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->hesabim()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 07:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 07:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:11:07 --> ErrorException: Undefined array key 6
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:16:02 --> ErrorException: Undefined array key 6
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:16:03 --> ErrorException: Undefined array key 6
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:22:30 --> ErrorException: Undefined variable $bil
+in APPPATH\Views\biletlog.php on line 271.
+ 1 APPPATH\Views\biletlog.php(271): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bil', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 271)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:22:59 --> ErrorException: Undefined variable $bil
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bil', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:23:00 --> ErrorException: Undefined variable $bil
+in APPPATH\Views\biletlog.php on line 270.
+ 1 APPPATH\Views\biletlog.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bil', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php', 270)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlog', [], true)
+ 5 APPPATH\Controllers\Home.php(131): view('biletlog')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlog()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 09:24:55 --> mysqli_sql_exception: PROCEDURE umuttepe.biletal does not exist in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal('3...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal('3...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal('3...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(423): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->odendi()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 09:24:55 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE umuttepe.biletal does not exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(423): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->odendi()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:24:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE umuttepe.biletal does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'3\',\'6\',\'11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'3\',\'6\',\'11\')')
+ 3 APPPATH\Controllers\User.php(423): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->odendi()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:24:55 --> [Caused by] mysqli_sql_exception: PROCEDURE umuttepe.biletal does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(\'3\',\'6\',\'11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'3\',\'6\',\'11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'3\',\'6\',\'11\')')
+ 4 APPPATH\Controllers\User.php(423): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->odendi()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 09:47:14 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 09:47:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:47:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'11\')')
+ 3 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:47:14 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',\'4\',\'11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'11\')')
+ 4 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 09:47:29 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 09:47:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:47:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:47:29 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',\'4\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 4 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-21 09:52:40 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 09:52:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:52:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:52:40 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',\'4\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 4 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 09:52:50 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyo...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyo...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyo...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyo...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 09:52:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:52:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 09:52:50 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş veya sefere 2 günden az süre kalmış.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL rezervasyon(\'3\',\'4\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL rezervasyon(\'3\',\'4\',\'15\')')
+ 4 APPPATH\Controllers\User.php(502): CodeIgniter\Database\BaseConnection->query('CALL rezervasyon(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->bakiyeodeme()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-21 09:59:26 --> ErrorException: Undefined variable $bakiye
+in APPPATH\Views\biletlerim.php on line 214.
+ 1 APPPATH\Views\biletlerim.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bakiye', 'C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php', 214)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeIgniter4\\app\\Views\\biletlerim.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('biletlerim', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('biletlerim')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->biletlerim()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 09:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 09:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 10:29:05 --> mysqli_sql_exception: İptal işlemi en fazla 1 gün kala olmalıdır. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 10:29:05 --> CodeIgniter\Database\Exceptions\DatabaseException: İptal işlemi en fazla 1 gün kala olmalıdır.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:29:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: İptal işlemi en fazla 1 gün kala olmalıdır.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'37\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'37\')')
+ 3 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:29:05 --> [Caused by] mysqli_sql_exception: İptal işlemi en fazla 1 gün kala olmalıdır.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(\'37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'37\')')
+ 4 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 10:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 10:46:26 --> mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş. in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal('3...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal('3...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal('3...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(645): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 10:46:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(645): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:46:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Bu koltuk başka bir yolcu tarafından rezerve edilmiş.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'3\',\'37\',\'15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'3\',\'37\',\'15\')')
+ 3 APPPATH\Controllers\User.php(645): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:46:26 --> [Caused by] mysqli_sql_exception: Bu koltuk başka bir yolcu tarafından rezerve edilmiş.
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL biletal(\'3\',\'37\',\'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL biletal(\'3\',\'37\',\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL biletal(\'3\',\'37\',\'15\')')
+ 4 APPPATH\Controllers\User.php(645): CodeIgniter\Database\BaseConnection->query('CALL biletal(?,?,?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 10:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-21 10:54:26 --> mysqli_sql_exception: CONSTRAINT `seferler.Dolu_koltuk` failed for `umuttepe`.`seferler` in C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeIgniter4\system\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(...', 0)
+#1 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(...')
+#2 C:\xampp\htdocs\codeIgniter4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(...')
+#3 C:\xampp\htdocs\codeIgniter4\app\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(...', Array)
+#4 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+#5 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\codeIgniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\codeIgniter4\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-21 10:54:26 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `seferler.Dolu_koltuk` failed for `umuttepe`.`seferler`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:54:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `seferler.Dolu_koltuk` failed for `umuttepe`.`seferler`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'11\')')
+ 3 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-21 10:54:26 --> [Caused by] mysqli_sql_exception: CONSTRAINT `seferler.Dolu_koltuk` failed for `umuttepe`.`seferler`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CALL Askiya_Al(\'11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CALL Askiya_Al(\'11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CALL Askiya_Al(\'11\')')
+ 4 APPPATH\Controllers\User.php(628): CodeIgniter\Database\BaseConnection->query('CALL Askiya_Al(?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->rezervasyonIptal()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-21 10:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-21 10:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

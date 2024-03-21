@@ -266,7 +266,7 @@ Bizi Tercih ettiğiniz için teşekkür ederiz.</h6>
           </ul>
           <div class="px-md-5 px-4 mb-4 d-flex align-items-center">
           </div>
-          <form method="post" action="<?= site_url('/eklendi') ?>">
+          <form method="post" action="<?= site_url('/rezerveToBuy') ?>">
              <div class="row">
                 <div class="col-12">
                    <div class="d-flex flex-column px-md-5 px-4 mb-4">
