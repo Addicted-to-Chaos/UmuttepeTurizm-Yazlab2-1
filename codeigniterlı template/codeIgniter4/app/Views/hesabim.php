@@ -258,10 +258,10 @@ h2#hesap-basligi {
 <h2 id="hesap-basligi">Hesap</h2>
 <br>
         <!-- Menu items go here -->
-        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a><hr>
         <?php 
        if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
- <hr>
+ 
     <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Paneli</a>
     <hr>
 <?php endif; ?>

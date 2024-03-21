@@ -185,7 +185,7 @@ h2#hesap-basligi {
     border: none; /* Kenarlık yok */
     padding: 5px 5px; /* Buton içi boşluk */
     width: 85px;
-    margin-top: -50px;
+    margin-top: -43px;
     margin-left: 250px;
     border-radius: 5px; /* Yuvarlatılmış kenarlar */
     cursor: pointer; /* İmleç tipi: el işareti */
@@ -196,6 +196,24 @@ h2#hesap-basligi {
 .cancel-button:hover {
     background-color: #EC221C; /* Butona fare geldiğinde koyu kırmızı */
 }
+
+.buy-button {
+    background-color: #95D480  ; /* Kırmızı arka plan */
+    color: #fff; /* Beyaz metin rengi */
+    border: none; /* Kenarlık yok */
+    padding: 5px 5px; /* Buton içi boşluk */
+    width: 160px;
+    height:30px;
+    margin-top: 47px;
+    margin-left: 0px;
+    border-radius: 5px; /* Yuvarlatılmış kenarlar */
+    cursor: pointer; /* İmleç tipi: el işareti */
+}
+.buy-button:hover {
+    background-color: #82B771; /* Butona fare geldiğinde koyu kırmızı */
+}
+
+
 </style>
 </head>
 
@@ -207,16 +225,16 @@ h2#hesap-basligi {
 <h2 id="hesap-basligi">Hesap</h2>
 <br>
         <!-- Menu items go here -->
-        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a>
+        <a class="menu-item" href="<?php echo site_url('/'); ?>">Ana Sayfa</a><hr>
         <?php 
        if (session()->get('user') && session()->get('user')['Email'] === 'admin@gmail.com'): ?>
- <hr>
+ 
     <a class="menu-item" href="<?php echo site_url('/admin'); ?>">Admin Paneli</a>
     <hr>
 <?php endif; ?>
-        <a href="" class="menu-item active">Kullanıcı Bilgilerim </a>
+        <a href="hesabim" class="menu-item">Kullanıcı Bilgilerim </a>
         <hr>
-        <a  href="biletlerim" class="menu-item">Bilet Bilgilerim</a>
+        <a  href="biletlerim" class="menu-item  active">Bilet Bilgilerim</a>
         <hr>
         
         <a class="menu-item">Bakiye: <?php echo $bakiye?></a>
@@ -286,8 +304,7 @@ h2#hesap-basligi {
                     echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';
                     echo '<input type="hidden" name="seferrr" id="sefer"value='.$bilet['Sefer_id'].'>';
                     echo '<input type="hidden" name="koltukk" id="koltukk"value='.$bilet['Koltuk_no'].'>';
-
-                    echo'<input type="submit"id="satinAl" name="satinAl" value="Bileti Satın Al">';
+                    echo'<input class="buy-button" type="submit" id="satinAl" name="satinAl" value="Bileti Satın Al">';
                     echo '<input class="cancel-button" type="submit"value="İptal Et">';
 
                     
@@ -303,7 +320,7 @@ h2#hesap-basligi {
                     $result=$writer->write($qr_code);
                     
                     header("Content-Type:".$result->getMimeType());
-                    echo '<div id="qrCodeContainer" style="margin-left:250px;">';
+                    echo '<div id="qrCodeContainer" style="margin-left:250px; margin-top:-40px;">';
                     echo $result->getString();
                     echo '</div>';
                     echo '<input type="hidden" name="bilId" id="bilId"value='.$bilet['Bilet_id'].'>';

@@ -95,6 +95,17 @@ h2#hesap-basligi {
   text-align: center;
   padding-top: 20px;
     }
+    h4#hesap-basligi {
+  color: #3498db;
+  text-align: center;
+  padding-top: 20px;
+    }
+    .containertoplusefer {
+        text-align: center;
+        margin-top: -100px;
+    }
+
+    
     </style>
 
 </head>
@@ -267,14 +278,10 @@ h2#hesap-basligi {
 <div class="container-fluid">
 
                     <!-- Page Heading -->
-<h2 id="hesap-basligi">Sefer Ekle</h2>
-</form>
-<form method="post" action="<?php echo site_url('/ekleSefer'); ?>">
-<input type="submit"id="topluSefer" name="topluSefer"value="Toplu Sefer Ekle">
 
-</form>
+
                     <!-- Content Row -->
-
+ <h2 id="hesap-basligi">Sefer Ekle</h2>
 <form method="post" action="<?php echo site_url('/ekleSefer'); ?>" onsubmit="return bilgiKontrol()">    
 <div class="row">                
   <div class="container">
@@ -335,13 +342,20 @@ h2#hesap-basligi {
 
         </div>
     </div>
+    
 
 </div>
 
 </div>
 
 
+</form>
+<form method="post" action="<?php echo site_url('/ekleSefer'); ?>">
+<div class="containertoplusefer">
+<hr><br>
+<input style="width: 350px;" type="submit"id="topluSefer" name="topluSefer"value="Toplu Sefer Ekle"></div><br><hr><br>
 
+</form>
 
               
     </div>
