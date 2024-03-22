@@ -28,7 +28,7 @@ Geliştirilen web sitesi, müşterilerin seyahat planlarını yapmalarını ve o
 
 
 **Uygulama İçi Görüntüler:**
-- ![image](https://github.com/Addicted-to-Chaos/UmuttepeTurizm-Yazlab2-1/assets/91319092/00f0c26a-3f88-486e-adda-9da689b85008)
+- ![image](https://github.com/Addicted-to-Chaos/UmuttepeTurizm-Yazlab2-1/assets/91319092/9d9a44ee-9d1b-49ec-a1bc-a066741cdfd3)
 - ![image](https://github.com/Addicted-to-Chaos/UmuttepeTurizm-Yazlab2-1/assets/91319092/9ccab987-c89d-45ae-a4cc-d0d84cfe9c68)
 - ![image](https://github.com/Addicted-to-Chaos/UmuttepeTurizm-Yazlab2-1/assets/91319092/29015b6c-bc3e-44c2-9308-b0bf4ab221a6)
 - ![image](https://github.com/Addicted-to-Chaos/UmuttepeTurizm-Yazlab2-1/assets/91319092/54cfd896-5f12-4c24-aaae-2a2852b51188)
